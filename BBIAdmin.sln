@@ -3,25 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "BBIAdminHtml(1)", "http://localhost:7853", "{F40DD470-FD80-4A8D-8568-125EE18BA6B7}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AdminHTML", "http://localhost:8405", "{1E018D03-BD94-4173-933F-4C8B0FC45465}"
 	ProjectSection(WebsiteProperties) = preProject
 		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_7853"
-		Debug.AspNetCompiler.PhysicalPath = "..\BBIAdminHtml\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7853\"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_8405"
+		Debug.AspNetCompiler.PhysicalPath = "AdminHTML\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8405\"
 		Debug.AspNetCompiler.Updateable = "true"
 		Debug.AspNetCompiler.ForceOverwrite = "true"
 		Debug.AspNetCompiler.FixedNames = "false"
 		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_7853"
-		Release.AspNetCompiler.PhysicalPath = "..\BBIAdminHtml\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_7853\"
+		Release.AspNetCompiler.VirtualPath = "/localhost_8405"
+		Release.AspNetCompiler.PhysicalPath = "AdminHTML\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_8405\"
 		Release.AspNetCompiler.Updateable = "true"
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\BBIAdminHtml\"
+		SlnRelativePath = "AdminHTML\"
 		DefaultWebSiteLanguage = "Visual Basic"
 	EndProjectSection
 EndProject
@@ -30,8 +30,8 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F40DD470-FD80-4A8D-8568-125EE18BA6B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F40DD470-FD80-4A8D-8568-125EE18BA6B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E018D03-BD94-4173-933F-4C8B0FC45465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E018D03-BD94-4173-933F-4C8B0FC45465}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
