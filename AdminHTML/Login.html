@@ -1,0 +1,77 @@
+﻿
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <title>
+        后台管理
+    </title>
+    <link href="Content/Public/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/Public/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="Content/Public/css/Main.min.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="Content/Public/js/html5shiv.min.js"></script>
+      <script src="Content/Public/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="loginPage">
+    <div class="loginbox">
+        <header>
+            <h2>后台管理</h2> 
+        </header>
+        <form method="post" class="loginForm">
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
+                    <input class="form-control" type="email" placeholder="用户名">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <div class="input-group-addon"><i class="fa fa-desktop fa-fw"></i></div>
+                    <input class="form-control" type="email" placeholder="密码">
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> 记住我
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">登录系统</button>
+        </form>
+    </div>
+
+
+
+    <script src="Content/Public/js/jquery-2.1.1.min.js"></script>
+    <script src="Content/Public/js/bootstrap.min.js"></script>
+
+    <script src="Content/Public/js/main.js"></script>
+
+   <script>
+       var loginbox = {
+           initialize: function () {
+               var winheight = $(window).height(), lbheight = $('.loginbox').height();
+               var paddingTop = (winheight - lbheight) / 2 - 50;
+               $('.loginPage').css('padding-top', paddingTop + 'px');
+           }
+
+       }
+       $(function () {
+          
+           loginbox.initialize();
+
+           $(window).resize(function () {
+               loginbox.initialize();
+           })
+          
+       })
+   </script>
+
+</body>
+</html>
