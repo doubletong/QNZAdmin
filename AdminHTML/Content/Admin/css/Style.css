@@ -164,9 +164,15 @@ nav#menu h3 {
   line-height: 36px;
   color: #fff;
   font-size: 1.3em;
+  text-align: center;
+  border-bottom: 1px #222222 solid;
+}
+nav#menu .mainmenu {
+  border-top: 1px #555555 solid;
 }
 nav#menu .mainmenu li.liitem a {
   padding: 7px 6px 7px 15px;
+  position: relative;
   display: block;
   color: #eeeeee;
 }
@@ -179,6 +185,20 @@ nav#menu .mainmenu li.liitem a span.badge {
 nav#menu .mainmenu li.liitem a:hover {
   background-color: #222222;
 }
+nav#menu .mainmenu li.liitem a .arrow-left {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid #fff;
+}
+nav#menu .mainmenu li.liitem a.active .arrow-left {
+  display: block;
+}
 nav#menu .mainmenu li.current a {
   text-decoration: none;
   font-weight: bold;
@@ -188,7 +208,7 @@ nav#menu .mainmenu li.down-nav ul.submenu {
   display: none;
   list-style: none;
   background-color: #222222;
-  padding: 5px 5px 5px 23px;
+  padding: 5px 0 5px 23px;
   overflow: hidden;
 }
 nav#menu .mainmenu li.down-nav ul.submenu li {
