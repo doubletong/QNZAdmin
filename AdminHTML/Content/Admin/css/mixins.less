@@ -16,6 +16,14 @@
   font-size: ~"@{remValue}rem";
 }
 
+.actionbtn(@borderColor){
+    border:1px lighten(@borderColor,50%) solid;width:26px;height:26px;display:inline-block;line-height:24px;text-align:center;
+    color:@borderColor;background-color:lighten(@borderColor,60%);
+    &:hover{
+        border:1px lighten(@borderColor,40%) solid;background-color:lighten(@borderColor,80%);color:darken(@borderColor,20%);
+    }
+}
+
 .mplnone{
     margin: 0;padding: 0;list-style:none;
 }

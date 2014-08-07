@@ -161,12 +161,14 @@ nav#menu {
         }
     }
     .breadcrumb{
-        margin:0 0 0 45px;padding:0;
+        margin:0 0 0 45px;padding:0;background-color:transparent;
         a{
             color:@gray;
         }
     }
 }
+
+
 
 
 .main-content {
@@ -175,54 +177,81 @@ nav#menu {
 
 
 
-dl#dlAdminInfo dt,dl#dlAdminInfo dd{ padding:5px;}
-#roles{ margin-bottom:35px;}
-#roles input[type="checkbox"]{}
-#roles span label{ padding-left:5px; margin-right:20px; float:left;}
-#roles span{ padding:3px 10px; display:block; float:left;}
-
-.form-horizontal{ position:relative;}
-#thumb{ position:absolute; right:30px; top:80px;}
-
-
-/* 登录框样式 */
-#loginbox{ width:600px; margin:70px auto auto; }
-#loginbox section{padding:20px 30px;; background-color:#fff;}
-p.powered{ font-size:small; text-align:center; padding:5px;}
-
-#loginout{ padding:8px 15px 0 0;}
-#loginout a:hover{ text-decoration:none; color:#fff;}
-
-
 .box
 {
-    border:1px #ccc solid;
+    background-color:#fff;
+   
+    .box-header
+    {
+        background-color:@navy-light;color:#fff;height:36px;position:relative;
+        h3{
+            margin:0;padding:0;line-height:36px;
+            .font-size(1.8);font-weight:normal;padding-left:8px;
+        }
+        .control{
+            position:absolute;height:36px;right:0;top:0;
+            a{
+                display:block;width:36px;height:36px;text-align:center;line-height:36px;float:left;
+                color:#fff;border-left:1px @navy-lighter solid;
+            }
+            a.compress{
+                display:none;
+            }
+        }
+    }
+    .box-body{
+        border:1px #ccc solid; border-top:none;border-bottom:none;
+        .box-toolbar{
+            padding:15px 15px;
+        }
+        .box-table{
+            border-top:1px #ddd solid; border-bottom:1px #ddd solid;margin:0;
+            th{
+                background-color:#f7f7f7;
+            }
+        }
+       
+
+    }
+     .box-footer{
+            padding:15px 15px 10px;
+             border:1px #ccc solid; border-top:none;
+            .pagination{
+                margin:0;
+            }
+            .table-pager{
+                @media only screen and (max-width : 768px){
+                  text-align:center;
+                }
+                .pagecount{
+                    text-align:right;
+                    @media only screen and (max-width : 768px){
+                      text-align:center;
+                    }
+                }
+            }
+        }
 }
-.box-header
-{
-    height:36px;line-height:36px;padding:0 10px;font-size:14px;
-    border-bottom:1px #ccc solid;
-background: #fcfff4; /* Old browsers */
-background: -moz-linear-gradient(top,  #fcfff4 0%, #e9e9ce 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcfff4), color-stop(100%,#e9e9ce)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  #fcfff4 0%,#e9e9ce 100%); /* IE10+ */
-background: linear-gradient(to bottom,  #fcfff4 0%,#e9e9ce 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#e9e9ce',GradientType=0 ); /* IE6-9 */
 
-
-
-
+.box-fixed{
+    position:fixed;width:100%;height:100%;margin:0;z-index:5000;top:0;left:0;
+    overflow-y:scroll;
+    -webkit-overflow-scrolling: touch;
+    
 }
 
-.ithum {
-    position:absolute;right:0;top:0;z-index:100;
+.abtn{
+    .actionbtn(@gray);
+}
+.abtn-primary{
+    .actionbtn(@navy);
 }
 
 
 footer#pagefooter
 {
-    text-align:center; padding:10px;
+    text-align:center; padding:10px;  
+      .font-size(1.2);position:absolute;bottom:0;left:0;width:100%;
+    
      
 }
