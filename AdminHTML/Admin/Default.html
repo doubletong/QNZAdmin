@@ -17,8 +17,8 @@
     <link href="../Content/Admin/css/font-awesome.min.css" rel="stylesheet" />
     <script src="../Scripts/modernizr-2.7.2.js"></script>
 
-
-    <link href="../Content/Admin/css/Style.css" type="text/css" rel="stylesheet" />
+    <link href="../Content/Admin/css/Style.min.css" rel="stylesheet" />
+   
 </head>
 <body>
 
@@ -38,16 +38,12 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/" title="返回首页"><i class="fa fa-home"></i> 返回首页</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">你好，Admin <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-
                             <li><a href="/bbi-Admin/Users/UpdatePWD.aspx">修改密码</a></li>
-
                         </ul>
                     </li>
                     <li><a href="/bbi-admin/loginOut.aspx"><i class="fa fa-sign-out"></i> 退出系统</a></li>
@@ -56,52 +52,51 @@
         </nav>
         <!-- navbar end -->
 
+    <div id="wrapper">
 
-
-        <div id="sidebar-nav">
-
-            <aside class="mt15 mb15">
+        <div id="sidebar-nav" class="leftcol">
+            <aside>
                 <nav id="menu">
                     <h3><i class="fa fa-dot-circle-o"></i>  导航</h3>
                     <ul class="list-unstyled mainmenu">
-                        <li><a href="/BBI-Admin/Default.aspx"><i class="fa fa-dashboard"></i> 控制面板</a></li>
+                        <li class="liitem"><a href="/BBI-Admin/Default.aspx"><i class="fa fa-dashboard"></i> 控制面板</a></li>
 
 
-                        <li class="down-nav">
-                            <a href="#"><i class="fa fa-table"></i> 表格 <b class="caret"></b></a>
+                        <li class="liitem down-nav">
+                            <a href="#"><i class="fa fa-list-alt"></i> 新闻动态 <span class="badge">2</span></a>
                             <ul class="list-unstyled submenu">
-                                <li><a href="/BBI-Admin/Articles/ManageArticles.aspx"><i class="fa fa-angle-double-right"></i> 表格一</a></li>
-                                <li><a href="/BBI-Admin/Articles/ManageCategories.aspx"><i class="fa fa-angle-double-right"></i> 表格二</a></li>
+                                <li><a href="/BBI-Admin/Articles/ManageArticles.aspx"><i class="fa fa-angle-double-right"></i> 新闻资讯</a></li>
+                                <li><a href="/BBI-Admin/Articles/ManageCategories.aspx"><i class="fa fa-angle-double-right"></i> 新闻分类</a></li>
                             </ul>
                         </li>
-                        <li class="down-nav">
-                            <a href="#"><i class="fa fa-edit"></i> 表单 <b class="caret"></b></a>
-                            <ul class="list-unstyled submenu">
-                                <li><a href="/BBI-Admin/Links/ManageLinks.aspx"><i class="fa fa-angle-double-right"></i> 表单一</a></li>
-                                <li><a href="/BBI-Admin/Links/ManageCategories.aspx"><i class="fa fa-angle-double-right"></i> 表单带编辑器</a></li>
-                            </ul>
-                        </li>
-                        <li class="down-nav">
-                            <a href="#"><i class="fa fa-picture-o"></i> 广告 <b class="caret"></b></a>
+
+                        <li class="liitem down-nav">
+                            <a href="#"><i class="fa fa-picture-o"></i> 广告 <span class="badge">2</span></a>
                             <ul class="list-unstyled submenu">
                                 <li><a href="/BBI-Admin/Ad/ManageSlides.aspx"><i class="fa fa-angle-double-right"></i> 广告列表</a></li>
                                 <li><a href="/BBI-Admin/Ad/ManagePositions.aspx"><i class="fa fa-angle-double-right"></i> 广告位置</a></li>
                             </ul>
                         </li>
-                        <li><a href="/BBI-Admin/Pages/ManagePages.aspx"><i class="fa fa-paste"></i> 内容片段</a></li>
+                        <li class="liitem"><a href="/BBI-Admin/Pages/ManagePages.aspx"><i class="fa fa-paste"></i> 内容片段</a></li>
 
-                        
+                        <li class="liitem down-nav">
+                            <a href="#"><i class="fa fa-link"></i> 链接管理 <span class="badge">2</span></a>
+                            <ul class="list-unstyled submenu">
+                                <li><a href="/BBI-Admin/Links/ManageLinks.aspx"><i class="fa fa-angle-double-right"></i> 链接列表</a></li>
+                                <li><a href="/BBI-Admin/Links/ManageCategories.aspx"><i class="fa fa-angle-double-right"></i> 链接分类</a></li>
+                            </ul>
+                        </li>
 
 
-                        <li class="down-nav">
-                            <a href="#"><i class="fa fa-shield"></i> 安全设置 <b class="caret"></b></a>
+                        <li class="liitem down-nav">
+                            <a href="#"><i class="fa fa-shield"></i> 安全设置 <span class="badge">2</span></a>
                             <ul class="list-unstyled submenu">
                                 <li><a href="/BBI-Admin/Users/ManageUsers.aspx"><i class="fa fa-angle-double-right"></i> 管理员</a></li>
                                 <li><a href="/BBI-Admin/Users/UpdatePWD.aspx"><i class="fa fa-angle-double-right"></i> 修改密码</a></li>
                             </ul>
                         </li>
-                        <li class="down-nav">
-                            <a href="#"><i class="fa fa-cog"></i> 常规设置 <b class="caret"></b></a>
+                        <li class="liitem down-nav">
+                            <a href="#"><i class="fa fa-cog"></i> 常规设置 <span class="badge">4</span></a>
                             <ul class="submenu">
                                 <li><a href="/bbi-admin/Common/SiteInfo.aspx"><i class="fa fa-home"></i> 站点信息</a></li>
                                 <li><a href="/bbi-admin/Common/CompanyInfo.aspx"><i class="fa fa-info-circle"></i> 企业信息</a></li>
@@ -114,34 +109,48 @@
 
 
                 </nav>
+
+                <div class="closemenu">
+                    <a href="#"><i class="fa fa-chevron-circle-left"></i></a>
+                </div>
             </aside>
 
         </div>
 
-        <div id="rightcol">
+        <div id="rightcol" class="rightcol">
+            <div class="toolbar">
+                <a href="#" class="showmenu"><i class="fa fa-bars"></i></a>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-home fa-fw"></i> 控制面板</a></li>
+                    <li><a href="#">Library</a></li>
+                    <li class="active">Data</li>
+                </ol>
+            </div>
             <div class="main-content">
-
                 gdgfd
-
             </div>
 
 
 
             <footer id="pagefooter">
                 Copyright &copy; 2012 <a id="hlSiteInfo" href="http://heiniaozhi.cn">黑鸟志</a> All Rights
-                Reserved               
+                Reserved
             </footer>
 
 
         </div>
-
+    </div>
 
     <script src="../Content/Admin/js/jquery-2.0.0.min.js"></script>
 
     <script src="../Content/Admin/js/bootstrap.min.js"></script>
     <script src="../Content/Admin/js/App.js"></script>
 
-
+    <script>
+        $(function () {
+            $('.mainmenu li').eq(0).addClass('nav-open');
+        })
+    </script>
 
 </body>
 </html>
