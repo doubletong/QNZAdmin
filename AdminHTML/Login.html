@@ -68,7 +68,12 @@
 
            $(window).resize(function () {
                loginbox.initialize();
-           })
+           });
+
+           $('button').click(function (e) {
+               e.preventDefault();
+               location.href = 'Admin/Default.html';
+           });
           
        })
    </script>
