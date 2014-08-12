@@ -1,0 +1,384 @@
+﻿
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<head>
+    <title>
+        后台管理
+    </title>
+    <link href="../Content/Admin/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/Admin/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../Content/Admin/css/Style.min.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="../Content/Admin/js/html5shiv.min.js"></script>
+      <script src="../Content/Admin/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-default navbar-inverse" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="#">bbicms Admin</a>
+        </div>
+
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="/" title="返回首页"><i class="fa fa-home"></i> 返回首页</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">你好，Admin <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/bbi-Admin/Users/UpdatePWD.aspx">修改密码</a></li>
+                    </ul>
+                </li>
+                <li><a href="/bbi-admin/loginOut.aspx"><i class="fa fa-sign-out"></i> 退出系统</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </nav>
+    <!-- navbar end -->
+
+    <div id="wrapper">
+
+        <div id="sidebar-nav" class="leftcol">
+            <aside>
+                <nav id="menu">
+                    <h3>导航</h3>
+                    <ul class="list-unstyled mainmenu">
+                        <li class="liitem">
+                            <a href="Default.html">
+                                <i class="fa fa-dashboard"></i> 控制面板
+                            </a>
+                        </li>
+
+                        <li class="liitem down-nav nav-open">
+                            <a href="#"><i class="fa fa-table"></i> 表格 <span class="badge">2</span></a>
+                            <ul class="list-unstyled submenu">
+                                <li>
+                                    <a href="TableBasic.html" class="active">
+                                        <i class="fa fa-angle-double-right"></i> 表格一
+                                        <div class="arrow-left"></div>
+                                    </a>
+                                </li>
+                                <li><a href="/BBI-Admin/Articles/NewsCategories.html"><i class="fa fa-angle-double-right"></i> 表格二</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="liitem down-nav">
+                            <a href="#"><i class="fa fa-edit"></i> 表单 <span class="badge">2</span></a>
+                            <ul class="list-unstyled submenu">
+                                <li><a href="FormBasic.aspx"><i class="fa fa-angle-double-right"></i> 基本表单</a></li>
+                                <li><a href="/BBI-Admin/Ad/ManagePositions.aspx"><i class="fa fa-angle-double-right"></i> 带验证表单</a></li>
+                            </ul>
+                        </li>
+                        <li class="liitem"><a href="/BBI-Admin/Pages/ManagePages.aspx"><i class="fa fa-paste"></i> 内容片段</a></li>
+
+                        <li class="liitem down-nav">
+                            <a href="#"><i class="fa fa-link"></i> 链接管理 <span class="badge">2</span></a>
+                            <ul class="list-unstyled submenu">
+                                <li><a href="/BBI-Admin/Links/ManageLinks.aspx"><i class="fa fa-angle-double-right"></i> 链接列表</a></li>
+                                <li><a href="/BBI-Admin/Links/ManageCategories.aspx"><i class="fa fa-angle-double-right"></i> 链接分类</a></li>
+                            </ul>
+                        </li>
+
+
+                        <li class="liitem down-nav">
+                            <a href="#"><i class="fa fa-shield"></i> 其它页面 <span class="badge">2</span></a>
+                            <ul class="list-unstyled submenu">
+                                <li><a href="../Login.html"><i class="fa fa-angle-double-right"></i> 登录页</a></li>
+                                <li><a href="../Register.html"><i class="fa fa-angle-double-right"></i> 注册页</a></li>
+                            </ul>
+                        </li>
+                        <li class="liitem down-nav">
+                            <a href="#"><i class="fa fa-cog"></i> 常规设置 <span class="badge">4</span></a>
+                            <ul class="submenu">
+                                <li><a href="/bbi-admin/Common/SiteInfo.aspx"><i class="fa fa-home"></i> 站点信息</a></li>
+                                <li><a href="/bbi-admin/Common/CompanyInfo.aspx"><i class="fa fa-info-circle"></i> 企业信息</a></li>
+                                <li><a href="/bbi-admin/Common/Social.aspx"><i class="fa fa-twitter"></i> 社交资料</a></li>
+                                <li class="hide"><a href="/bbi-admin/Common/MailSettings.aspx"><i class="fa fa-envelope-o"></i> 邮箱服务设置</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+
+                </nav>
+
+                <div class="closemenu">
+                    <a href="#"><i class="fa fa-chevron-circle-left"></i></a>
+                </div>
+            </aside>
+
+        </div>
+
+        <div id="rightcol" class="rightcol">
+            <div class="toolbar">
+                <a href="#" class="showmenu"><i class="fa fa-bars"></i></a>
+                <ol class="breadcrumb">
+                    <li><a href="#"><i class="fa fa-home fa-fw"></i> 控制面板</a></li>
+                    <li><a href="#">表单</a></li>
+                    <li class="active">基本表单</li>
+                </ol>
+            </div>
+            <div class="main-content">
+                <div class="box">
+                    <header class="box-header">
+                        <h3><i class="fa fa-search"></i> 数据查询</h3>
+                        <div class="control">
+                            <a href="#" class="expand"><i class="fa fa-expand"></i></a>
+                            <a href="#" class="compress"><i class="fa fa-compress"></i></a>
+                        </div>
+                    </header>
+                    <section class="box-body">
+                        <div class="box-toolbar">
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <form class="form-inline" role="form">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">从</div>
+                                                <input class="form-control" id="fromDate" type="date" placeholder="请输入日期">
+
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <div class="input-group-addon">到</div>
+                                                <input class="form-control" id="toDate" type="date" placeholder="请输入日期">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="sr-only" for="inputCategory">业务类型</label>
+                                            <select class="form-control" id="inputCategory">
+                                                <option>--请选择业务类型--</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                                <option>5</option>
+                                            </select>
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-search"></i> 查询</button>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-hover box-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>业务类别</th>
+                                        <th>任务数</th>
+                                        <th>时间</th>
+                                        <th>服务点</th>
+                                        <th>款箱</th>
+                                        <th>费用</th>
+                                        <th>#</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Mark</td>
+                                        <td>5</td>
+                                        <td>@mdo</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Jacob</td>
+                                        <td>4</td>
+                                        <td>@fat</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry the Bird</td>
+                                        <td>87</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Larry the Bird</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry the Bird</td>
+                                        <td>87</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Larry the Bird</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry the Bird</td>
+                                        <td>87</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Larry the Bird</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry the Bird</td>
+                                        <td>87</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Larry the Bird</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry the Bird</td>
+                                        <td>87</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Larry the Bird</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry the Bird</td>
+                                        <td>87</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Larry the Bird</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry the Bird</td>
+                                        <td>87</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Larry the Bird</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Larry the Bird</td>
+                                        <td>87</td>
+                                        <td>Mark</td>
+                                        <td>Otto</td>
+                                        <td>@mdo</td>
+                                        <td>Larry the Bird</td>
+                                        <td>
+                                            <a href="NetDetailList.html" title="查看明细" class="abtn"><i class="fa fa-list"></i></a>
+                                            <a href="NetDetailList.html" title="编辑" class="abtn"><i class="fa fa-edit"></i></a>
+                                            <a href="NetDetailList.html" title="删除" class="abtn"><i class="fa fa-trash-o"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </section>
+                    <footer class="box-footer">
+                        <div class="row table-pager">
+                            <div class="col-sm-6">
+                                <ul class="pagination">
+                                    <li class="disabled"><a href="#">&laquo;</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li><a href="#">4</a></li>
+                                    <li><a href="#">5</a></li>
+                                    <li><a href="#">&raquo;</a></li>
+                                </ul>
+
+                            </div>
+                            <div class="col-sm-6">
+                                <p class="pagecount">
+                                    显示1-10条，总计10页，记录数100条
+                                </p>
+                            </div>
+                        </div>
+
+                    </footer>
+
+                </div>
+            </div>
+
+
+
+            <footer id="pagefooter">
+                Copyright &copy; 2012 <a id="hlSiteInfo" href="http://heiniaozhi.cn">黑鸟志</a> All Rights
+                Reserved
+            </footer>
+
+
+        </div>
+    </div>
+
+    <script src="../Content/Admin/js/jquery-2.0.0.min.js"></script>
+
+    <script src="../Content/Admin/js/bootstrap.min.js"></script>
+    <script src="../Content/Admin/js/App.js"></script>
+
+</body>
+</html>
