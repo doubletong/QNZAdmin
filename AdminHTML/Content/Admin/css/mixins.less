@@ -31,13 +31,15 @@
     background-image:url(../img/bg.png); background-repeat:no-repeat;
 }
 
-
+//浮动定义
 .fl {
   float: left;
 }
 .fr {
   float: right;
 }
+
+//文字排版
 .tc {
   text-align: center;
 }
@@ -47,60 +49,38 @@
 .tr {
   text-align: right;
 }
-.pl30 {
-  padding-left: 30px;
-}
-.p15 {
-  padding: 15px;
-}
-.pb10{
-    padding-bottom:10px;
-}
-.p25 {
-  padding: 25px;
-}
-.mb20 {
-  margin-bottom: 20px;
-}
-.mb24 {
-  margin-bottom: 24px;
-}
-.mb30 {
-  margin-bottom: 30px;
-}
-.mb50{margin-bottom:50px;}
-.mt20 {
-  margin-top: 20px;
-}
-.mb10 {
-  margin-bottom: 10px;
-}
-.mr10 {
-  margin-right: 10px;
-}
-.mr20 {
-  margin-right: 20px;
-}
-.mr30 {
-  margin-right: 30px;
-}
-.mt10
+
+//外边距
+.mt(@distance:15)
 {
-    margin-top:10px;
+    margin-top:~"@{distance}px";
 }
-.mt15
-{
-    margin-top:15px;
-}
-.pl20 {
-    padding-left:20px;
-}
-.pt15
-{
-    padding-top: 15px;
+.mr(@distance:15) {
+  margin-right: ~"@{distance}px";
 }
 
-.mb15
+.mb(@distance:15) {
+  margin-bottom: ~"@{distance}px";
+}
+.ml(@distance:15) {
+  margin-left: ~"@{distance}px";
+}
+
+//内边距
+.p(@distance:15) {
+  padding:~"@{distance}px";
+}
+
+.pt(@distance:15)
 {
-    margin-bottom:15px;
+    padding-top:~"@{distance}px";
+}
+.pr(@distance:15) {
+    padding-right:~"@{distance}px";
+}
+.pb(@distance:15) {
+    padding-bottom:~"@{distance}px";
+}
+.pl(@distance:15) {
+    padding-left:~"@{distance}px";
 }
