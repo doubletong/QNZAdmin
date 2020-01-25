@@ -1,0 +1,280 @@
+.page-software{
+    background-color: #fff;
+    
+    .tabcontent{
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      @include mq(md){
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+      @include mq(lg){
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+        display: none;
+        
+        
+
+        .ss9{
+            padding-top: 2rem;
+            @include mq(lg){
+                margin: 0 -25px;
+            }
+            .item{
+                margin-bottom: 2rem;
+                @include mq(lg){
+                    margin:0 10px 3rem;
+                }
+                h3{
+                    font-size: rem(16);
+                    color: #333;
+                    font-weight: normal;
+                }
+                p{
+                    color: #999;
+                    font-size: rem(13);
+                    margin-bottom: 0;
+               
+
+                }
+            }
+            .icon {
+                border-width: 1px;
+                border-color:$color-primary;
+                border-style: solid;
+                border-radius: 50% 0 50% 50%;           
+              
+                width: 78px;
+                height: 78px;
+                color: $color-primary;
+                text-align: center;
+                line-height: 76px;
+                .iconfont{
+                    font-size: rem(36);
+                }
+              }              
+        }
+        .ss10{
+            text-align: center;
+            margin-bottom: 2rem;
+            @include mq(md){
+                min-width: 3rem;
+            }
+            @include mq(lg){
+                min-width: 4rem;
+            }
+            .item{
+             
+                padding-top: 2rem;
+              
+                @include mq(sm){
+                    min-width: 180px;
+                }
+                .icon{
+                    background: url('../img/i-bg-v8.png') no-repeat center center; 
+                     width: 77px;      margin: 0 auto 1rem;
+                    height: 89px;                  
+                    line-height: 87px;
+                    @include mq(lg){
+                        margin: 0 auto 2rem;
+                    }
+                }
+                .iconfont{
+                    color: $color-primary;
+                    font-size: rem(42);
+                }
+                h3{
+                    font-weight: normal;
+                    margin-top: 0;
+                    font-size: 1rem;
+                    color: #333;
+                    margin-bottom: 1rem;
+                }
+                p{
+                    font-size: rem(13);
+                    color: #999;
+                }
+            }
+        }
+        .ss10v1{
+            margin-bottom: 2rem;
+            @include mq(md){
+                min-width: 3rem;
+            }
+            @include mq(lg){
+                min-width: 4rem;
+            }
+        }
+        .ss11{
+            margin-bottom: 3rem;
+
+            .pic{
+                text-align: center;
+            }
+        }
+        .ss12{
+            text-align: center;
+            padding-top: 2rem;
+            margin-bottom: 3rem; overflow: hidden;
+            .item{
+                margin: 0 auto 2rem;
+                position: relative;
+                .arrow{
+                    position: absolute;
+                    right: -2.1rem;
+                    top: 2.6rem;
+                    z-index: 100;
+                }
+                &.item5{
+                    .arrow{
+                        display: none;
+                    }
+                }
+                .icon{
+                   
+                    margin: 0 auto 1.5rem;
+                 
+                    line-height: 80px;
+                    color: $color-primary;
+              
+                        border-width: 2px;
+                        border-color: rgb(246, 67, 71);
+                        border-style: solid;
+                        border-radius: 50%;
+                     
+                        width: 80px;
+                        height: 80px;
+                   
+                 
+                      
+                    .iconfont{
+                        font-size: rem(32);
+                    }
+                }
+             
+                h3{
+                    font-size: 1rem;
+                    margin: 1rem ;
+                }
+                p{
+                    color: #999;
+                }
+            }
+        }
+
+        .ss13{
+            padding-top: 2rem;
+            @include mq(lg){
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+    
+            .item{
+              box-shadow: 0 0 12px rgba(0,0,0,.06);
+                padding: 1rem;
+                background-color: #fff;
+               
+                border-radius: 6px;
+                padding-bottom: 1.6rem;
+                position: relative;
+                margin-bottom: 4rem;
+                @include mq(lg){
+                    height: 100%;      margin: 0 -10px 0;
+                }
+                .icon{
+                    text-align: center;
+                    color: $color-primary;
+                  
+                    .iconfont{
+                        font-size: rem(32);
+                    }
+                }
+                h3{
+                    font-size: rem(14);
+                    text-align: center;
+                    color: #333;
+                    @include mq(lg){
+                        font-size: rem(16);
+                    }
+                }
+                p{
+                    font-size: rem(12);
+                    text-align: justify;
+                    @include mq(md){
+                        font-size: rem(13);
+                    }
+                }
+                .num{
+                    border:5px $color-primary solid;
+                    background-color: #fff;
+                    text-align: center;
+                    line-height: 50px;
+                    font-size: rem(20);
+                    color: $color-primary;
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -30px;
+                    bottom: -30px;
+                    font-weight: bold;
+                    @include mq(md){
+                        width: 70px;
+                        height: 70px;  line-height: 58px;  border:6px $color-primary solid;    margin-left: -35px;    bottom: -35px;
+                    }
+                }
+            }
+        }
+
+        &.active{
+            display: block;
+        }
+    }
+    .s4{
+        padding-top: 2rem;
+        .box{
+            margin-bottom: 2rem;
+            .title{
+                color: $color-primary;
+                font-weight: normal;
+                font-size: 1rem;
+                position: relative;
+                padding-left: 1.5rem;
+                margin-bottom: 1rem;
+                &::before{
+                 
+                    border-radius: 50%;
+                    background-color: rgb(102, 102, 102);
+                    position: absolute;                    
+                    width: 8px;
+                    height: 8px;
+                    content: "";
+                    display: block;
+                    z-index: 100;
+                    left: 0;
+                    top: .6rem;                  
+                      
+                      
+                }
+            }
+            .pic{
+                margin-bottom: 1rem;
+                img{
+                    width: 100%;
+                    @include mq(md){
+                        height: 140px;
+                        object-fit: cover;
+                        width: 220px;
+                    }
+                  
+                    @include mq(lg){
+                        width: 250px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+}

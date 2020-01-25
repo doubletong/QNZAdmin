@@ -1,0 +1,385 @@
+.page-software {
+    .s1{
+        .pic{
+            @include mq(md){
+                width: 320px;
+            }
+            @include mq(lg){
+                width: auto;
+            }
+        }
+    }
+    .s2 {
+        margin-bottom: 3rem;
+        .value{
+            @include mq(lg){
+               margin: 0 -25px;
+            }
+        }
+        .item {
+            text-align: center;
+            padding-top: 2rem;
+           
+            @include mq(lg){
+                margin: 0 10px;
+             }
+            .icon {
+
+                margin: 0 auto 1rem;
+
+                text-align: center;
+                line-height: 82px;
+                color: $color-primary;
+
+                border-width: 1px;
+                border-color: $color-primary;
+                border-style: solid;
+                border-radius: 50%;
+
+                width: 84px;
+                height: 84px;
+
+
+
+                .iconfont {
+                    font-size: rem(36);
+                }
+            }
+
+            h4 {
+                color: #333;
+                margin: 1rem 0;
+                font-weight: normal;
+                @include mq(lg) {
+                    margin: 1.2rem 0;
+                }
+            }
+
+            p {
+                color: #999;
+                font-size: rem(14);
+
+            }
+        }
+    }
+
+    .s3 {
+        margin-bottom: rem(30);
+
+        .title {
+            font-size: rem(18);
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .ser-header {
+            .row{
+                @include mq(lg) {
+                    margin: 0 -25px;
+                }
+            }
+            .item {
+                background-size: cover;
+                display: block;
+                height: 150px;
+                border-radius: 6px;
+                font-size: rem(22);
+                box-shadow: 0 0 6px rgba(0, 0, 0, .05);
+                background-color: #fff;
+                padding: 1.5rem 1rem 0;
+                text-align: center;
+                margin-left: -15px;
+                margin-right: -15px;
+                @include mq(md) {
+                    margin-left:0;
+                    margin-right: 0;
+                }
+                @include mq(lg) {
+                    height: 346px;   padding: 3rem 1rem 0; 
+                    margin-left:10px;
+                    margin-right: 10px;
+                 
+                }
+
+                .icon {
+                   
+                    border-radius: 50%;
+                    background-color: $color-primary;
+
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    line-height: 60px;
+                    margin: 0 auto 1rem;
+                    color: #fff;
+
+                    @include mq(lg) {
+                        width: 92px;
+                        height: 92px;
+                        line-height: 92px;   margin: 0 auto 2rem;  
+                    }
+
+                    .iconfont {
+                        font-size: rem(36);
+                        @include mq(md) {
+                            font-size: rem(38);
+                        }
+                        @include mq(lg) {
+                            font-size: rem(42);
+                        }
+                    }
+                }
+
+                h4 {
+                    font-size: rem(12);
+                    color: #333;
+                    margin: 1rem auto;
+                    font-weight: normal;
+                    @include mq(md) {
+                        font-size: rem(15);
+                    }
+                    @include mq(lg) {
+                        font-size: rem(18);    margin: 1rem auto 2rem;
+                    }
+                }
+
+                p {
+                    font-size: rem(14);
+                    display: none;
+
+                    @include mq(lg) {
+                        font-size: 1rem;
+                        padding: 0 2rem;
+                        display: block;
+                    }
+                }
+
+                &:hover {
+                    background: $color-primary;
+                    color: #fff;
+
+                    .icon {
+                        background-color: #fff;
+                        color: $color-primary;
+                    }
+
+                    h4 {
+
+                        color: #fff;
+                    }
+                }
+
+                &.active {
+                    color: #fff;
+                    background: $color-primary;
+
+                    .icon {
+                        background-color: #fff;
+                        color: $color-primary;
+                    }
+
+                    &::after {
+                        content: " ";
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border: 7px $color-primary solid;
+                        border-bottom-color: transparent;
+                        border-left-color: transparent;
+                        border-right-color: transparent;
+                        position: absolute;
+                        bottom: -14px;
+                        left: 50%;
+                        margin-left: -7px;
+                        z-index: 100;
+
+                    }
+
+                    h4 {
+
+                        color: #fff;
+                    }
+                }
+
+
+            }
+
+        }
+    }
+
+    .tabcontent {
+        .p22{
+            @include mq(lg) {
+                padding-right: 3rem;
+            }
+        }
+        .ss1 {
+            margin-bottom: 4rem;
+        }
+
+        .ss2 {
+            padding-top: 2rem;
+            margin-bottom: 3rem;
+
+            .item {
+                border: 1px #eee solid;
+                border-radius: 6px;
+                padding: 1rem;
+                background-color: #fff;
+                margin-bottom: rem(20);
+                @include mq(lg) {
+                    padding: 2rem;
+                }
+                .icon {
+                    border-radius: 50%;
+                    background-color: rgb(255, 255, 255);
+                    color: $color-primary;
+                    width: 84px;
+                    height: 84px;
+                    box-shadow: 0 0 12px rgba(0, 0, 0, .1);
+                    text-align: center;
+                    line-height: 84px;
+
+                    .iconfont {
+                        font-size: rem(32);
+                    }
+                }
+
+                h3 {
+                    color: #333;
+                    font-size: 16px;
+                }
+
+                p {
+                    color: #999;
+                    font-size: rem(14);
+                    margin-bottom: 0;
+                }
+
+            }
+        }
+
+        .ss3 {
+            text-align: center;
+            padding-top: 1rem;
+
+            .item {
+                background: url('../img/i-bg-v3.png') no-repeat center center;
+                width: 124px;
+                height: 144px;
+                margin: 0 auto 2rem;
+                padding-top: 2rem;
+                line-height: 1.3;
+                min-width: 130px;
+
+                @include mq(sm) {
+                    min-width: 180px;
+                }
+
+                .iconfont {
+                    color: $color-primary;
+                    font-size: rem(42);
+                }
+
+                h3 {
+                    font-weight: normal;
+                    margin-top: 0;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .ss4 {
+            text-align: center;
+            padding-top: 2rem;
+            margin-bottom: 3rem;
+
+            .item {
+                margin: 0 auto 2rem;
+                @include mq(lg){
+                    margin: 0 auto 3rem;
+                }
+                .icon {
+                    background: url('../img/i-bg-v4.png') no-repeat center center;
+                    margin: 0 auto 1.5rem;
+                    width: 78px;
+                    height: 90px;
+                    line-height: 90px;
+                    color: #fff;
+
+                    .iconfont {
+                        font-size: rem(32);
+                    }
+                }
+
+                h2 {
+                    color: $color-primary;
+                    font-size: rem(18);
+                    font-weight: normal;  
+                }
+
+                h3 {
+                    font-size: 1rem;
+                    margin: 1rem;
+                    color: #333; font-weight: normal;  
+                }
+
+                p {
+                    color: #999;
+                    font-size: rem(12);
+                    @include mq(md){
+                        font-size: rem(14);
+                    }
+                }
+            }
+        }
+
+        .ss5 {
+            margin-bottom: 2rem;
+            @include mq(lg){
+                margin:0 -25px 3rem;                
+            }
+            .item {
+                margin-bottom: rem(30);
+                @include mq(lg){
+                   
+                    margin: 0 10px 3rem;
+                }
+                h3 {
+                    font-size: rem(18);
+                    color: #333;
+                    font-weight: normal;
+                }
+
+                p {
+                    color: #999;
+                    font-size: rem(13);
+                    margin-bottom: 0;
+
+                    @include mq(lg) {
+                        font-size: 1rem;
+                    }
+
+                }
+            }
+
+            .icon {
+                border-width: 1px;
+                border-color: $color-primary;
+                border-style: solid;
+                border-radius: 50%;
+
+                width: 90px;
+                height: 90px;
+                color: $color-primary;
+                text-align: center;
+                line-height: 88px;
+              
+                .iconfont {
+                    font-size: rem(36);
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,87 @@
+.mapsite{
+   
+    padding-bottom: 1rem;
+ 
+    color: #ccc;
+    a{
+        color: #999;
+    }
+
+    span{
+        color: #333;
+    }
+}
+.page-news {
+    padding-top: 2rem;
+    .news-list{
+        .item{
+            padding: 1rem;
+            background-color: #fff;
+            margin-bottom: 20px;               
+            a{
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                grid-gap: 20px;     
+                font-size: 14px;
+                line-height: 1.8;
+                transition: all .25s;        
+
+       
+                .pic{
+                    img{
+                        transition: all .25s;
+                    }
+                }
+                .txt{
+                    .title{
+                        font-size: rem(24);font-weight: normal;margin: 0;
+                        color: #333;
+                    }
+                    .note{
+                        div{
+                            display: inline-block;
+                            color: #999; margin-right: 20px;
+                        }
+                    }
+                    .summary{
+                        color: #666;
+                        padding-top: 12px;
+                    }
+                }
+               
+                .count{                  
+                    color: #F60;
+                }
+                @include hover{
+                    .title{
+                       
+                        color:$color-primary;
+                    }
+                    .pic{
+                        img{
+                            transform: scale(1.05)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-news-detail{
+    padding-top: 1rem;
+    .news-content{
+        background-color: #fff; padding: 2rem;
+        margin-bottom: 2rem;
+        img{
+            max-width: 100%;
+        }
+        .page-title{
+            text-align: center;
+            margin-bottom: 3rem;
+            .note{
+                color: #999;
+            }
+        }
+    }
+}

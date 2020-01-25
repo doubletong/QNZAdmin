@@ -1,0 +1,147 @@
+.page-cases {    
+   background-color: #fff;
+    .s1 {
+      text-align: center;
+        
+    }
+    .s2 {
+        padding-top: 2rem;
+        @include mq(lg){
+            padding-top: 3rem;
+        }
+        .title-se {
+            margin-bottom: 2rem;
+            @include mq(lg){
+                margin-bottom: 3rem;
+            }
+            h3 {
+                text-align: center;
+                font-size: rem(20);
+                font-weight: normal;
+                color: #333;
+            }
+        }
+       
+        .case-list{
+            .item{
+                margin-bottom: 2rem; background-color: #fff;
+                border:1px #fff solid;
+              transition: all .2s;
+              display: block;
+                .pic{
+                    text-align: center;
+                    background-color: #f4f8fd;
+                    margin-bottom: 1rem;
+                    img{
+                        display: block;
+                        margin: 0 auto;
+                    }
+                }
+                .txt{
+                    padding: 0 1rem .5rem;
+                    h3{
+                        font-size:1rem; color: #333;
+                    }
+                    p{
+                        font-size: rem(14); color: #666;
+                    }
+                }
+
+                &:hover{
+                    transform: scale(1.05);
+                    box-shadow: 0 0 12px rgba(0,0,0,.1);  border:1px $color-primary solid;
+                    .txt{
+                        h3{
+                            color: $color-primary;
+                        }
+                    }
+                }
+               
+            }
+        }
+      
+    }
+}
+
+.page-cases-detail{
+    background-color: #fff;
+    padding: 0;
+    position: relative;
+  
+    @include mq(lg){
+        padding-right: 50%;
+    }
+   
+    .intro{
+         height: 100%;
+        padding-top: 3rem;       
+        padding-bottom: 3rem;
+        padding-left: 15px;
+        padding-right: 15px;
+        @include mq(lg){
+            width: 310px; padding-top: 1rem;           
+            right: 50%;
+            position: absolute;          
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @include mq(xl){
+            margin-right: -555px;
+        }
+        .txt{
+            position: sticky;
+            top: 110px;
+        }
+        .title{
+            text-align: center;
+            font-size: rem(20);
+            position: relative;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: normal;
+            &::after{
+                content: " ";
+                display: block;
+                height: 4px;
+                background-color: $color-primary;
+                width: 124px;
+                border-radius: 2px;
+                left: 50%;
+                bottom: 0;
+                margin-left: -62px;
+                position: absolute;
+            }
+            
+        }
+        p{
+            text-align: justify;
+        }
+        .back{
+            margin-top: 3rem;
+        }
+        .btn-primary-outline{
+            border:1px $color-primary solid;
+            background-color: #fff;
+            color: $color-primary;
+            border-radius: 20px;
+         
+            @include mq(lg){
+                font-size: rem(18);
+                line-height: 38px;
+            }
+        }
+    }
+
+    .pic{
+        @include mq(lg){
+            margin-right: -120px;
+        }
+        @include mq(lg){
+            margin-right: -210px;
+        }
+        img{
+            width: 100%;
+            display: block;
+        }
+    }
+}

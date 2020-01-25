@@ -1,0 +1,39 @@
+.page-oem{
+    background-color: #fff;
+    .content{
+        margin-bottom: 3rem;
+    }
+    .item{
+        text-align: center;
+        padding-top: 2rem;
+        .icon{
+            width: 85px; height: 98px;
+            margin: 0 auto 1rem;
+            background: url('../img/i-bg-v1.png') no-repeat center center;
+            text-align: center;
+            line-height: 98px;
+            color: #fff;
+            .iconfont{
+                font-size: 2.65rem;
+            }
+        }
+        .icon1{
+            background: url('../img/i-bg-v2.png') no-repeat center center; width: 88px; height: 102px; line-height: 102px;
+            color: $color-primary;
+        }
+        h4{
+            color: #333;
+            margin: 1rem 0;
+            @include mq(lg){
+                margin: 1.5rem 0;
+            }
+        }
+        p{
+            color: #999;
+            font-size: rem(14);
+            @include mq(lg){
+               padding: 0 1rem;
+            }
+        }
+    }
+}

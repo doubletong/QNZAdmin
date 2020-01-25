@@ -1,0 +1,158 @@
+.se-title {
+    margin-bottom: 1rem;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 3rem;
+    }
+    h3 {
+        font-size: rem(22);
+        color: #333;
+        @media screen and (min-width: 768px) {
+            font-size: rem(32);
+        }
+    }
+}
+
+.page-post {
+    padding: 4rem 1rem;
+    .detail-note {
+        border-bottom: 1px #ddd solid;
+        padding: 1rem 0;
+        margin: 0 0 1.5rem;
+        color: #999;
+        font-size: rem(12);
+        @media screen and (min-width: 768px) {
+            font-size: rem(16);
+            margin: 0 0 3rem;
+        }
+        span {
+            margin-right: .8rem;
+        }
+    }
+    &.section2 {
+        max-width: 760px;
+        margin: 0 auto;
+    }
+}
+
+.posts {
+    max-width: 760px;
+    margin: 0 auto;
+    position: relative;
+    .blognav {
+        background-color: #f7f7f7;
+        position: fixed;
+        left: 50%;
+        top: 200px;
+        z-index: 1000;
+        margin-left: 400px;
+        padding: .5rem 0;
+        .bird {
+            position: absolute;
+            left: 4rem;
+            top: -95px;
+            z-index: 200;
+            height: 100px;
+        }
+        ul {
+            @include reset-list;
+            li {
+                &:last-child {
+                    border-bottom: none;
+                }
+                a {
+                    display: block;
+                    padding: .8rem 2rem;
+                    text-align: center;
+                    color: #333;
+                    @include hover {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+    .item {
+        display: flex;
+        flex-flow: row wrap;
+        /* Then we define how is distributed the remaining space */
+        justify-content: space-around;
+        flex: 100px 1;
+        border-bottom: 1px #eee solid;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        .pic {
+            display: none;
+            @media screen and (min-width: 768px) {
+                width: 150px;
+                display: block;
+            }
+        }
+        .des {
+            flex: 1;
+            @media screen and (min-width: 768px) {
+                padding-left: rem(24);
+            }
+            h2 {
+                margin: 0 0 8px;
+                color: #666;
+                font-size: rem(20);
+                line-height: 1.5;
+                @media screen and (min-width: 768px) {
+                    font-size: rem(24);
+                }
+            }
+            .note {
+                color: #999;
+                font-size: rem(14);
+                span {
+                    margin-right: .7rem;
+                }
+            }
+            .txt {
+                text-align: justify;
+                color: #999;
+            }
+        }
+        &:hover {
+            .des {
+                h2 {
+                    color: #000;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+article {
+    p {
+        text-align: justify;
+        line-height: 1.8;
+    }
+}
+
+.pager {
+    text-align: center;
+    padding: 3rem;
+    a {
+        display: inline-block;
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        background-color: #f7f7f7;
+        border-radius: 50%;
+        color: #333;
+        transition: all .25s;
+        @include hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
+    &.detail-pager {
+        display: flex;
+        &>div {
+            flex: 1;
+        }
+    }
+}

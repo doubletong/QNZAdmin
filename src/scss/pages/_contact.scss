@@ -1,0 +1,62 @@
+.page-contact {
+    background-color: #fff;
+    padding: 5rem 3rem;
+    margin-bottom: 1rem;
+    .twocol {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        .company {
+            padding-right: 2rem;
+            text-align: right;
+            span {
+                font-size: rem(12);
+            }
+        }
+    }
+    .formsent {
+        padding-left: 2rem;
+        ul {
+            @include reset-list;
+            margin-bottom: 2rem;
+            li {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .form-contact {
+        .form-controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 2rem;
+        }
+        .input-group {
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        input,
+        textarea {
+            width: 100%;
+            padding: .6rem .6rem;
+            border: none;
+            outline: none;
+            box-sizing: border-box;
+            background-color: #eee;
+        }
+        .actions {
+            text-align: center;
+            padding: 1rem;
+            button {
+                margin: 0 1rem;
+            }
+        }
+    }
+    img {
+        max-width: initial !important;
+    }
+}
+
+.baidumap {
+    min-height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}

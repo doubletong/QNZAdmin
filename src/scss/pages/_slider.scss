@@ -1,0 +1,96 @@
+.bxslider {
+    .item {
+        height: 200px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        @include mq(sm){
+            height:330px;
+        }
+        @include mq(md){
+            height: 380px;
+        }
+        @include mq(lg){
+            height: 420px;
+        }
+        @include mq(xl){
+            height: 630px;
+        }
+    }
+}
+
+.bx-wrapper {
+    border: none;
+    box-shadow: none;
+    margin-bottom: 0;
+
+    .bx-controls {
+
+        max-width: 1140px;
+        margin: 0 auto;
+
+    }
+
+    .bx-pager {
+        bottom: 1rem;
+        @include mq(lg){
+            bottom: 2rem;
+        }
+        &.bx-default-pager {
+            max-width: 1140px;
+           
+            a {
+                width: rem(8);
+                height: rem(8);
+                border-radius: 50%;
+                margin: 0 rem(8);
+                background-color: #fff;
+                @include mq(lg){
+                    width: rem(16);
+                    height: rem(16);  
+                    margin: 0 rem(10);
+                }
+                &:hover {
+                    background-color: $color-primary;
+                }
+
+                &.active {
+                    background-color: $color-primary;
+                }
+            }
+        }
+    }
+
+    .bx-controls-direction a {
+        z-index: 1000;
+        width: 57px;
+        height: 57px;
+        margin-top: -28px;
+        opacity: .5;
+        display: none;
+
+        @include mq(md) {
+            display: block;
+        }
+    }
+
+    .bx-next {
+        right: 10px;
+        background: url(../img/icon-right.png) center center no-repeat;
+
+        &:hover {
+            background-position: center center;
+            opacity: 1;
+        }
+    }
+
+    .bx-prev {
+        left: 10px;
+        background: url(../img/icon-left.png) center center no-repeat;
+
+        &:hover {
+            background-position: center center;
+            opacity: 1;
+        }
+    }
+}

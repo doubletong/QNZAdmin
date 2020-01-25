@@ -1,0 +1,66 @@
+@viewport {
+    width: device-width;
+}
+
+@include font-face('fjalla one', 'fjalla-one-v5-latin-regular', 'fjalla-one-v5-latin', 'sans-serif');
+html {
+    background-color: $color-background;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+* {
+    &:before,
+    &:after {
+        box-sizing: inherit;
+    }
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    color: $color-text;
+    font-family: $font-family-default;
+    min-height: 100%;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    font-size: rem(16);
+    line-height: 1.8;
+    background-color: #f9f9f9;
+}
+
+a {
+    background: transparent;
+    color: $color-text;
+    text-decoration: none;
+    transition: color .2s;
+    &:hover {
+        color: $color-primary;
+    }
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-family-display;
+    font-weight: normal;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.bg-linear {
+    background-image: linear-gradient(-270deg, rgb(28, 167, 222), rgb(66, 214, 198));
+}

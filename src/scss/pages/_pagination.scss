@@ -1,0 +1,102 @@
+
+
+
+.pagination {
+    text-align: center;
+    font-size: rem(14);
+    color: $color-text-weak;
+ 
+        padding: 3rem 0;
+
+    .pager {
+        list-style: none;
+        margin: 0 1rem 0 0;
+        padding: 0;
+
+        display: inline-block;
+
+       
+
+        li {
+            display: inline-block;
+            margin: 0 .2rem;
+
+            a {
+                display: block;
+                border-width: 1px;
+                border-color: rgb(191, 191, 191);
+                border-style: solid;
+                border-radius: 14px;
+                height: 28px;
+                line-height: 26px;
+              
+                padding: 0 .56rem;
+
+                background-color: #fff;
+                text-align: center;
+                color: $color-text-weak;
+
+                @include hover {
+                    color: #FFF;
+                    background-color: $color-primary;
+                    border: 1px $color-primary solid;
+                }
+
+                &.prev,
+                &.next {
+                    padding: 0 1rem;
+                }
+
+                &.more {
+                    border: none;
+
+                    @include hover {
+                        color: $color-primary;
+                        background-color: #fff;
+                        border: none;
+                    }
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: $color-primary;
+                    color: #fff;
+                    border: 1px $color-primary solid;
+                }
+            }
+
+            &.disabled {
+                a {
+                    background-color: #eee;
+                    color: $color-text-weak;
+                    cursor: no-drop;
+                }
+
+            }
+
+        }
+    }
+    input.pagenum{
+        border:none;
+        border-bottom: $color-primary 1px solid;
+        text-align: center;
+        width: 50px;background-color: transparent;
+        outline: none;color: $color-primary;
+    }
+    a.go{
+        display: inline-block;
+       
+        border-radius: 14px;
+        height: 28px;
+        line-height: 26px;
+        font-size: rem(14);
+        padding: 0 1rem;
+        background-color:$color-primary;
+        text-align: center;
+        color: #fff;
+        margin-left: .5rem;
+    }
+
+}
+

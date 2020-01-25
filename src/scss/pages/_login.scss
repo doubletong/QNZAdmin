@@ -1,0 +1,80 @@
+.page-login{
+    background: $color-primary url(../img/home-slide-1.jpg) no-repeat center center;
+    background-size: cover;
+    height:500px ;
+
+    .container{
+        height: 100%;
+    }
+    .r1{
+        height: 100%;
+    }
+    .box-login{
+        background-color: #fff;
+        box-shadow: 0 0 12px rgba(0,0,0,.2);
+        border-radius: 6px;
+        padding: 1rem;
+       text-align: center;
+       h3.title{
+           color: #333;
+           margin-bottom: 1.3rem;
+       }
+       .form-group{
+           margin-bottom: 1.5rem;
+       }
+       input{
+           border:1px #ddd solid;
+           padding: 7px 8px;
+           width: 100%;
+           border-radius: 3px;
+       }
+
+       button{
+           width: 100%;
+       }
+       .actions{
+           margin-bottom: .5rem;
+       }
+       a{
+           color:$color-primary;
+           &:hover{
+               text-decoration: underline;
+           }
+       }
+    }
+}
+
+.page-reg{
+    padding-top: 2rem;
+    .info-form{
+        background-color: #fff;
+        padding: 2rem 2rem 3rem;
+        .page-title{
+            border-bottom: 2px #eee solid;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+        .form-group{
+            min-height: 60px;
+            label.form-label{
+                margin: 0;
+                text-align: right;
+                display: block;
+            }
+        }
+        input.form-control{
+            padding: .4rem 10px;
+            width: 300px;
+            border-radius: 6px;
+            border:1px #ddd solid;
+            outline-style: none;
+        }
+        textarea.form-control{
+            padding: .4rem 10px; border-radius: 6px;
+            border:1px #ddd solid;
+            outline-style: none;
+            width :100%;
+            margin: .8rem 0;
+        }
+    }
+}

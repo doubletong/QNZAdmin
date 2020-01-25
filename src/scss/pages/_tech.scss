@@ -1,0 +1,235 @@
+.banner-tech{
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 200px;
+    @include mq(sm){
+        height:330px;
+    }
+    @include mq(md){
+        height: 380px;
+    }
+    @include mq(lg){
+        height: 420px;
+    }
+    @include mq(xl){
+        height: 630px;
+    }
+}
+.page-tech {    
+    background-color: #fff;
+    
+    section{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @include mq(md) {
+            padding-top:2.5rem;
+            padding-bottom: 2.5rem;
+        }
+
+        @include mq(lg) {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        @include mq(xl) {
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+        }
+    }
+     .s1 {
+       text-align: center;
+       padding-bottom: 0;
+     }
+     .s2{
+         padding-top: 2rem;
+         padding-bottom: 0;
+         overflow: hidden;
+         .tech-list{
+             .item{
+                 text-align: center;
+                 position: relative;
+                 .arrow{
+                    position: absolute;
+                    right: -30px;
+                    top: 45px;
+                    z-index: 100;
+                 }
+                 .pic{
+                     background: url('../img/icon-bg.png') no-repeat center center;
+                     height: 92px; width: 79px;
+                     margin: 0 auto;
+                     text-align: center;
+                     line-height: 92px;
+                     color: $color-primary;
+                     margin-bottom: 1rem;
+                     .iconfont{
+                         font-size: rem(42);
+                     }
+                 }
+                 h3{
+                     font-size: rem(18);
+                     font-weight: normal;
+                     margin-bottom: 1.2rem;
+                 }
+                 p{
+                     font-size: rem(14);
+                     color: #999;
+                 }
+             }
+         }
+     }
+
+     .s3 {
+        text-align: center;       
+        .ser-header{
+            .item{
+                background-size: cover;
+                display: block;
+                height: 120px;
+                color: #fff;
+                font-size: rem(16);
+                padding-top: 1rem;
+                background-color: #333;
+                background-position: center center;
+                background-repeat: no-repeat;
+                @include mq(md) {
+                    height: 160px;    padding-top: 1.8rem;
+                    font-size: rem(18);
+                }
+                @include mq(lg) {
+                    height: 210px;    padding-top: 2.5rem;  font-size: rem(22);
+                }
+                .icon{
+                    height: 3.5rem;
+                    @include mq(md) {
+                        height: 4.5rem;
+                    }
+                    @include mq(lg) {
+                        height: 5.5rem;
+                    }
+                    .iconfont{
+                        font-size: rem(36);
+                        @include mq(md) {
+                            font-size: rem(46);
+                        }
+                        @include mq(lg) {
+                            font-size: rem(56);
+                        }
+                    }
+                }
+                &:hover{
+                    background: $color-primary;
+                }
+                &.active{
+                    background: $color-primary;
+                    &::after{
+                        content: " ";
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        border:7px $color-primary solid;
+                        border-bottom-color: transparent;
+                        border-left-color: transparent;
+                        border-right-color: transparent;
+                        position: absolute;
+                        bottom: -14px;
+                        left: 50%;
+                        margin-left: -7px;
+                        z-index: 100;
+                    }
+                }
+            }
+            .make{
+                background-image: url('../img/h01.jpg');              
+                
+            }
+            .life{
+                background-image: url('../img/h02.jpg');
+                
+            }
+            .city{
+                background-image: url('../img/h03.jpg');
+                
+            }
+        }
+
+        .tab-content{
+            background-color: #f7f7f7;
+            .tabcontent{
+                padding-top: 2.5rem;
+                padding-bottom: 2.5rem;
+                display: none;
+                &.active{
+                    display: block;
+                }
+                .item{
+                    .icon{
+                        color: $color-primary;
+                        .iconfont{
+                            font-size: rem(52);
+                        }
+                    }
+                    h3{
+                        font-size: 1rem;
+                        font-weight: normal;
+                        color: #333;
+                        margin-bottom: .5rem;
+                        @include mq(lg){
+                            font-size: rem(18);   margin-bottom: 1.2rem;
+                        }
+                    }
+                    p{
+                        max-width: 200px;
+                        margin: 0 auto;
+                        color: #999;
+                        text-align: justify;
+                        font-size: rem(12);
+                        @include mq(lg){
+                            font-size: rem(14);
+                        }
+                    }
+                }
+               
+
+                .tabbot{
+                    background-color: #fff;
+                    padding: 1rem;
+                    margin-top: 3rem;
+                    box-shadow: 0 0 5px rgba(0,0,0,.1);
+                    @include mq(lg){
+                        padding: 2rem;
+                    }
+                    .pic{
+                        margin-bottom: 1rem;
+                        img{
+                            width: 100%;
+                            max-width: none;
+                            @include mq(lg){
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                    .tabtxt{
+                        text-align: left;
+                        h3{
+                            font-size: rem(18);
+                            color: #333;
+                            font-weight: bold;
+                            margin-bottom: 1rem;
+                            @include mq(lg){
+                                font-size: rem(20); margin-bottom: 1.5rem;
+                            }
+                        }
+                        p{
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+        }
+          
+      }
+ }

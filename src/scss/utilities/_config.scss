@@ -1,0 +1,15 @@
+// $old-ie
+//
+// Turn on/off IE specific styles
+//
+// $old-ie - {boolean}
+// @source  - http://jakearchibald.github.com/sass-ie/
+$old-ie: false !default;
+// $zindex
+//
+// Define z-indexes for various elements
+//
+// $zindex - {map}
+// @source - http://www.sitepoint.com/using-sass-maps/
+$zindex: ( overlay: 9000, dropdown: 8000, nav: 7000, header: 6000, footer: 5000, pseduo: 4000, default: 1, bottomless-pit: -10000);
+$breakpoints: ( 'sm': ( min-width: 576px), 'md': ( min-width: 768px), 'lg': ( min-width: 992px), 'xl': ( min-width: 1201px)) !default;

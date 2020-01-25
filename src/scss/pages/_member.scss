@@ -1,0 +1,134 @@
+
+
+.page-member{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .mapsite{
+        border-bottom: 1px #ddd solid;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        color: #ccc;
+        a{
+            color: #999;
+        }
+    
+        span{
+            color: #333;
+        }
+    }
+    .navs{
+        background-color: #fff; min-height: 500px;
+        width: 150px;
+        ul{
+            @include reset-list;
+            li{
+                a{
+                    display: block;
+                    padding: .8rem 1rem;
+                    text-align: center;
+                    &.active{
+                        background-color: $color-primary;
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+    .maincontent{
+        background-color: #fff;
+        padding: 1.5rem 1rem;
+        min-height: 500px;
+        
+        .table{
+            width: 100%;
+            tr{
+                &:nth-child(2n+1){
+                    background-color: #f7f7f7;
+                }
+            }
+            th{
+                border-bottom: 2px #333 solid;
+                background-color: $color-primary;
+                color: #fff;
+                font-weight: normal;
+                padding: 5px 12px;
+            }
+            td{
+                padding: 8px 12px;
+            }
+        }
+
+        .se-item{
+            border-bottom: 1px #ddd solid;padding: 1rem 2rem;
+        }
+        .downlist{
+            padding: 1rem;
+            .item{
+                border-bottom: 1px #ddd solid;
+                padding:1rem;
+                a{
+                    color:$color-primary;
+                }
+            }
+        }
+        .form-com{
+            background-color: #eee;
+            padding: 2rem 2rem 1rem;
+            margin-top: .5rem;
+            display: none;
+            
+            .row{
+                margin-bottom: 1.5rem;
+            }
+            label.form-label{
+                display: block;
+                text-align: right;
+            }
+           
+           
+        }
+        input.form-control{
+            padding: .4rem 10px;
+            width: 300px;
+            border-radius: 6px;
+            border:1px #ddd solid;
+            outline-style: none;
+        }
+        textarea.form-control{
+            padding: .4rem 10px; border-radius: 6px;
+            border:1px #ddd solid;
+            outline-style: none;
+            width :100%;
+            margin: .8rem 0;
+        }
+        .info-form{
+            .form-group{
+                min-height: 60px;
+                label.form-label{
+                    margin: 0;
+                    text-align: right;
+                    display: block;
+                }
+            }
+        }
+        hr{
+            border:none;
+            border-top: 1px #ccc solid;
+        }
+        .btn-upload{
+            width:80px;
+            height: 80px;
+            border:1px #ddd solid;
+            background-color: #fff;
+            display: inline-block;
+            text-align: center;line-height: 78px;
+            margin: .8rem 0;
+            border-radius: 6px;
+            .iconfont{
+                font-size: 2rem;
+                
+            }
+        }
+       
+    }
+}
