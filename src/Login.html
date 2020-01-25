@@ -10,8 +10,7 @@
     <title>
         后台管理
     </title>
-    <link href="Content/Public/Bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="Content/Public/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="fonts/iconfont.css" rel="stylesheet" />
     <link href="css/styles.min.css" rel="stylesheet" />
     <!--[if lt IE 9]>
       <script src="Content/Public/js/html5shiv.min.js"></script>
@@ -24,25 +23,26 @@
         <header>
             <h2>后台管理</h2> 
         </header>
-        <form method="post" class="loginForm">
-            <div class="form-group">
-                <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-user fa-fw"></i></div>
-                    <input class="form-control" type="email" placeholder="用户名">
+        <form method="post" class="loginForm">       
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="iconfont icon-user"></i></span>
                 </div>
+                <input type="text" class="form-control" placeholder="帐号/用户名" aria-label="Username" aria-describedby="basic-addon1">
             </div>
-            <div class="form-group">
-                <div class="input-group">
-                    <div class="input-group-addon"><i class="fa fa-desktop fa-fw"></i></div>
-                    <input class="form-control" type="email" placeholder="密码">
+            <div class="input-group mb-4">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon2"><i class="iconfont icon-lock"></i></span>
                 </div>
+                <input type="password" class="form-control" placeholder="密码" aria-label="password" aria-describedby="basic-addon2">
             </div>
+            
             <div class="checkbox">
                 <label>
                     <input type="checkbox"> 记住我
                 </label>
             </div>
-            <button type="submit" class="btn btn-primary">登录系统</button>
+            <button type="submit" class="btn btn-primary btn-block">登录系统</button>
         </form>
     </div>
 
@@ -54,25 +54,13 @@
     <script src="Content/Public/js/main.js"></script>
 
    <script>
-       var loginbox = {
-           initialize: function () {
-               var winheight = $(window).height(), lbheight = $('.loginbox').height();
-               var paddingTop = (winheight - lbheight) / 2 - 50;
-               $('.loginPage').css('padding-top', paddingTop + 'px');
-           }
-
-       }
+     
        $(function () {
-          
-           loginbox.initialize();
-
-           $(window).resize(function () {
-               loginbox.initialize();
-           });
+      
 
            $('button').click(function (e) {
                e.preventDefault();
-               location.href = 'Admin/Default.html';
+               location.href = 'default.html';
            });
           
        })
