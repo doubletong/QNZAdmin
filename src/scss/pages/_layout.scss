@@ -1,26 +1,96 @@
 .navbar-primary{
-    background-color: $color-primary;
-    .navbar-brand{
-        color: #fff;
-    }
-    a.nav-link{
-        color: #fff;
-    }
+   background-color: #fff;
+   box-shadow: 0 0 12px rgba(0,0,0,.1);
 }
 .wrapper{
     display: grid;
-    grid-template-columns: 200px auto;
-    min-height: calc(100%-62px);
+    grid-template-columns: 220px auto;
+    min-height: 100%;
 }
 
 .leftcol{
-    background-color:lighten( $color-primary,60%);
-    .mainmenu{
-        li{
-          
-            a{
+    background-color:$color-primary;
+    color: lighten($color: $color-primary, $amount: 30%);
+    .logo{
+        a{
+            display: block;
+            padding:.8rem 1rem;
+            text-align: center;
+            img{
                 display: block;
-                padding: .8rem 1rem;  border-bottom: 1px lighten( $color-primary,50%) solid;
+                margin: 0 auto;
+            }
+        }
+    }
+    .mainmenu{
+        @include reset-list();
+        &>li{          
+            &>a{
+                color:lighten($color: $color-primary, $amount: 40%);
+                display: block;
+                padding: .7rem 1.6rem .7rem 2.6rem;
+                position: relative;
+                font-size: rem(14);
+                &:hover{
+                    background-color: lighten($color-primary,5%);
+                    color: #fff;
+                }
+                &.active{
+                    background-color: lighten($color-primary,5%);color: #fff;
+                    &::after{
+                        content: " ";
+                        display: block;
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        background-color: $color-accent;
+                        right: 1rem;
+                        top: 1.2rem;
+                        z-index: 10;
+                        border-radius: 50%;
+                    }
+                }
+                .iconfont{
+                    color:lighten($color: $color-primary, $amount: 10%);
+                    font-size: rem(18);
+                    position: absolute;
+                    display: block;
+                    left: 1rem;
+                    top: .45rem;
+                    z-index: 10;
+                }
+                .arrow{
+                    position: absolute;
+                    top: .5rem;
+                    right: 1.8rem;
+                    left: auto;
+                    z-index: 100;
+                    display: block;
+                    transition:all .25s;
+                 
+                }
+               
+                &.open{
+                    color: #fff;
+                    .arrow{
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+            .submenu{
+                background-color: darken($color-primary,8%);
+                @include reset-list();
+                display: none;
+                padding-top: .5rem;
+                padding-bottom: .5rem;
+                li{
+                    a{
+                        color:lighten($color: $color-primary, $amount: 30%);
+                        display: block;
+                        padding: .5rem 1rem .5rem 2.3rem;
+                        font-size: rem(14);
+                    }
+                }
             }
         }
     }
@@ -28,7 +98,22 @@
 }
 
 .main-content{
-    padding: 1rem;
+    padding: 1.5rem 2rem;
+    .breadcrumb-container{
+        font-size: rem(12);
+        margin-bottom: 1.5rem;
+    }
+    .subheader{
+        margin-bottom: 1.5rem;
+        .subheader-title{
+            font-size: rem(22);
+            margin: 0;
+            .iconfont{
+                font-size: rem(22);
+                color: $color-secondary;
+            }
+        }
+    }
 }
 .rightcol{
     position: relative;
@@ -40,5 +125,6 @@
         width: 100%;
         padding: 1rem;
         text-align: center;
+        font-size: rem(12);
     }
 }

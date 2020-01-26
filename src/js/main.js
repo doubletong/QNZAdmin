@@ -1,5 +1,6 @@
 const buttons = document.getElementsByClassName('waves-effect');
-buttons.forEach(function(button){  
+console.log(buttons);
+Array.from(buttons).forEach(function(button){  
     button.addEventListener('click', function(event) {
         event.preventDefault();
 
@@ -65,6 +66,12 @@ buttons.forEach(function(button){
 
 $(document).ready(function() {
 
+
+    $("#mainmenu .down-nav>a").click(function(e){
+        e.preventDefault();
+        $(this).toggleClass('open')
+        $(this).next('.submenu').slideToggle();
+    })
   
     $(window).scroll(function() {
         if ($(this).scrollTop() > 350) {
