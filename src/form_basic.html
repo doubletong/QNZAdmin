@@ -1,140 +1,169 @@
-﻿
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+﻿<!doctype html>
+<html class="no-js" lang="">
 <head>
-    <title>
-        后台管理
-    </title>
-   
-    <link href="../Content/Admin/bootstrap/bootstrap.min.css" rel="stylesheet" />
-    <link href="../Content/Admin/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="../Content/Admin/css/Style.min.css" rel="stylesheet" />
-    <!--[if lt IE 9]>
-      <script src="../Content/Admin/js/html5shiv.min.js"></script>
-      <script src="../Content/Admin/js/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="utf-8">
+    <title>控制台</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <meta name="theme-color" content="#fafafa">
+   
+    <link href="fonts/iconfont.css" rel="stylesheet" />
+    <link href="css/styles.min.css" rel="stylesheet" />
+   
 </head>
 <body>
+    <!--[if IE]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->   
+      
+    
 
-    <!-- navbar start -->
-    <nav class="navbar navbar-default navbar-inverse" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand logo" href="#">bbicms Admin</a>
-        </div>
-
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/" title="返回首页"><i class="fa fa-home"></i> 返回首页</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">你好，Admin <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="/bbi-Admin/Users/UpdatePWD.aspx">修改密码</a></li>
-                    </ul>
-                </li>
-                <li><a href="/bbi-admin/loginOut.aspx"><i class="fa fa-sign-out"></i> 退出系统</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </nav>
-    <!-- navbar end -->
-
-    <div id="wrapper">
-
-        <div id="sidebar-nav" class="leftcol">
-            <aside>
-                <nav id="menu">
-                    <h3>导航</h3>
-                    <ul class="list-unstyled mainmenu">
-                        <li class="liitem">
-                            <a href="Default.html">
-                                <i class="fa fa-dashboard"></i> 控制面板
-                            </a>
-                        </li>
-
-                        <li class="liitem down-nav nav-open">
-                            <a href="#"><i class="fa fa-table"></i> 表格 <span class="badge">2</span></a>
-                            <ul class="list-unstyled submenu">
-                                <li>
-                                    <a href="TableBasic.html" class="active">
-                                        <i class="fa fa-angle-double-right"></i> 表格一
-                                        <div class="arrow-left"></div>
-                                    </a>
-                                </li>
-                                <li><a href="/BBI-Admin/Articles/NewsCategories.html"><i class="fa fa-angle-double-right"></i> 表格二</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="liitem down-nav">
-                            <a href="#"><i class="fa fa-edit"></i> 表单 <span class="badge">2</span></a>
-                            <ul class="list-unstyled submenu">
-                                <li><a href="FormBasic.aspx"><i class="fa fa-angle-double-right"></i> 基本表单</a></li>
-                                <li><a href="/BBI-Admin/Ad/ManagePositions.aspx"><i class="fa fa-angle-double-right"></i> 带验证表单</a></li>
-                            </ul>
-                        </li>
-                        <li class="liitem"><a href="/BBI-Admin/Pages/ManagePages.aspx"><i class="fa fa-paste"></i> 内容片段</a></li>
-
-                        <li class="liitem down-nav">
-                            <a href="#"><i class="fa fa-link"></i> 链接管理 <span class="badge">2</span></a>
-                            <ul class="list-unstyled submenu">
-                                <li><a href="/BBI-Admin/Links/ManageLinks.aspx"><i class="fa fa-angle-double-right"></i> 链接列表</a></li>
-                                <li><a href="/BBI-Admin/Links/ManageCategories.aspx"><i class="fa fa-angle-double-right"></i> 链接分类</a></li>
-                            </ul>
-                        </li>
-
-
-                        <li class="liitem down-nav">
-                            <a href="#"><i class="fa fa-shield"></i> 其它页面 <span class="badge">2</span></a>
-                            <ul class="list-unstyled submenu">
-                                <li><a href="../Login.html"><i class="fa fa-angle-double-right"></i> 登录页</a></li>
-                                <li><a href="../Register.html"><i class="fa fa-angle-double-right"></i> 注册页</a></li>
-                            </ul>
-                        </li>
-                        <li class="liitem down-nav">
-                            <a href="#"><i class="fa fa-cog"></i> 常规设置 <span class="badge">4</span></a>
-                            <ul class="submenu">
-                                <li><a href="/bbi-admin/Common/SiteInfo.aspx"><i class="fa fa-home"></i> 站点信息</a></li>
-                                <li><a href="/bbi-admin/Common/CompanyInfo.aspx"><i class="fa fa-info-circle"></i> 企业信息</a></li>
-                                <li><a href="/bbi-admin/Common/Social.aspx"><i class="fa fa-twitter"></i> 社交资料</a></li>
-                                <li class="hide"><a href="/bbi-admin/Common/MailSettings.aspx"><i class="fa fa-envelope-o"></i> 邮箱服务设置</a></li>
-                            </ul>
-                        </li>
-
-                    </ul>
-
-
-                </nav>
-
-                <div class="closemenu">
-                    <a href="#"><i class="fa fa-chevron-circle-left"></i></a>
-                </div>
-            </aside>
-
-        </div>
+    <div id="wrapper" class="wrapper">     
+          
+        <aside class="leftcol" id="leftcol">
+            <div class="logo"><a href="default.html"><img src="img/logo.png" alt="logo"></a></div>
+            <nav id="menu">
+            
+                <ul class="mainmenu" id="mainmenu">
+                    <li class="liitem nav-open">
+                        <a href="Default.html" class="active">
+                            <i class="iconfont icon-dashboard"></i> 控制面板
+                            <div class="arrow-left"></div>
+                        </a>
+                    </li>
+    
+    
+                    <li class="liitem down-nav">
+                        <a href="#"><i class="iconfont icon-table"></i> 表格 <i class="arrow iconfont icon-down"></i></a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="table_basic.html">
+                                    <i class="iconfont icon-angle-double-right"></i> 表格一
+                                </a>
+                            </li>
+                            <li><a href="/BBI-Admin/Articles/NewsCategories.html"><i class="iconfont icon-angle-double-right"></i> 表格二</a></li>
+                        </ul>
+                    </li>
+    
+                    <li class="liitem down-nav">
+                        <a href="#"><i class="iconfont icon-edit"></i> 表单 <i class="arrow iconfont icon-down"></i></a>
+                        <ul class="list-unstyled submenu">
+                            <li><a href="form_basic.html"><i class="iconfont icon-angle-double-right"></i> 基本表单</a></li>
+                            <li><a href="/BBI-Admin/Ad/ManagePositions.aspx"><i class="iconfont icon-angle-double-right"></i> 带验证表单</a></li>
+                        </ul>
+                    </li>
+                    <li class="liitem"><a href="/BBI-Admin/Pages/ManagePages.aspx"><i class="iconfont icon-file-text"></i> 页面管理</a></li>
+    
+                    <li class="liitem down-nav">
+                        <a href="#"><i class="iconfont icon-link"></i> 链接管理 <i class="arrow iconfont icon-down"></i></a>
+                        <ul class="list-unstyled submenu">
+                            <li><a href="/BBI-Admin/Links/ManageLinks.aspx"><i class="iconfont icon-angle-double-right"></i> 链接列表</a></li>
+                            <li><a href="/BBI-Admin/Links/ManageCategories.aspx"><i class="iconfont icon-angle-double-right"></i> 链接分类</a></li>
+                        </ul>
+                    </li>
+    
+    
+                    <li class="liitem down-nav">
+                        <a href="#"><i class="iconfont icon-file-image"></i> 其它页面 <i class="arrow iconfont icon-down"></i></a>
+                        <ul class="list-unstyled submenu">
+                            <li><a href="../Login.html"><i class="iconfont icon-angle-double-right"></i> 登录页</a></li>
+                            <li><a href="../Register.html"><i class="iconfont icon-angle-double-right"></i> 注册页</a></li>
+                        </ul>
+                    </li>
+                    <li class="liitem down-nav">
+                        <a href="#"><i class="iconfont icon-setting"></i> 常规设置 <i class="arrow iconfont icon-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="/bbi-admin/Common/SiteInfo.aspx"><i class="iconfont icon-home"></i> 站点信息</a></li>
+                            <li><a href="/bbi-admin/Common/CompanyInfo.aspx"><i class="iconfont icon-info-circle"></i> 企业信息</a></li>
+                            <li><a href="/bbi-admin/Common/Social.aspx"><i class="iconfont icon-twitter"></i> 社交资料</a></li>
+                            <li class="hide"><a href="/bbi-admin/Common/MailSettings.aspx"><i class="iconfont icon-envelope-o"></i> 邮箱服务设置</a></li>
+                        </ul>
+                    </li>
+    
+                </ul>
+    
+    
+            </nav>
+    
+            <div class="closemenu">
+                <a href="#"><i class="iconfont icon-chevron-circle-left"></i></a>
+            </div>
+        </aside>
 
         <div id="rightcol" class="rightcol">
-            <div class="toolbar">
-                <a href="#" class="showmenu"><i class="fa fa-bars"></i></a>
-                <ol class="breadcrumb">
-                    <li><a href="#"><i class="fa fa-home fa-fw"></i> 控制面板</a></li>
-                    <li><a href="#">表单</a></li>
-                    <li class="active">基本表单</li>
-                </ol>
-            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-primary">
+                <a class="navbar-brand" id="openav" href="#"><i class="iconfont icon-menu"></i></a>                       
+            
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                    </ul>
+            
+                    <ul class="navbar-nav navbar-right">
+                    
+                    <li  class="nav-item dropdown">               
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            你好，Admin
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">修改密码</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                    </li>
+                    <li class="nav-item"><a href="/bbi-admin/loginOut.aspx" class="nav-link"><i class="iconfont icon-sign-out"></i> 退出系统</a></li>
+                </ul>
+        
+                
+                </div>
+            </nav>
+    
             <div class="main-content">
+
+                <div class="breadcrumb-container">
+                    <div class="row ">
+                        <div class="col-md">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">控制面板</a></li>
+                                <li class="breadcrumb-item"><a href="#">Library</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Data</li>
+                                </ol>
+                            </nav>
+                        </div>
+                        <div class="col-md-auto">
+                            <time>
+                                Sunday, January 26, 2020
+                            </time>                                
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="subheader">
+                    <h1 class="subheader-title">
+                        <i class="iconfont icon-table"></i> 基本表格                              
+                    </h1>
+                    <small>
+                        Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.
+                    </small>
+                </div>
+
+                
                 <div class="box">
                     <header class="box-header">
                         <h3><i class="fa fa-search"></i> 数据查询</h3>

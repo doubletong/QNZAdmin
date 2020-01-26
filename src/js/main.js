@@ -1,38 +1,4 @@
-const buttons = document.getElementsByClassName('waves-effect');
-console.log(buttons);
-Array.from(buttons).forEach(function(button){  
-    button.addEventListener('click', function(event) {
-        event.preventDefault();
 
-        const xPos = event.pageX - this.offsetLeft,
-        yPos = event.pageY - this.offsetTop,
-        elWavesRipple = document.createElement('div');
-
-        elWavesRipple.className = 'waves-ripple';
-        elWavesRipple.style.left = xPos + 'px';
-        elWavesRipple.style.top = yPos + 'px';
-
-        const rippleElm = this.appendChild(elWavesRipple);
-
-        anime({
-        targets: '.waves-ripple',
-        scale: {
-            value: 40,
-            duration: 1000,
-        },
-        opacity: {
-            value: 0,
-            duration: 1000
-        },
-        easing: 'easeOutSine',
-        complete: function() {
-            const newElm = document.getElementsByClassName('waves-ripple')[0]
-            newElm.remove();
-        }
-        });
-
-    });
-});
   
 
 // var app = function() {
@@ -69,9 +35,33 @@ $(document).ready(function() {
 
     $("#mainmenu .down-nav>a").click(function(e){
         e.preventDefault();
-        $(this).toggleClass('open')
-        $(this).next('.submenu').slideToggle();
+        var $that = $(this);
+        $that.next('.submenu').slideToggle(function(){
+            $that.closest('li.down-nav').toggleClass('open')
+        });
     })
+
+    $('#openav').click(function(e){
+        e.preventDefault();
+        $("#wrapper").toggleClass('closenav');
+    })
+
+
+    $('a.expand').click(function (e) {
+        $(this).closest('.card').addClass('card-fixed');
+        $(this).hide();
+        $(this).next('a').show()
+        e.preventDefault();
+    });
+    $('a.compress').click(function (e) {
+        $(this).closest('.card').removeClass('card-fixed');
+        $(this).hide();
+        $(this).prev('a').show()
+        e.preventDefault();
+    });
+
+
+
   
     $(window).scroll(function() {
         if ($(this).scrollTop() > 350) {

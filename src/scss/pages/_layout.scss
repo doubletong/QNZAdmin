@@ -1,16 +1,41 @@
 .navbar-primary{
    background-color: #fff;
    box-shadow: 0 0 12px rgba(0,0,0,.1);
+   .navbar-brand{
+       padding: 0 1rem;
+       border:1px #eee solid;
+       border-radius: 3px;
+       .iconfont{
+           font-size: rem(20);
+       }
+   }
 }
 .wrapper{
     display: grid;
     grid-template-columns: 220px auto;
     min-height: 100%;
+  
+    .leftcol{
+        transition: all .2s;
+    }
+    .rightcol{
+        transition: all .2s;
+    }
+    &.closenav{     
+   
+        .leftcol{
+            margin-left: -220px;
+        }
+        .rightcol{
+            margin-left: -220px;
+        }
+    }
 }
 
 .leftcol{
     background-color:$color-primary;
     color: lighten($color: $color-primary, $amount: 30%);
+    width: 220px;
     .logo{
         a{
             display: block;
@@ -24,7 +49,8 @@
     }
     .mainmenu{
         @include reset-list();
-        &>li{          
+        &>li{  
+
             &>a{
                 color:lighten($color: $color-primary, $amount: 40%);
                 display: block;
@@ -77,6 +103,7 @@
                     }
                 }
             }
+          
             .submenu{
                 background-color: darken($color-primary,8%);
                 @include reset-list();
@@ -89,7 +116,34 @@
                         display: block;
                         padding: .5rem 1rem .5rem 2.3rem;
                         font-size: rem(14);
+                        position: relative;
+                        &:hover{
+                            color: #fff;
+                        }
+                        &.active{
+                            color: #fff;
+                            &::after{
+                                content: " ";
+                                display: block;
+                                position: absolute;
+                                width: 8px;
+                                height: 8px;
+                                background-color: $color-accent;
+                                right: 1rem;
+                                top: 1.1rem;
+                                z-index: 10;
+                                border-radius: 50%;
+                            }
+                        }
                     }
+                }
+            }
+            &.nav-open{
+                &>a{
+                    color: #fff;
+                }
+                .submenu{
+                    display: block;
                 }
             }
         }
