@@ -1,0 +1,180 @@
+﻿
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+ <!--<![endif]-->
+<head>
+    <title>
+        后台管理
+    </title>
+    <link href="fonts/iconfont.css" rel="stylesheet" />
+    <link href="css/styles.min.css" rel="stylesheet" />
+    <!--[if lt IE 9]>
+      <script src="../Content/Admin/js/html5shiv.min.js"></script>
+      <script src="../Content/Admin/js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-primary">
+        <a class="navbar-brand" href="#">QNZCMS Admin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav navbar-right">
+            <li class="nav-item"><a href="/" title="返回首页" class="nav-link"><i class="fa fa-home"></i> 返回首页</a></li class="nav-item">
+            <li  class="nav-item dropdown">               
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    你好，Admin
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">修改密码</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+            </li>
+            <li class="nav-item"><a href="/bbi-admin/loginOut.aspx" class="nav-link"><i class="fa fa-sign-out"></i> 退出系统</a></li>
+        </ul>
+
+      
+        </div>
+      </nav>
+      
+
+    <div id="wrapper" class="wrapper">
+     
+          
+                <aside class="leftcol">
+                    <nav id="menu">
+                        <h3>导航</h3>
+                        <ul class="list-unstyled mainmenu">
+                            <li class="liitem nav-open">
+                                <a href="Default.html" class="active">
+                                    <i class="fa fa-dashboard"></i> 控制面板
+                                    <div class="arrow-left"></div>
+                                </a>
+                            </li>
+    
+    
+                            <li class="liitem down-nav">
+                                <a href="#"><i class="fa fa-table"></i> 表格 <span class="badge">2</span></a>
+                                <ul class="list-unstyled submenu">
+                                    <li>
+                                        <a href="TableBasic.html">
+                                            <i class="fa fa-angle-double-right"></i> 表格一
+                                        </a>
+                                    </li>
+                                    <li><a href="/BBI-Admin/Articles/NewsCategories.html"><i class="fa fa-angle-double-right"></i> 表格二</a></li>
+                                </ul>
+                            </li>
+    
+                            <li class="liitem down-nav">
+                                <a href="#"><i class="fa fa-edit"></i> 表单 <span class="badge">2</span></a>
+                                <ul class="list-unstyled submenu">
+                                    <li><a href="FormBasic.html"><i class="fa fa-angle-double-right"></i> 基本表单</a></li>
+                                    <li><a href="/BBI-Admin/Ad/ManagePositions.aspx"><i class="fa fa-angle-double-right"></i> 带验证表单</a></li>
+                                </ul>
+                            </li>
+                            <li class="liitem"><a href="/BBI-Admin/Pages/ManagePages.aspx"><i class="fa fa-paste"></i> 内容片段</a></li>
+    
+                            <li class="liitem down-nav">
+                                <a href="#"><i class="fa fa-link"></i> 链接管理 <span class="badge">2</span></a>
+                                <ul class="list-unstyled submenu">
+                                    <li><a href="/BBI-Admin/Links/ManageLinks.aspx"><i class="fa fa-angle-double-right"></i> 链接列表</a></li>
+                                    <li><a href="/BBI-Admin/Links/ManageCategories.aspx"><i class="fa fa-angle-double-right"></i> 链接分类</a></li>
+                                </ul>
+                            </li>
+    
+    
+                            <li class="liitem down-nav">
+                                <a href="#"><i class="fa fa-shield"></i> 其它页面 <span class="badge">2</span></a>
+                                <ul class="list-unstyled submenu">
+                                    <li><a href="../Login.html"><i class="fa fa-angle-double-right"></i> 登录页</a></li>
+                                    <li><a href="../Register.html"><i class="fa fa-angle-double-right"></i> 注册页</a></li>
+                                </ul>
+                            </li>
+                            <li class="liitem down-nav">
+                                <a href="#"><i class="fa fa-cog"></i> 常规设置 <span class="badge">4</span></a>
+                                <ul class="submenu">
+                                    <li><a href="/bbi-admin/Common/SiteInfo.aspx"><i class="fa fa-home"></i> 站点信息</a></li>
+                                    <li><a href="/bbi-admin/Common/CompanyInfo.aspx"><i class="fa fa-info-circle"></i> 企业信息</a></li>
+                                    <li><a href="/bbi-admin/Common/Social.aspx"><i class="fa fa-twitter"></i> 社交资料</a></li>
+                                    <li class="hide"><a href="/bbi-admin/Common/MailSettings.aspx"><i class="fa fa-envelope-o"></i> 邮箱服务设置</a></li>
+                                </ul>
+                            </li>
+    
+                        </ul>
+    
+    
+                    </nav>
+    
+                    <div class="closemenu">
+                        <a href="#"><i class="fa fa-chevron-circle-left"></i></a>
+                    </div>
+                </aside>
+         
+                <section id="rightcol" class="rightcol">
+                    <div class="toolbar">
+                        <a href="#" class="showmenu"><i class="fa fa-bars"></i></a>
+                        <ol class="breadcrumb">
+                            <li><a href="#"><i class="fa fa-home fa-fw"></i> 控制面板</a></li>
+                            <li><a href="#">Library</a></li>
+                            <li class="active">Data</li>
+                        </ol>
+                    </div>
+                    <div class="main-content">
+                        gdgfd
+                    </div>
+        
+        
+        
+                    <footer id="pagefooter" class="site-footer">
+                        Copyright &copy; 2012 <a id="hlSiteInfo" href="http://heiniaozhi.cn">黑鸟志</a> All Rights
+                        Reserved
+                    </footer>
+        
+        
+                </section>
+         
+
+        
+    </div>
+
+    <script src="js/libs/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+
+   
+
+</body>
+</html>

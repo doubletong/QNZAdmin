@@ -20,6 +20,9 @@ const size = require('gulp-size');
 const notify = require('gulp-notify');
 const colors = require('colors');
 const modernizr = require('gulp-modernizr');
+const babel = require('gulp-babel');
+var gutil = require('gulp-util');
+var sourcemaps  = require('gulp-sourcemaps');
 
 var bases = {
     app: 'src/',
@@ -39,32 +42,32 @@ colors.setTheme({
     error: 'red'
 });
 
-var displayError = function(error) {
-    // Initial building up of the error
-    var errorString = '[' + error.plugin.error.bold + ']';
-    errorString += ' ' + error.message.replace("\n", ''); // Removes new line at the end
+// var displayError = function(error) {
+//     // Initial building up of the error
+//     var errorString = '[' + error.plugin.error.bold + ']';
+//     errorString += ' ' + error.message.replace("\n", ''); // Removes new line at the end
 
-    // If the error contains the filename or line number add it to the string
-    if (error.fileName)
-        errorString += ' in ' + error.fileName;
+//     // If the error contains the filename or line number add it to the string
+//     if (error.fileName)
+//         errorString += ' in ' + error.fileName;
 
-    if (error.lineNumber)
-        errorString += ' on line ' + error.lineNumber.bold;
+//     if (error.lineNumber)
+//         errorString += ' on line ' + error.lineNumber.bold;
 
-    // This will output an error like the following:
-    // [gulp-sass] error message in file_name on line 1
-    console.error(errorString);
-};
+//     // This will output an error like the following:
+//     // [gulp-sass] error message in file_name on line 1
+//     console.error(errorString);
+// };
 
-var onError = function(err) {
-    notify.onError({
-        title: "Gulp",
-        subtitle: "Failure!",
-        message: "Error: <%= error.message %>",
-        sound: "Basso"
-    })(err);
-    this.emit('end');
-};
+// var onError = function(err) {
+//     notify.onError({
+//         title: "Gulp",
+//         subtitle: "Failure!",
+//         message: "Error: <%= error.message %>",
+//         sound: "Basso"
+//     })(err);
+//     this.emit('end');
+// };
 
 
 
@@ -73,19 +76,23 @@ var onError = function(err) {
 
 // Clean assets
 function clean() {
-    return del([bases.dist]);
+  //  return del.sync([bases.dist]);
+  return  (async () => {
+        const deletedPaths = await del([bases.dist], {dryRun: true});    
+        console.log('Files and directories that would be deleted:\n', deletedPaths.join('\n'));
+    })();
 }
 
 function css() {
     return gulp
-        .src(bases.app + 'scss/styles.scss')
+        .src(bases.app + 'scss/styles.scss')       
         .pipe(plumber())
         .pipe(sass({ outputStyle: "expanded" }))
         .pipe(gulp.dest(bases.dist + 'css'))
-        .pipe(cleanCSS({ debug: true }, function(details) {
-            console.log(details.name + '(originalSize): ' + details.stats.originalSize);
-            console.log(details.name + '(minifiedSize): ' + details.stats.minifiedSize);
-        }))
+        .pipe(cleanCSS({debug: true}, (details) => {
+            console.log(`${details.name}: ${details.stats.originalSize}`);
+            console.log(`${details.name}: ${details.stats.minifiedSize}`);
+          }))
         .pipe(rename({ suffix: ".min" }))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(gulp.dest(bases.dist + 'css'))
@@ -99,10 +106,16 @@ function scripts() {
         gulp
         .src([bases.app + 'js/*.js'])
         //.pipe(modernizr()) //加入modernizr.js
+        .pipe(babel({
+            presets: ["@babel/preset-env"]
+          }))
         .pipe(uglify())
+        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
         .pipe(size({ gzip: false, showFiles: true }))
         .pipe(concat('app.js'))
+        .pipe(sourcemaps.write('./maps'))
         .pipe(gulp.dest(bases.dist + 'js'))
+        //.pipe(livereload())
         .pipe(browserSync.stream())
     );
 }
@@ -146,7 +159,7 @@ function htmls(done) {
 
     gulp.src(bases.app + 'member/*.*')
         .pipe(size({ gzip: true, showFiles: true }))
-        .pipe(gulp.dest(bases.dist + 'member'))
+        .pipe(gulp.dest(bases.dist + 'member'))       
         .pipe(browserSync.stream());
 
     done();
@@ -211,7 +224,10 @@ function watchFiles() {
 
 //define complex tasks
 const js = gulp.series(scripts);
-const build = gulp.series(clean, gulp.parallel(css, images, js, htmls, copyFiles));
+//const build = gulp.series(clean, gulp.parallel(css, images, js, htmls, copyFiles));
+const build = (done) => {
+    gulp.series( clean, gulp.parallel(css, images, js, htmls, copyFiles))(done);
+};
 const watch = gulp.parallel(watchFiles, browserSyncOpen);
 
 // export tasks

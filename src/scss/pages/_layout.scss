@@ -1,0 +1,44 @@
+.navbar-primary{
+    background-color: $color-primary;
+    .navbar-brand{
+        color: #fff;
+    }
+    a.nav-link{
+        color: #fff;
+    }
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: 200px auto;
+    min-height: calc(100%-62px);
+}
+
+.leftcol{
+    background-color:lighten( $color-primary,60%);
+    .mainmenu{
+        li{
+          
+            a{
+                display: block;
+                padding: .8rem 1rem;  border-bottom: 1px lighten( $color-primary,50%) solid;
+            }
+        }
+    }
+  
+}
+
+.main-content{
+    padding: 1rem;
+}
+.rightcol{
+    position: relative;
+    padding-bottom: 4rem;
+    .site-footer{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+}

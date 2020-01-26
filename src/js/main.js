@@ -1,4 +1,39 @@
-new WOW().init();
+const buttons = document.getElementsByClassName('waves-effect');
+buttons.forEach(function(button){  
+    button.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        const xPos = event.pageX - this.offsetLeft,
+        yPos = event.pageY - this.offsetTop,
+        elWavesRipple = document.createElement('div');
+
+        elWavesRipple.className = 'waves-ripple';
+        elWavesRipple.style.left = xPos + 'px';
+        elWavesRipple.style.top = yPos + 'px';
+
+        const rippleElm = this.appendChild(elWavesRipple);
+
+        anime({
+        targets: '.waves-ripple',
+        scale: {
+            value: 40,
+            duration: 1000,
+        },
+        opacity: {
+            value: 0,
+            duration: 1000
+        },
+        easing: 'easeOutSine',
+        complete: function() {
+            const newElm = document.getElementsByClassName('waves-ripple')[0]
+            newElm.remove();
+        }
+        });
+
+    });
+});
+  
+
 // var app = function() {
 //     var body = void 0;
 //     var menu = void 0;
