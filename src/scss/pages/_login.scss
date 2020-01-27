@@ -12,20 +12,14 @@
     background-color: #fff;
     @include vertical-align(); 
   }
-  .loginbox header {
+  .loginbox header.loginbox-header {
     text-align: center;
     border-radius: 6px 6px 0 0;
-    background: #45484d;
-    background: linear-gradient(to bottom, #45484d 0%, #000000 100%);
+    background: $color-primary;
+   padding: 1rem;
  
   }
-  .loginbox header h2 {
-    margin: 0;
-    padding: 1rem;
-    font-size: rem(24);
-    color: #fff;
-    font-weight: normal;
-  }
+
   .loginbox .loginForm {
     padding: 30px;
   }

@@ -1,4 +1,7 @@
-
+var d = new Date();
+const st = document.getElementById("sitetime");
+if(st)
+    st.innerHTML = d;
   
 
 // var app = function() {

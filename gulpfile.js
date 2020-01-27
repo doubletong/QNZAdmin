@@ -128,7 +128,7 @@ function copyFiles(done) {
         .pipe(gulp.dest(bases.dist + 'js/libs'))
         .pipe(browserSync.stream());
 
-    gulp.src(bases.app + 'js/vendor/*.*')
+    gulp.src(bases.app + 'js/vendor/**/**/*.*')
         .pipe(size({ gzip: true, showFiles: true }))
         .pipe(gulp.dest(bases.dist + 'js/vendor'))
         .pipe(browserSync.stream());
