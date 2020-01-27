@@ -65,6 +65,33 @@ $(document).ready(function() {
 
 
 
+    var url = location.pathname;
+      
+    switch(url){
+        case "/":
+        case "/index.html":     
+            $(".mainmenu>li:nth-of-type(1) a").addClass("active");
+        break;
+        case "/table_basic.html":   
+            $(".mainmenu>li:nth-of-type(2)").addClass("nav-open");
+            $(".mainmenu>li:nth-of-type(2) .submenu li:nth-of-type(1) a").addClass("active");
+            break;
+        case "/table_adv.html":   
+            $(".mainmenu>li:nth-of-type(2)").addClass("nav-open");
+            $(".mainmenu>li:nth-of-type(2) .submenu li:nth-of-type(2) a").addClass("active");
+            break;
+    case "/about.html":
+    case "/team.html":
+    case "/culture.html":
+    case "/footprints.html":
+    case "/awards.html":            
+        $(".mainav li:nth-of-type(4) a").addClass("active");
+        break;
+    case "/tech.html":            
+        $(".mainav li:nth-of-type(3) a").addClass("active");
+    }
+
+
   
     $(window).scroll(function() {
         if ($(this).scrollTop() > 350) {
@@ -86,47 +113,7 @@ $(document).ready(function() {
         return false;
     });
 
-    $("#site-header").load('_header.html',function() {
-        var url = location.pathname;
-      
-        switch(url){
-            case "/cases.html":
-            case "/case-01.html":
-                $(".mainav li:nth-of-type(2) a").addClass("active");
-            break;
-        case "/":
-        case "/index.html":
-        case "/oem.html":
-        case "/hardware.html":
-        case "/system.html":
-        case "/software.html":
-            $(".mainav li:nth-of-type(1) a").addClass("active");
-            break;
-        case "/about.html":
-        case "/team.html":
-        case "/culture.html":
-        case "/footprints.html":
-        case "/awards.html":            
-            $(".mainav li:nth-of-type(4) a").addClass("active");
-            break;
-        case "/tech.html":            
-            $(".mainav li:nth-of-type(3) a").addClass("active");
-        }
-
-
-        $(".menu-toggle").on('click', function() {
-            $(this).toggleClass("on");
-            $("#mainav").toggleClass("on");
-        });
-        $(".down").on('click', function(e) {
-            e.preventDefault();
-            $(this).next('.subnav').slideToggle();
-            //$("#mainav").toggleClass("on");
-        });
-
-      
-    });
-    $("#site-footer").load('_footer.html');
+    
 
     
     

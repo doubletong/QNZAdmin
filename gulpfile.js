@@ -19,10 +19,10 @@ const uglify = require('gulp-uglify');
 const size = require('gulp-size');
 const notify = require('gulp-notify');
 const colors = require('colors');
-const modernizr = require('gulp-modernizr');
 const babel = require('gulp-babel');
 var gutil = require('gulp-util');
 var sourcemaps  = require('gulp-sourcemaps');
+var pug = require('gulp-pug');
 
 var bases = {
     app: 'src/',
@@ -42,32 +42,6 @@ colors.setTheme({
     error: 'red'
 });
 
-// var displayError = function(error) {
-//     // Initial building up of the error
-//     var errorString = '[' + error.plugin.error.bold + ']';
-//     errorString += ' ' + error.message.replace("\n", ''); // Removes new line at the end
-
-//     // If the error contains the filename or line number add it to the string
-//     if (error.fileName)
-//         errorString += ' in ' + error.fileName;
-
-//     if (error.lineNumber)
-//         errorString += ' on line ' + error.lineNumber.bold;
-
-//     // This will output an error like the following:
-//     // [gulp-sass] error message in file_name on line 1
-//     console.error(errorString);
-// };
-
-// var onError = function(err) {
-//     notify.onError({
-//         title: "Gulp",
-//         subtitle: "Failure!",
-//         message: "Error: <%= error.message %>",
-//         sound: "Basso"
-//     })(err);
-//     this.emit('end');
-// };
 
 
 
@@ -152,21 +126,25 @@ function copyFiles(done) {
 }
 
 function htmls(done) {
-    gulp.src([bases.app + '*.html', bases.app + '**/*.html', bases.app + '*.txt', bases.app + '*.json'])
+    gulp.src([bases.app + '*.html', bases.app + '**/*.html', bases.app + '*.txt',bases.app + '*.xml',bases.app + '*.webmanifest', bases.app + '*.json',bases.app + "**.png",bases.app + "favicon.ico"])
         .pipe(size({ gzip: true, showFiles: true }))
         .pipe(gulp.dest(bases.dist))
         .pipe(browserSync.stream());
 
-    gulp.src(bases.app + 'member/*.*')
-        .pipe(size({ gzip: true, showFiles: true }))
-        .pipe(gulp.dest(bases.dist + 'member'))       
+    done();
+}
+
+function pugtohtml(done){
+
+    gulp.src([bases.app + '*.pug'])
+        .pipe(pug({
+            pretty:true
+        }))
+        .pipe(gulp.dest(bases.dist))
         .pipe(browserSync.stream());
 
     done();
-
 }
-
-
 function browserSyncOpen(done) {
     browserSync.init({
         server: {
@@ -189,7 +167,7 @@ function browserSyncReload(done) {
 // Optimize Images
 function images() {
     return gulp
-        .src(bases.app + "img/**/*")
+        .src([bases.app + "img/**/*"])
         .pipe(newer(bases.dist + "img"))
         .pipe(
             imagemin([
@@ -214,10 +192,11 @@ function watchFiles() {
     gulp.watch(bases.app + "js/**/*", gulp.series(scripts));
     gulp.watch(
         [
-            bases.app + "**.html",bases.app + "member/**.html"
+            bases.app + "**.html"
         ],
         gulp.series(htmls, browserSyncReload)
     );
+    gulp.watch(bases.app + "**.pug", gulp.series(pugtohtml));
     gulp.watch(bases.app + "img/**/*", images);
 }
 
@@ -235,6 +214,7 @@ exports.htmls = htmls;
 exports.images = images;
 exports.css = css;
 exports.js = js;
+exports.pug = pugtohtml;
 // exports.jekyll = jekyll;
 exports.clean = clean;
 exports.build = build;

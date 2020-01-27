@@ -1,0 +1,26 @@
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-primary
+    a#openav.navbar-brand(href='#')
+        i.iconfont.icon-menu
+    #navbarSupportedContent.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            li.nav-item.active
+                a.nav-link(href='#')
+                    | Home 
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href='#') Link
+            li.nav-item
+                a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
+        ul.navbar-nav.navbar-right
+            li.nav-item.dropdown
+                a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                    | 你好，Admin
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                    a.dropdown-item(href='#') 修改密码
+                    a.dropdown-item(href='#') Another action
+                    .dropdown-divider
+                    a.dropdown-item(href='#') Something else here
+            li.nav-item
+                a.nav-link(href='/bbi-admin/loginOut.aspx')
+                    i.iconfont.icon-sign-out
+                    |  退出系统

@@ -1,0 +1,22 @@
+extends layout.pug
+
+block content
+    .breadcrumb-container
+        .row
+            .col-md
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') 控制面板
+                        li.breadcrumb-item
+                            a(href='#') Library
+                        li.breadcrumb-item.active(aria-current='page') Data
+            .col-md-auto
+                time#sitetime
+    .subheader
+        h1.subheader-title
+            i.iconfont.icon-table
+            |  基本表格
+        small
+            | Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.
+    p dsdsa

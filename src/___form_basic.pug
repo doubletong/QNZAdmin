@@ -1,0 +1,202 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    title 控制台
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='manifest', href='site.webmanifest')
+    link(rel='apple-touch-icon', href='icon.png')
+    // Place favicon.ico in the root directory
+    meta(name='theme-color', content='#fafafa')
+    link(href='fonts/iconfont.css', rel='stylesheet')
+    link(href='css/styles.min.css', rel='stylesheet')
+  body
+    #wrapper.wrapper
+      aside#leftcol.leftcol
+        .logo
+          a(href='index.html')
+            img(src='img/logo.png', alt='logo')
+        nav#menu
+          ul#mainmenu.mainmenu
+            li.liitem
+              a(href='index.html')
+                i.iconfont.icon-dashboard
+                |  控制面板
+                .arrow-left
+            li.liitem.down-nav
+              a(href='#')
+                i.iconfont.icon-table
+                |  表格 
+                i.arrow.iconfont.icon-down
+              ul.submenu
+                li
+                  a(href='table_basic.html') 简单表格
+                li
+                  a(href='table_adv.html') 复杂表格
+            li.liitem.down-nav.nav-open
+              a(href='#')
+                i.iconfont.icon-edit
+                |  表单 
+                i.arrow.iconfont.icon-down
+              ul.list-unstyled.submenu
+                li
+                  a.active(href='form_basic.html') 基本表单
+                li
+                  a(href='form_adv.html') 带验证表单
+                li
+                  a(href='form_adv_pic.html') 表单带文件上传
+            li.liitem
+              a(href='pages.html')
+                i.iconfont.icon-file-text
+                |  页面管理
+            li.liitem.down-nav
+              a(href='#')
+                i.iconfont.icon-link
+                |  链接管理 
+                i.arrow.iconfont.icon-down
+              ul.submenu
+                li
+                  a(href='links.html') 链接列表
+            li.liitem.down-nav
+              a(href='#')
+                i.iconfont.icon-file-image
+                |  其它页面 
+                i.arrow.iconfont.icon-down
+              ul.list-unstyled.submenu
+                li
+                  a(href='../Login.html')
+                    i.iconfont.icon-angle-double-right
+                    |  登录页
+                li
+                  a(href='../Register.html')
+                    i.iconfont.icon-angle-double-right
+                    |  注册页
+            li.liitem.down-nav
+              a(href='#')
+                i.iconfont.icon-setting
+                |  常规设置 
+                i.arrow.iconfont.icon-down
+              ul.submenu
+                li
+                  a(href='/bbi-admin/Common/SiteInfo.aspx')
+                    i.iconfont.icon-home
+                    |  站点信息
+                li
+                  a(href='/bbi-admin/Common/CompanyInfo.aspx')
+                    i.iconfont.icon-info-circle
+                    |                                     企业信息
+                li
+                  a(href='/bbi-admin/Common/Social.aspx')
+                    i.iconfont.icon-twitter
+                    |  社交资料
+                li.hide
+                  a(href='/bbi-admin/Common/MailSettings.aspx')
+                    i.iconfont.icon-envelope-o
+                    |  邮箱服务设置
+        .closemenu
+          a(href='#')
+            i.iconfont.icon-chevron-circle-left
+      #rightcol.rightcol
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-primary
+          a#openav.navbar-brand(href='#')
+            i.iconfont.icon-menu
+          #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+              li.nav-item.active
+                a.nav-link(href='#')
+                  | Home 
+                  span.sr-only (current)
+              li.nav-item
+                a.nav-link(href='#') Link
+              li.nav-item
+                a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
+            ul.navbar-nav.navbar-right
+              li.nav-item.dropdown
+                a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  | 你好，Admin
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                  a.dropdown-item(href='#') 修改密码
+                  a.dropdown-item(href='#') Another action
+                  .dropdown-divider
+                  a.dropdown-item(href='#') Something else here
+              li.nav-item
+                a.nav-link(href='/bbi-admin/loginOut.aspx')
+                  i.iconfont.icon-sign-out
+                  |  退出系统
+        .main-content
+          .breadcrumb-container
+            .row
+              .col-md
+                nav(aria-label='breadcrumb')
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='#') 控制面板
+                    li.breadcrumb-item
+                      a(href='#') Library
+                    li.breadcrumb-item.active(aria-current='page') Data
+              .col-md-auto
+                time#sitetime
+          .subheader
+            h1.subheader-title
+              i.iconfont.icon-table
+              |  表单页面
+            small
+              | Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript
+              | plugins) with Bootstrap.
+          form
+            .card
+              header.card-header
+                .row
+                  .col 数据查询
+                  .col-auto
+                    .control
+                      a.expand(href='#')
+                        i.iconfont.icon-fullscreen
+                      a.compress(href='#', style='display: none;')
+                        i.iconfont.icon-shrink
+              section.card-body
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='inputEmail3') Email
+                  .col-sm-10
+                    input#inputEmail3.form-control(type='email')
+                .form-group.row
+                  label.col-sm-2.col-form-label(for='inputPassword3') Password
+                  .col-sm-10
+                    input#inputPassword3.form-control(type='password')
+                fieldset.form-group
+                  .row
+                    legend.col-form-label.col-sm-2.pt-0 Radios
+                    .col-sm-10
+                      .form-check
+                        input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='option1', checked='')
+                        label.form-check-label(for='gridRadios1')
+                          | First radio
+                      .form-check
+                        input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
+                        label.form-check-label(for='gridRadios2')
+                          | Second radio
+                      .form-check.disabled
+                        input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')
+                        label.form-check-label(for='gridRadios3')
+                          | Third disabled radio
+                .form-group.row
+                  .col-sm-2 Checkbox
+                  .col-sm-10
+                    .form-check
+                      input#gridCheck1.form-check-input(type='checkbox')
+                      label.form-check-label(for='gridCheck1')
+                        | Example checkbox
+              footer.card-footer.text-center
+                button.btn.btn-primary(type='submit') 提交
+                button.btn.btn-secondary(type='button') 返回
+        footer#pagefooter.site-footer
+          | Copyright © 2012-2020 
+          a#hlSiteInfo(href='http://heiniaozhi.cn') 黑鸟志
+          |  All Rights
+          |                 Reserved
+      script(src='js/vendor/modernizr-3.8.0.min.js')
+      script(src='js/vendor/jquery-3.4.1.min.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+      script(src='js/bootstrap/bootstrap.min.js')
+      script(src='js/app.js')

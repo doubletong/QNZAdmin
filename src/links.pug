@@ -1,0 +1,495 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    title 控制台
+    meta(name='description', content='')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='manifest', href='site.webmanifest')
+    link(rel='apple-touch-icon', href='icon.png')
+    // Place favicon.ico in the root directory
+    meta(name='theme-color', content='#fafafa')
+    link(href='fonts/iconfont.css', rel='stylesheet')
+    link(href='css/styles.min.css', rel='stylesheet')
+  body
+    #wrapper.wrapper
+      aside#leftcol.leftcol
+        .logo
+          a(href='index.html')
+            img(src='img/logo.png', alt='logo')
+        nav#menu
+          ul#mainmenu.mainmenu
+            li.liitem
+              a(href='index.html')
+                i.iconfont.icon-dashboard
+                |  控制面板
+                .arrow-left
+            li.liitem.down-nav
+              a(href='#')
+                i.iconfont.icon-table
+                |  表格 
+                i.arrow.iconfont.icon-down
+              ul.submenu
+                li
+                  a(href='table_basic.html') 简单表格
+                li
+                  a(href='table_adv.html') 复杂表格
+            li.liitem.down-nav
+              a(href='#')
+                i.iconfont.icon-edit
+                |  表单 
+                i.arrow.iconfont.icon-down
+              ul.list-unstyled.submenu
+                li
+                  a(href='form_basic.html') 基本表单
+                li
+                  a(href='form_adv.html') 带验证表单
+                li
+                  a(href='form_adv_pic.html') 表单带文件上传
+            li.liitem
+              a(href='pages.html')
+                i.iconfont.icon-file-text
+                |  页面管理
+            li.liitem.down-nav.nav-open
+              a(href='#')
+                i.iconfont.icon-link
+                |  链接管理 
+                i.arrow.iconfont.icon-down
+              ul.submenu
+                li
+                  a.active(href='links.html') 链接列表
+            li.liitem.down-nav
+              a(href='#')
+                i.iconfont.icon-file-image
+                |  其它页面 
+                i.arrow.iconfont.icon-down
+              ul.list-unstyled.submenu
+                li
+                  a(href='../Login.html')
+                    i.iconfont.icon-angle-double-right
+                    |  登录页
+                li
+                  a(href='../Register.html')
+                    i.iconfont.icon-angle-double-right
+                    |  注册页
+            li.liitem.down-nav
+              a(href='#')
+                i.iconfont.icon-setting
+                |  常规设置 
+                i.arrow.iconfont.icon-down
+              ul.submenu
+                li
+                  a(href='/bbi-admin/Common/SiteInfo.aspx')
+                    i.iconfont.icon-home
+                    |  站点信息
+                li
+                  a(href='/bbi-admin/Common/CompanyInfo.aspx')
+                    i.iconfont.icon-info-circle
+                    |  企业信息
+                li
+                  a(href='/bbi-admin/Common/Social.aspx')
+                    i.iconfont.icon-twitter
+                    |  社交资料
+                li.hide
+                  a(href='/bbi-admin/Common/MailSettings.aspx')
+                    i.iconfont.icon-envelope-o
+                    |  邮箱服务设置
+        .closemenu
+          a(href='#')
+            i.iconfont.icon-chevron-circle-left
+      #rightcol.rightcol
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-primary
+          a#openav.navbar-brand(href='#')
+            i.iconfont.icon-menu
+          #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.mr-auto
+              li.nav-item.active
+                a.nav-link(href='#')
+                  | Home 
+                  span.sr-only (current)
+              li.nav-item
+                a.nav-link(href='#') Link
+              li.nav-item
+                a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') Disabled
+            ul.navbar-nav.navbar-right
+              li.nav-item.dropdown
+                a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                  | 你好，Admin
+                .dropdown-menu(aria-labelledby='navbarDropdown')
+                  a.dropdown-item(href='#') 修改密码
+                  a.dropdown-item(href='#') Another action
+                  .dropdown-divider
+                  a.dropdown-item(href='#') Something else here
+              li.nav-item
+                a.nav-link(href='/bbi-admin/loginOut.aspx')
+                  i.iconfont.icon-sign-out
+                  |  退出系统
+        .main-content
+          .breadcrumb-container
+            .row
+              .col-md
+                nav(aria-label='breadcrumb')
+                  ol.breadcrumb
+                    li.breadcrumb-item
+                      a(href='index.html') 控制面板
+                    li.breadcrumb-item
+                      a(href='links.html') 链接
+                    li.breadcrumb-item.active(aria-current='page') 列表
+              .col-md-auto
+                time#sitetime
+          .subheader
+            h1.subheader-title
+              i.iconfont.icon-link
+              |  链接列表
+            small
+              | 友情链接，客户列表展示
+          .card
+            header.card-header
+              .row
+                .col 链接列表
+                .col-auto
+                  .control
+                    a.expand(href='#')
+                      i.iconfont.icon-fullscreen
+                    a.compress(href='#', style='display: none;')
+                      i.iconfont.icon-shrink
+            section.card-body
+              .card-toolbar.mb-3
+                .row
+                  .col-md
+                    .btn-group(role='group', aria-label='Basic example')
+                      button.btn.btn-outline-info(type='button') 移动
+                      button.btn.btn-outline-info(type='button') 推荐
+                      button.btn.btn-outline-info(type='button') 激活
+                      button.btn.btn-outline-danger(type='button') 删除
+                  .col-md-auto
+                    form.form-inline(role='form')
+                      .form-group.mr-2
+                        label.sr-only(for='inputCategory') 分类
+                        select#inputCategory.form-control
+                          option --请选择分类--
+                          option 友情链接
+                          option 客户列表
+                      button.btn.btn-primary.btn-sm(type='submit')
+                        i.iconfont.icon-search
+                        |  查询
+              .table-responsive
+                table.table.table-hover.box-table
+                  thead
+                    tr
+                      th
+                        input#cbSelectAll(type='checkbox')
+                      th ID
+                      th Logo
+                      th 主题/链接
+                      th 创建时间
+                      th 激活？
+                      th(style='width:260px;') 操作
+                  tbody
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 1
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-check-circle-fill.text-success
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-info.btn-sm(href='#', title='推荐')
+                          i.iconfont.icon-like
+                        a.btn.btn-info.btn-sm(href='#', title='激活')
+                          i.iconfont.icon-eye
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 2
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-check-circle-fill.text-success
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-warning.btn-sm(href='#', title='不推荐')
+                          i.iconfont.icon-unlike
+                        a.btn.btn-info.btn-sm(href='#', title='激活')
+                          i.iconfont.icon-eye
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 3
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-check-circle-fill.text-success
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-info.btn-sm(href='#', title='推荐')
+                          i.iconfont.icon-like
+                        a.btn.btn-warning.btn-sm(href='#', title='锁定')
+                          i.iconfont.icon-eye-close
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 3
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-check-circle-fill.text-success
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-info.btn-sm(href='#', title='推荐')
+                          i.iconfont.icon-like
+                        a.btn.btn-info.btn-sm(href='#', title='激活')
+                          i.iconfont.icon-eye
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 3
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-check-circle-fill.text-success
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-info.btn-sm(href='#', title='推荐')
+                          i.iconfont.icon-like
+                        a.btn.btn-info.btn-sm(href='#', title='激活')
+                          i.iconfont.icon-eye
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 3
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-check-circle-fill.text-success
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-info.btn-sm(href='#', title='推荐')
+                          i.iconfont.icon-like
+                        a.btn.btn-info.btn-sm(href='#', title='激活')
+                          i.iconfont.icon-eye
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 3
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-check-circle-fill.text-success
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-info.btn-sm(href='#', title='推荐')
+                          i.iconfont.icon-like
+                        a.btn.btn-info.btn-sm(href='#', title='激活')
+                          i.iconfont.icon-eye
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 3
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-check-circle-fill.text-success
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-info.btn-sm(href='#', title='推荐')
+                          i.iconfont.icon-like
+                        a.btn.btn-info.btn-sm(href='#', title='激活')
+                          i.iconfont.icon-eye
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 3
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-check-circle-fill.text-success
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-warning.btn-sm(href='#', title='不推荐')
+                          i.iconfont.icon-unlike
+                        a.btn.btn-info.btn-sm(href='#', title='激活')
+                          i.iconfont.icon-eye
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+                    tr
+                      td
+                        input(type='checkbox', value='')
+                      td 3
+                      td
+                        img(src='https://www.fillmurray.com/210/70', alt='')
+                      td
+                        | 科学世界
+                        br
+                        a(href='http://www.bing.com')
+                          small [http://www.bing.com]
+                      td 2020-1-21
+                      td
+                        i.iconfont.icon-close-circle-fill.text-danger
+                      td
+                        a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                          i.iconfont.icon-ellipsis
+                        a.btn.btn-info.btn-sm(href='#', title='推荐')
+                          i.iconfont.icon-like
+                        a.btn.btn-info.btn-sm(href='#', title='激活')
+                          i.iconfont.icon-eye
+                        a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                          i.iconfont.icon-edit
+                        a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                          i.iconfont.icon-file-copy
+                        a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                          i.iconfont.icon-delete
+            footer.card-footer
+              .row.table-pager
+                .col-sm
+                  nav(aria-label='...')
+                    ul.pagination
+                      li.page-item.disabled
+                        a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+                      li.page-item
+                        a.page-link(href='#') 1
+                      li.page-item.active(aria-current='page')
+                        a.page-link(href='#')
+                          | 2 
+                          span.sr-only (current)
+                      li.page-item
+                        a.page-link(href='#') 3
+                      li.page-item
+                        a.page-link(href='#') Next
+                .col-sm-auto
+                  p.pagecount
+                    | 显示1-10条，总计10页，记录数100条
+        footer#pagefooter.site-footer
+          | Copyright © 2012-2020 
+          a#hlSiteInfo(href='http://heiniaozhi.cn') 黑鸟志
+          |  All Rights
+          |                 Reserved
+      script(src='js/vendor/modernizr-3.8.0.min.js')
+      script(src='js/vendor/jquery-3.4.1.min.js')
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js')
+      script(src='js/bootstrap/bootstrap.min.js')
+      script(src='js/app.js')
+      script.
+        $(function(){
+        $("#cbSelectAll").change(function(){
+        var isSelected = $(this).prop("checked");
+        $('td input[type="checkbox"]').prop("checked",isSelected)
+        })
+        })

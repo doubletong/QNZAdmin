@@ -1,0 +1,236 @@
+extends layout.pug
+
+block content
+    .breadcrumb-container
+        .row
+            .col-md
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') 控制面板
+                        li.breadcrumb-item
+                            a(href='#') Library
+                        li.breadcrumb-item.active(aria-current='page') Data
+            .col-md-auto
+                time#sitetime
+    .subheader
+        h1.subheader-title
+            i.iconfont.icon-table
+            |  基本表格
+        small
+            | Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.
+    .card
+        header.card-header
+            .row
+                .col 数据查询
+                .col-auto
+                    .control
+                        a.expand(href='#')
+                            i.iconfont.icon-fullscreen
+                        a.compress(href='#', style='display: none;')
+                            i.iconfont.icon-shrink
+        section.card-body
+            .card-toolbar.mb-3
+                form.form-inline(role='form')
+                    .input-group.mr-2
+                        .input-group-prepend
+                            span.input-group-text 从
+                        input#fromDate.form-control(type='date', placeholder='请输入日期', aria-label='Dollar amount (with dot and two decimal places)')
+                    .input-group.mr-2
+                        .input-group-prepend
+                            span.input-group-text 到
+                        input#toDate.form-control(type='date', placeholder='请输入日期', aria-label='Dollar amount (with dot and two decimal places)')
+                    .form-group.mr-2
+                        label.sr-only(for='inputCategory') 业务类型
+                        select#inputCategory.form-control
+                            option --请选择业务类型--
+                            option 2
+                            option 3
+                            option 4
+                            option 5
+                    button.btn.btn-primary.btn-sm(type='submit')
+                        i.iconfont.icon-search
+                        |  查询
+            .table-responsive
+                table.table.table-hover.box-table
+                    thead
+                        tr
+                            th ID
+                            th 业务类别
+                            th 任务数
+                            th 时间
+                            th 服务点
+                            th 款箱
+                            th 费用
+                            th 操作
+                    tbody
+                        tr
+                            td 1
+                            td Mark
+                            td 5
+                            td @mdo
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td 2
+                            td Jacob
+                            td 4
+                            td @fat
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td 3
+                            td Larry the Bird
+                            td 87
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td Larry the Bird
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td 3
+                            td Larry the Bird
+                            td 87
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td Larry the Bird
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td 3
+                            td Larry the Bird
+                            td 87
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td Larry the Bird
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td 3
+                            td Larry the Bird
+                            td 87
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td Larry the Bird
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td 3
+                            td Larry the Bird
+                            td 87
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td Larry the Bird
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td 3
+                            td Larry the Bird
+                            td 87
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td Larry the Bird
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td 3
+                            td Larry the Bird
+                            td 87
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td Larry the Bird
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+                        tr
+                            td 3
+                            td Larry the Bird
+                            td 87
+                            td Mark
+                            td Otto
+                            td @mdo
+                            td Larry the Bird
+                            td
+                                a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
+                                    i.iconfont.icon-delete
+        footer.card-footer
+            .row.table-pager
+                .col-sm
+                    nav(aria-label='...')
+                        ul.pagination
+                            li.page-item.disabled
+                                a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-item.active(aria-current='page')
+                                a.page-link(href='#')
+                                    | 2 
+                                    span.sr-only (current)
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') Next
+                .col-sm-auto
+                    p.pagecount
+                        | 显示1-10条，总计10页，记录数100条

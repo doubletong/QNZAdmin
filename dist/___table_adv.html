@@ -20,10 +20,10 @@
           <ul class="mainmenu" id="mainmenu">
             <li class="liitem"><a href="index.html"><i class="iconfont icon-dashboard"></i> 控制面板
                 <div class="arrow-left"></div></a></li>
-            <li class="liitem down-nav"><a href="#"><i class="iconfont icon-table"></i> 表格 <i class="arrow iconfont icon-down"></i></a>
+            <li class="liitem down-nav nav-open"><a href="#"><i class="iconfont icon-table"></i> 表格 <i class="arrow iconfont icon-down"></i></a>
               <ul class="submenu">
                 <li><a href="table_basic.html">简单表格</a></li>
-                <li><a href="table_adv.html">复杂表格</a></li>
+                <li><a class="active" href="table_adv.html">复杂表格</a></li>
               </ul>
             </li>
             <li class="liitem down-nav"><a href="#"><i class="iconfont icon-edit"></i> 表单 <i class="arrow iconfont icon-down"></i></a>
@@ -33,7 +33,7 @@
                 <li><a href="form_adv_pic.html">表单带文件上传</a></li>
               </ul>
             </li>
-            <li class="liitem"><a class="active" href="pages.html"><i class="iconfont icon-file-text"></i> 页面管理</a></li>
+            <li class="liitem"><a href="pages.html"><i class="iconfont icon-file-text"></i> 页面管理</a></li>
             <li class="liitem down-nav"><a href="#"><i class="iconfont icon-link"></i> 链接管理 <i class="arrow iconfont icon-down"></i></a>
               <ul class="submenu">
                 <li><a href="links.html">链接列表</a></li>
@@ -81,8 +81,9 @@
               <div class="col-md">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="index.html">控制面板</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">单页管理</li>
+                    <li class="breadcrumb-item"><a href="#">控制面板</a></li>
+                    <li class="breadcrumb-item"><a href="#">Library</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Data</li>
                   </ol>
                 </nav>
               </div>
@@ -92,12 +93,12 @@
             </div>
           </div>
           <div class="subheader">
-            <h1 class="subheader-title"><i class="iconfont icon-file-text"></i> 页面管理</h1><small>全站所有零散的单页与内容片段集中管理</small>
+            <h1 class="subheader-title"><i class="iconfont icon-table"></i> 基本表格</h1><small>Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.</small>
           </div>
           <div class="card">
             <header class="card-header">
               <div class="row">
-                <div class="col">单页列表</div>
+                <div class="col">数据查询</div>
                 <div class="col-auto">
                   <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#" style="display: none;"><i class="iconfont icon-shrink"></i></a></div>
                 </div>
@@ -147,8 +148,10 @@
                         <input id="cbSelectAll" type="checkbox">
                       </th>
                       <th>ID</th>
-                      <th>主题</th>
-                      <th>发布日期</th>
+                      <th>业务类别</th>
+                      <th>时间</th>
+                      <th>服务点</th>
+                      <th>款箱</th>
                       <th>激活？</th>
                       <th style="width: 260px;">操作</th>
                     </tr>
@@ -159,8 +162,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>1</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Mark</td>
+                      <td>@mdo</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -169,8 +174,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>2</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Jacob</td>
+                      <td>@fat</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-warning btn-sm" href="#" title="不推荐"><i class="iconfont icon-unlike"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -179,8 +186,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>3</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Larry the Bird</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-warning btn-sm" href="#" title="锁定"><i class="iconfont icon-eye-close"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -189,8 +198,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>3</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Larry the Bird</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -199,8 +210,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>3</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Larry the Bird</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -209,8 +222,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>3</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Larry the Bird</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -219,8 +234,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>3</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Larry the Bird</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -229,8 +246,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>3</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Larry the Bird</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -239,8 +258,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>3</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Larry the Bird</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-warning btn-sm" href="#" title="不推荐"><i class="iconfont icon-unlike"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -249,8 +270,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>3</td>
-                      <td>冠状病毒入侵扩散形式严峻武汉封城</td>
-                      <td>2020-1-21</td>
+                      <td>Larry the Bird</td>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
                       <td><i class="iconfont icon-close-circle-fill text-danger"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
