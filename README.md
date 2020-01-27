@@ -8,4 +8,5 @@
 
 - [ckeditor](https://ckeditor.com/ckeditor-4/download/) 【web在线编辑器】
 - [holder.js](http://holderjs.com/)  【客户端图片替代】
-- [bootstrap](https://getbootstrap.com/)
+- [bootstrap](https://getbootstrap.com/)                           
+- [fillmurray](https://www.fillmurray.com/)  【临时图片方案】
