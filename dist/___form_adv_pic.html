@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title>-控制台</title>
+    <title>控制台</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="manifest" href="site.webmanifest">
@@ -24,14 +24,14 @@
             <li class="liitem down-nav"><a href="#"><i class="iconfont icon-table"></i> 表格 <i class="arrow iconfont icon-down"></i></a>
               <ul class="submenu">
                 <li><a href="table_basic.html">简单表格</a></li>
-                <li><a href="table_adv.html">复杂表格</a></li>
+                <li><a href="table_adv.html">高级表格</a></li>
               </ul>
             </li>
-            <li class="liitem down-nav"><a href="#"><i class="iconfont icon-edit"></i> 表单 <i class="arrow iconfont icon-down"></i></a>
+            <li class="liitem down-nav nav-open"><a href="#"><i class="iconfont icon-edit"></i> 表单 <i class="arrow iconfont icon-down"></i></a>
               <ul class="list-unstyled submenu">
                 <li><a href="form_basic.html">基本表单</a></li>
                 <li><a href="form_adv.html">带验证表单</a></li>
-                <li><a href="form_adv_pic.html">表单带文件上传</a></li>
+                <li><a class="active" href="form_adv_pic.html">表单带文件上传</a></li>
               </ul>
             </li>
             <li class="liitem"><a href="pages.html"><i class="iconfont icon-file-text"></i> 页面管理</a></li>
@@ -49,7 +49,7 @@
             <li class="liitem down-nav"><a href="#"><i class="iconfont icon-setting"></i> 常规设置 <i class="arrow iconfont icon-down"></i></a>
               <ul class="submenu">
                 <li><a href="/bbi-admin/Common/SiteInfo.aspx"><i class="iconfont icon-home"></i> 站点信息</a></li>
-                <li><a href="/bbi-admin/Common/CompanyInfo.aspx"><i class="iconfont icon-info-circle"></i> 企业信息</a></li>
+                <li><a href="/bbi-admin/Common/CompanyInfo.aspx"><i class="iconfont icon-info-circle"></i>                                    企业信息</a></li>
                 <li><a href="/bbi-admin/Common/Social.aspx"><i class="iconfont icon-twitter"></i> 社交资料</a></li>
                 <li class="hide"><a href="/bbi-admin/Common/MailSettings.aspx"><i class="iconfont icon-envelope-o"></i> 邮箱服务设置</a></li>
               </ul>
@@ -58,7 +58,7 @@
         </nav>
         <div class="closemenu"><a href="#"><i class="iconfont icon-chevron-circle-left"></i></a></div>
       </aside>
-      <section class="rightcol" id="rightcol">
+      <div class="rightcol" id="rightcol">
         <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-primary"><a class="navbar-brand" id="openav" href="#"><i class="iconfont icon-menu"></i></a>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
@@ -76,7 +76,7 @@
             </ul>
           </div>
         </nav>
-        <div class="main-content">         
+        <div class="main-content">
           <div class="breadcrumb-container">
             <div class="row">
               <div class="col-md">
@@ -94,7 +94,9 @@
             </div>
           </div>
           <div class="subheader">
-            <h1 class="subheader-title"><i class="iconfont icon-table"></i> 基本表格</h1><small>Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.</small>
+            <h1 class="subheader-title"><i class="iconfont icon-table"></i> 表单页面</h1><small>
+              Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript
+              plugins) with Bootstrap.</small>
           </div>
           <form class="needs-validation" novalidate="">
             <div class="card">
@@ -181,34 +183,37 @@
             </div>
           </form>
         </div>
-        <footer class="site-footer" id="pagefooter">Copyright © 2012-2020 <a href="http://heiniaozhi.cn">黑鸟志</a> All Rights Reserved</footer>
-      </section>
+        <footer class="site-footer" id="pagefooter">Copyright © 2012-2020 <a id="hlSiteInfo" href="http://heiniaozhi.cn">黑鸟志</a> All Rights
+                          Reserved
+        </footer>
+      </div>
+      <script src="js/vendor/modernizr-3.8.0.min.js"></script>
+      <script src="js/vendor/jquery-3.4.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+      <script src="js/bootstrap/bootstrap.min.js"></script>
+      <script src="js/vendor/holderjs/holder.min.js"></script>
+      <script src="js/app.js"></script>
+      <script>
+        CKEDITOR.replace( 'editor1' );
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+        form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+        }, false);
+        });
+        }, false);
+        })();
+      </script>
     </div>
-    <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-    <script src="js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <script src="js/app.js"></script>
-    <script>
-      CKEDITOR.replace( 'editor1' );
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('needs-validation');
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-      if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-      }, false);
-      });
-      }, false);
-      })();
-    </script>
   </body>
 </html>

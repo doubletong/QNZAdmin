@@ -80,8 +80,25 @@ $(document).ready(function() {
             $(".mainmenu>li:nth-of-type(2)").addClass("nav-open");
             $(".mainmenu>li:nth-of-type(2) .submenu li:nth-of-type(2) a").addClass("active");
             break;
-    case "/about.html":
-    case "/team.html":
+        case "/form_basic.html":   
+            $(".mainmenu>li:nth-of-type(3)").addClass("nav-open");
+            $(".mainmenu>li:nth-of-type(3) .submenu li:nth-of-type(1) a").addClass("active");
+            break;
+        case "/form_adv.html":   
+            $(".mainmenu>li:nth-of-type(3)").addClass("nav-open");
+            $(".mainmenu>li:nth-of-type(3) .submenu li:nth-of-type(2) a").addClass("active");
+            break;
+        case "/form_adv_pic.html":   
+            $(".mainmenu>li:nth-of-type(3)").addClass("nav-open");
+            $(".mainmenu>li:nth-of-type(3) .submenu li:nth-of-type(3) a").addClass("active");
+            break;
+        case "/pages.html":
+            $(".mainmenu>li:nth-of-type(4) a").addClass("active");
+            break;
+        case "/links.html":
+            $(".mainmenu>li:nth-of-type(5)").addClass("nav-open");
+            $(".mainmenu>li:nth-of-type(5) .submenu li:nth-of-type(1) a").addClass("active");
+            break;
     case "/culture.html":
     case "/footprints.html":
     case "/awards.html":            

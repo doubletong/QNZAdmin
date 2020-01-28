@@ -19,4 +19,49 @@ block content
             |  基本表格
         small
             | Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.
-    p dsdsa
+    form
+        .card
+            header.card-header
+                .row
+                    .col 数据查询
+                    .col-auto
+                        .control
+                            a.expand(href='#')
+                                i.iconfont.icon-fullscreen
+                            a.compress(href='#', style='display: none;')
+                                i.iconfont.icon-shrink
+            section.card-body
+                .form-group.row
+                    label.col-sm-2.col-form-label(for='inputEmail3') Email
+                    .col-sm-10
+                        input#inputEmail3.form-control(type='email')
+                .form-group.row
+                    label.col-sm-2.col-form-label(for='inputPassword3') Password
+                    .col-sm-10
+                        input#inputPassword3.form-control(type='password')
+                fieldset.form-group
+                    .row
+                        legend.col-form-label.col-sm-2.pt-0 Radios
+                        .col-sm-10
+                            .form-check
+                                input#gridRadios1.form-check-input(type='radio', name='gridRadios', value='option1', checked='')
+                                label.form-check-label(for='gridRadios1')
+                                    | First radio
+                            .form-check
+                                input#gridRadios2.form-check-input(type='radio', name='gridRadios', value='option2')
+                                label.form-check-label(for='gridRadios2')
+                                    | Second radio
+                            .form-check.disabled
+                                input#gridRadios3.form-check-input(type='radio', name='gridRadios', value='option3', disabled='')
+                                label.form-check-label(for='gridRadios3')
+                                    | Third disabled radio
+                .form-group.row
+                    .col-sm-2 Checkbox
+                    .col-sm-10
+                        .form-check
+                            input#gridCheck1.form-check-input(type='checkbox')
+                            label.form-check-label(for='gridCheck1')
+                                | Example checkbox
+            footer.card-footer.text-center
+                button.btn.btn-primary(type='submit') 提交
+                button.btn.btn-secondary(type='button') 返回

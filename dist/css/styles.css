@@ -9769,6 +9769,10 @@ img {
   vertical-align: middle;
 }
 
+.table td .btn {
+  margin-left: .3rem;
+}
+
 .site-header {
   background-color: #fff;
   position: fixed;
