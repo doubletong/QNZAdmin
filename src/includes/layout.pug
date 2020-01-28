@@ -2,7 +2,9 @@ doctype html
 html.no-js(lang='')
   head
     meta(charset='utf-8')
-    title #{title}-控制台
+    title 
+       block title 
+       | -控制台
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='manifest', href='site.webmanifest')
@@ -16,15 +18,15 @@ html.no-js(lang='')
       
   body
     #wrapper.wrapper
-      include includes/leftnav.pug
+      include leftnav.pug
       
       section#rightcol.rightcol
-        include includes/header.pug
+        include header.pug
         
         .main-content          
           block content
         
-        include includes/footer.pug
+        include footer.pug
     
     script(src='js/vendor/modernizr-3.8.0.min.js')
     script(src='js/vendor/jquery-3.4.1.min.js')
