@@ -13,25 +13,30 @@
     <link href="css/styles.min.css" rel="stylesheet">
   </head>
   <body class="loginPage">
+    <header class="site-header">
+      <div class="container">
+        <div class="logo"><img src="img/logo.svg" alt=""></div>
+      </div>
+    </header>
     <div class="loginbox">
-      <header class="loginbox-header"><img src="img/logo.png" alt=""></header>
+      <header class="loginbox-header">用户登录</header>
       <form class="loginForm" method="post">
-        <div class="input-group mb-4">
-          <div class="input-group-prepend"><span class="input-group-text" id="basic-addon1"><i class="iconfont icon-user"></i></span></div>
-          <input class="form-control" type="text" placeholder="帐号/用户名" aria-label="Username" aria-describedby="basic-addon1">
+        <div class="mb-3">
+          <label for="username">帐号/用户名</label>
+          <input class="form-control" id="username" type="text" name="username">
         </div>
-        <div class="input-group mb-4">
-          <div class="input-group-prepend"><span class="input-group-text" id="basic-addon2"><i class="iconfont icon-lock"></i></span></div>
-          <input class="form-control" type="password" placeholder="密码" aria-label="password" aria-describedby="basic-addon2">
+        <div class="mb-3">
+          <label for="password">密码</label>
+          <input class="form-control" id="password" type="password" name="password">
         </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox"> 记住我
-          </label>
+        <div class="custom-control custom-checkbox mb-3">
+          <input class="custom-control-input" id="rememberme" type="checkbox">
+          <label class="custom-control-label" for="rememberme">记住我</label>
         </div>
         <button class="btn btn-primary btn-block" type="submit">登录系统</button>
       </form>
     </div>
+    <footer class="site-footer" id="pagefooter">Copyright © 2012-2020 <a href="http://heiniaozhi.cn">黑鸟志</a> All Rights Reserved</footer>
     <script src="js/libs/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/app.js"></script>

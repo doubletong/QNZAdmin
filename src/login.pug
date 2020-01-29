@@ -12,25 +12,30 @@ html.no-js(lang='')
     link(href='fonts/iconfont.css', rel='stylesheet')
     link(href='css/styles.min.css', rel='stylesheet')
   body.loginPage
+    header.site-header
+      .container
+        .logo
+          img(src='img/logo.svg', alt='')
     .loginbox
-      header.loginbox-header
-        img(src='img/logo.png', alt='')
+      header.loginbox-header 用户登录
+        
       form.loginForm(method='post')
-        .input-group.mb-4
-          .input-group-prepend
-            span#basic-addon1.input-group-text
-              i.iconfont.icon-user
-          input.form-control(type='text', placeholder='帐号/用户名', aria-label='Username', aria-describedby='basic-addon1')
-        .input-group.mb-4
-          .input-group-prepend
-            span#basic-addon2.input-group-text
-              i.iconfont.icon-lock
-          input.form-control(type='password', placeholder='密码', aria-label='password', aria-describedby='basic-addon2')
-        .checkbox
-          label
-            input(type='checkbox')
-            |  记住我
+        .mb-3
+          label(for='username') 帐号/用户名
+          input#username.form-control(type='text', name='username')
+        .mb-3
+          label(for='password') 密码
+          input#password.form-control(type='password', name='password')
+
+        .custom-control.custom-checkbox.mb-3
+          input#rememberme.custom-control-input(type='checkbox')
+          label.custom-control-label(for='rememberme') 记住我
+            
+           
         button.btn.btn-primary.btn-block(type='submit') 登录系统
+    include includes/footer.pug
+
+
     script(src='js/libs/jquery-1.12.4.min.js')
     script(src='js/bootstrap/bootstrap.min.js')
     script(src='js/app.js')
