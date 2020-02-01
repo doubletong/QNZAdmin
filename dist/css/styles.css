@@ -9628,15 +9628,8 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-.container {
-  max-width: 1180px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  padding: 0 1rem;
-}
-
-.flex {
-  display: flex;
+.btn .iconfont {
+  font-size: 14px;
 }
 
 body {
