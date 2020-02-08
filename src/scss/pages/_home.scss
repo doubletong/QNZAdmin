@@ -1,171 +1,36 @@
-
-
 .page-home {
-    background-color: #fff;
-    section{
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-
-        @include mq(md) {
-            padding-top:2.5rem;
-            padding-bottom: 2.5rem;
+    .box {
+        background-color: $color-primary;
+        color: #fff;
+        padding: 1rem;
+        border-radius: 6px;
+        position: relative;
+        overflow: hidden;
+        .iconfont {
+            position: absolute;
+            right: -1rem;
+            top: -2rem;
+            z-index: 10;
+            font-size: rem(108);
+            line-height: 1;
+            opacity: .15;
         }
-
-        @include mq(lg) {
-            padding-top: 3rem;
-            padding-bottom: 3rem;
+        h3 {
+            small {
+                font-size: rem(12);
+            }
         }
-
-        @include mq(xl) {
-            padding-top: 3.5rem;
-            padding-bottom: 3.5rem;
+        &.b2 {
+            background-color: $color-secondary;
+        }
+        &.b3 {
+            background-color: $color-accent;
+        }
+        &.b4 {
+            background-color: $venus;
+        }
+        p {
+            margin-bottom: 0;
         }
     }
-    .s1 {
-        padding-bottom: 0;
-
-        .business {
-            padding: 1rem 5px;
-            .item {
-                box-shadow: 0 0 1rem rgba(0,0,0,.1);
-                padding: 1.5rem 1rem;
-                text-align: center;
-                margin: 0 -5px rem(20);
-                height: 284px;
-                display: block;
-                background-color: #fff;
-                transition: all .2s;
-                @include mq(lg) {
-                    height: 100%;
-                }
-                .icon {
-
-                    border-radius: 50%;
-                    background-color: $color-primary;
-                    width: 80px;
-                    height: 80px;
-                    color: #fff;
-                    line-height: 80px;
-                    margin: 0 auto 1rem;
-
-                    .iconfont {
-                        font-size: rem(32);
-                    }
-
-                }
-                h3{
-                    font-size: rem(18);
-                    font-weight: normal;
-                    margin-bottom: 1rem;
-                }
-                p{
-                    font-size: rem(13);
-                    text-align: justify;
-                    margin-bottom: 0;
-                   color: #999;
-                }
-
-                &:hover{
-                    transform: scale(1.05);
-                    h3{
-                        color: $color-primary;
-                    }
-                }
-            }
-        }
-    }
-
-    .s2 {
-       background-color: #fff;
-       padding-bottom: 0;
-.sliders001{
-    position: relative;
-}
-        .bank-list {
-            padding-top: 1.5rem;
-            box-sizing: border-box;
-            .bank {
-                background-color: #fff;
-      
-                text-align: center;
-             margin-bottom: rem(20);
-          
-                transition: all .25s;
-              
-
-                @include hover {
-                    transform: scale(1.1)
-                }
-            }
-        }
-        .swiper-button-prev{
-            left: -2rem;
-            &::after{
-                color: #666;
-            }
-        }
-        .swiper-button-next{
-            right: -2rem;
-            &::after{
-                color: #666;
-            }
-        }
-        .swiper-button-prev, .swiper-container-rtl .swiper-button-next{
-            background-image: url('../img/arrow_left.png');
-            background-size: auto;
-        }
-        .swiper-button-next, .swiper-container-rtl .swiper-button-prev{
-            background-image: url('../img/arrow_next.png');  background-size: auto;
-        }
-    }
-
-    .s3 {
-        .companies {
-            padding-top: 1rem;
-            margin: 0;
-            padding: 0;
-            @include mq(md){
-                padding-top: 2rem;
-            }
-        }
-        .cities{
-           
-            list-style-image: url('../img/dot.png');
-            @include mq(lg){
-                width: 260px;        
-            }
-            li{
-             display: inline-block;
-             margin-right: 1rem;
-             @include mq(lg){
-                float: left; width: 110px;
-                display: block;
-                margin-right: 0;
-            }
-               dl{
-                   dt{
-                       font-size: rem(14);
-                       position: relative;
-                       &::before{
-                        content: " ";
-                        display: block;
-                        width: 8px;
-                        height: 8px;
-                        border-radius: 50%;
-                        background-color: $color-primary;
-                        position: absolute;
-                        left: -1rem;
-                        top: .6rem;
-                       }
-                   }
-                   dd{
-                       font-size: rem(13);
-                       color:#999;
-                   }
-               }
-            }
-        }
-    }
-
-    
 }

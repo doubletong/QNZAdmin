@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "811977",
+      "name": "icon-newspaper",
+      "font_class": "newspaper",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
       "icon_id": "4765721",
       "name": "check-circle",
       "font_class": "check-circle",

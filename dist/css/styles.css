@@ -9670,29 +9670,7 @@ a:hover {
 }
 
 .page {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-  .page {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .page {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-}
-
-@media (min-width: 1201px) {
-  .page {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
+  margin-bottom: 2rem;
 }
 
 .title-section {
@@ -9805,203 +9783,43 @@ img {
   }
 }
 
-.page-home {
-  background-color: #fff;
-}
-
-.page-home section {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
-
-@media (min-width: 768px) {
-  .page-home section {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .page-home section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-}
-
-@media (min-width: 1201px) {
-  .page-home section {
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-  }
-}
-
-.page-home .s1 {
-  padding-bottom: 0;
-}
-
-.page-home .s1 .business {
-  padding: 1rem 5px;
-}
-
-.page-home .s1 .business .item {
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
-  padding: 1.5rem 1rem;
-  text-align: center;
-  margin: 0 -5px 1.25rem;
-  height: 284px;
-  display: block;
-  background-color: #fff;
-  transition: all .2s;
-}
-
-@media (min-width: 992px) {
-  .page-home .s1 .business .item {
-    height: 100%;
-  }
-}
-
-.page-home .s1 .business .item .icon {
-  border-radius: 50%;
+.page-home .box {
   background-color: #1d829a;
-  width: 80px;
-  height: 80px;
   color: #fff;
-  line-height: 80px;
-  margin: 0 auto 1rem;
-}
-
-.page-home .s1 .business .item .icon .iconfont {
-  font-size: 2rem;
-}
-
-.page-home .s1 .business .item h3 {
-  font-size: 1.125rem;
-  font-weight: normal;
-  margin-bottom: 1rem;
-}
-
-.page-home .s1 .business .item p {
-  font-size: 0.8125rem;
-  text-align: justify;
-  margin-bottom: 0;
-  color: #999;
-}
-
-.page-home .s1 .business .item:hover {
-  transform: scale(1.05);
-}
-
-.page-home .s1 .business .item:hover h3 {
-  color: #1d829a;
-}
-
-.page-home .s2 {
-  background-color: #fff;
-  padding-bottom: 0;
-}
-
-.page-home .s2 .sliders001 {
+  padding: 1rem;
+  border-radius: 6px;
   position: relative;
+  overflow: hidden;
 }
 
-.page-home .s2 .bank-list {
-  padding-top: 1.5rem;
-  box-sizing: border-box;
-}
-
-.page-home .s2 .bank-list .bank {
-  background-color: #fff;
-  text-align: center;
-  margin-bottom: 1.25rem;
-  transition: all .25s;
-}
-
-.page-home .s2 .bank-list .bank:hover, .page-home .s2 .bank-list .bank:active, .page-home .s2 .bank-list .bank:focus {
-  transform: scale(1.1);
-}
-
-.page-home .s2 .swiper-button-prev {
-  left: -2rem;
-}
-
-.page-home .s2 .swiper-button-prev::after {
-  color: #666;
-}
-
-.page-home .s2 .swiper-button-next {
-  right: -2rem;
-}
-
-.page-home .s2 .swiper-button-next::after {
-  color: #666;
-}
-
-.page-home .s2 .swiper-button-prev, .page-home .s2 .swiper-container-rtl .swiper-button-next {
-  background-image: url("../img/arrow_left.png");
-  background-size: auto;
-}
-
-.page-home .s2 .swiper-button-next, .page-home .s2 .swiper-container-rtl .swiper-button-prev {
-  background-image: url("../img/arrow_next.png");
-  background-size: auto;
-}
-
-.page-home .s3 .companies {
-  padding-top: 1rem;
-  margin: 0;
-  padding: 0;
-}
-
-@media (min-width: 768px) {
-  .page-home .s3 .companies {
-    padding-top: 2rem;
-  }
-}
-
-.page-home .s3 .cities {
-  list-style-image: url("../img/dot.png");
-}
-
-@media (min-width: 992px) {
-  .page-home .s3 .cities {
-    width: 260px;
-  }
-}
-
-.page-home .s3 .cities li {
-  display: inline-block;
-  margin-right: 1rem;
-}
-
-@media (min-width: 992px) {
-  .page-home .s3 .cities li {
-    float: left;
-    width: 110px;
-    display: block;
-    margin-right: 0;
-  }
-}
-
-.page-home .s3 .cities li dl dt {
-  font-size: 0.875rem;
-  position: relative;
-}
-
-.page-home .s3 .cities li dl dt::before {
-  content: " ";
-  display: block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: #1d829a;
+.page-home .box .iconfont {
   position: absolute;
-  left: -1rem;
-  top: .6rem;
+  right: -1rem;
+  top: -2rem;
+  z-index: 10;
+  font-size: 6.75rem;
+  line-height: 1;
+  opacity: .15;
 }
 
-.page-home .s3 .cities li dl dd {
-  font-size: 0.8125rem;
-  color: #999;
+.page-home .box h3 small {
+  font-size: 0.75rem;
+}
+
+.page-home .box.b2 {
+  background-color: #d04b44;
+}
+
+.page-home .box.b3 {
+  background-color: #44c4d4;
+}
+
+.page-home .box.b4 {
+  background-color: #4e3141;
+}
+
+.page-home .box p {
+  margin-bottom: 0;
 }
 
 .navbar-primary {

@@ -1,88 +1,80 @@
-body{
+body {
     color: #666;
     background-color: #f1f1f1;
     font-family: "Microsoft YaHei", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     padding-top: 50px;
     line-height: 1.8;
-    font-size: rem(14); 
-    @include mq(md){
+    font-size: rem(14);
+    @include mq(md) {
         padding-top: 65px;
-     }
-    @include mq(lg){
-       font-size: rem(14);  padding-top: 80px;
     }
-    @include mq(xl){
+    @include mq(lg) {
+        font-size: rem(14);
+        padding-top: 80px;
+    }
+    @include mq(xl) {
         font-size: 1rem;
     }
 }
 
-
-a{
+a {
     text-decoration: none;
-    color:#666;
-    &:hover{
+    color: #666;
+    &:hover {
         text-decoration: none;
     }
 }
-.page{
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    @include mq(md){
-        padding-top:3rem;
-        padding-bottom: 3rem;
-    }
-    @include mq(lg){
-        padding-top:4rem;
-        padding-bottom: 4rem;
-    }
-    @include mq(xl){
-        padding-top:5rem;
-        padding-bottom: 5rem;
-    }
+
+.page {
+    margin-bottom: 2rem;
 }
 
-.title-section{
+.title-section {
     margin-bottom: 1rem;
-    @include mq(md){
+    @include mq(md) {
         margin-bottom: 1.5rem;
     }
-    h2{
+    h2 {
         color: $color-primary;
         font-size: rem(20);
         margin: 0;
         font-weight: normal;
-        @include mq(md){
+        @include mq(md) {
             font-size: rem(24);
         }
     }
 }
-.banner{
+
+.banner {
     height: 100px;
     border-bottom: 2px $color-primary solid;
     background-color: #eaeef1;
     background-size: auto 100px;
     background-position: center center;
     background-repeat: no-repeat;
-    @include mq(lg){
-        height: 198px;  background-size: auto 198px;
+    @include mq(lg) {
+        height: 198px;
+        background-size: auto 198px;
     }
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
-img{
+
+img {
     max-width: 100%;
 }
 
-.breadcrumb{
+.breadcrumb {
     background-color: transparent;
     font-size: rem(12);
     padding: 0;
     margin: 0;
 }
 
-.card{
-    &.card-fixed{
+.card {
+    &.card-fixed {
         position: fixed;
         left: 0;
         top: 0;
@@ -91,10 +83,11 @@ img{
         height: 100%;
     }
 }
-.table{
-    td{
+
+.table {
+    td {
         vertical-align: middle;
-        .btn{
+        .btn {
             margin-left: .3rem;
         }
     }
