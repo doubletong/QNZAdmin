@@ -126,7 +126,7 @@ function copyFiles(done) {
 }
 
 function htmls(done) {
-    gulp.src([bases.app + '*.html', bases.app + '**/*.html', bases.app + '*.txt',bases.app + '*.xml',bases.app + '*.webmanifest', bases.app + '*.json',bases.app + "**.png",bases.app + "favicon.ico"])
+    gulp.src([bases.app + '*.html', bases.app + '**/*.html', bases.app + '*.txt',bases.app + '*.xml',bases.app + '*.webmanifest', bases.app + '*.json'])
         .pipe(size({ gzip: true, showFiles: true }))
         .pipe(gulp.dest(bases.dist))
         .pipe(browserSync.stream());
