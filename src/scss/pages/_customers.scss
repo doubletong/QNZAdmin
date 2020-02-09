@@ -1,0 +1,13 @@
+.page-customer{
+    td{
+        ul{
+            @include reset-list();
+            li{
+                .iconfont{
+                    color: $color-accent;
+                    margin-right: .6rem;
+                }
+            }
+        }
+    }
+}

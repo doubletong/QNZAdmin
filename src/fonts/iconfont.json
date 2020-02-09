@@ -3513,6 +3513,13 @@
       "unicode_decimal": 58969
     },
     {
+      "icon_id": "9759222",
+      "name": "客户",
+      "font_class": "customer",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
       "icon_id": "10561607",
       "name": "Eye, blind",
       "font_class": "eye-close",

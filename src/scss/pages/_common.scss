@@ -73,7 +73,7 @@ img {
     margin: 0;
 }
 
-.card {
+.card { 
     &.card-fixed {
         position: fixed;
         left: 0;
@@ -82,6 +82,15 @@ img {
         width: 100%;
         height: 100%;
     }
+ 
+    .card-title-v1{
+        .iconfont{
+            margin-right: .6rem;
+            font-size: rem(18);
+            color: $color-secondary;
+        }
+    }
+    
 }
 
 .table {
