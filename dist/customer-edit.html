@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title> -控制台
+    <title> 客户管理-控制台
     </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,7 +12,7 @@
     <meta name="theme-color" content="#fafafa">
     <link href="fonts/iconfont.css" rel="stylesheet">
     <link href="css/styles.min.css" rel="stylesheet">
-    <script src="js/vendor/ckeditor/ckeditor.js"></script>
+    <script src="js/vendor/holderjs/holder.min.js"></script>
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -84,9 +84,9 @@
               <div class="col-md">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">控制面板</a></li>
-                    <li class="breadcrumb-item"><a href="#">Library</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    <li class="breadcrumb-item">                       <a href="/">控制面板                    </a></li>
+                    <li class="breadcrumb-item"><a href="/customers.html">客户管理     </a></li>
+                    <li class="breadcrumb-item active" aria-current="page">编辑客户信息</li>
                   </ol>
                 </nav>
               </div>
@@ -95,75 +95,92 @@
               </div>
             </div>
           </div>
-          <div class="subheader">
-            <h1 class="subheader-title"><i class="iconfont icon-table"></i> 复杂表单</h1><small>Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.</small>
-          </div>
-          <form class="needs-validation" novalidate="">
-            <div class="card">
+          <form>
+            <div class="card page-customer">
               <header class="card-header">
                 <div class="row">
-                  <div class="col">数据查询</div>
+                  <div class="col"> 
+                    <div class="card-title-v1"><i class="iconfont icon-customer"></i>编辑客户信息</div>
+                  </div>
                   <div class="col-auto">
-                    <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#" style="display: none;"><i class="iconfont icon-shrink"></i></a></div>
+                    <div class="control"><a class="expand" href="javascript:void(0);"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="javascript:void(0);"><i class="iconfont icon-shrink"></i></a></div>
                   </div>
                 </div>
               </header>
               <section class="card-body">
-                <div class="form-row">
-                  <div class="col-md-4 mb-3">
-                    <label for="validationCustom01">First name</label>
-                    <input class="form-control" id="validationCustom01" type="text" value="Mark" required="">
-                    <div class="valid-feedback">Looks good!</div>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <label for="validationCustom02">Last name</label>
-                    <input class="form-control" id="validationCustom02" type="text" value="Otto" required="">
-                    <div class="valid-feedback">Looks good!</div>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <label for="validationCustomUsername">Username</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend"><span class="input-group-text" id="inputGroupPrepend">@</span></div>
-                      <input class="form-control" id="validationCustomUsername" type="text" aria-describedby="inputGroupPrepend" required="">
-                      <div class="invalid-feedback">Please choose a username.</div>
+                <div class="row">
+                  <div class="col-md">               
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputName">客户名称</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputName" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">客户类型</legend>
+                        <div class="col-sm-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" id="customRadioInline1" type="radio" name="gridRadios" value="option1">
+                            <label class="custom-control-label" for="customRadioInline1">公司</label>
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" id="customRadioInline2" type="radio" name="gridRadios" value="option2">
+                            <label class="custom-control-label" for="customRadioInline2">个人</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputPhone">联系电话</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputPhone" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputEmail">Email</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputEmail" type="email">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputHomepage">主页</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputHomepage" type="url">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputDescription">简介</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" id="inputDescription" name="inputDescription" cols="30" rows="10"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-2">激活</div>
+                      <div class="col-sm-10">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" id="gridCheck1" type="checkbox">
+                          <label class="custom-control-label" for="gridCheck1"></label>激活
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="form-row">
-                  <div class="col-md-6 mb-3">
-                    <label for="validationCustom03">City</label>
-                    <input class="form-control" id="validationCustom03" type="text" required="">
-                    <div class="invalid-feedback">Please provide a valid city.</div>
-                  </div>
-                  <div class="col-md-3 mb-3">
-                    <label for="validationCustom04">State</label>
-                    <select class="custom-select" id="validationCustom04" required="">
-                      <option selected="" disabled="" value="">Choose...</option>
-                      <option>...</option>
-                    </select>
-                    <div class="invalid-feedback">Please select a valid state.</div>
-                  </div>
-                  <div class="col-md-3 mb-3">
-                    <label for="validationCustom05">Zip</label>
-                    <input class="form-control" id="validationCustom05" type="text" required="">
-                    <div class="invalid-feedback">Please provide a valid zip.</div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="my-input">内容</label>
-                  <textarea id="editor1" name="editor1" rows="10" cols="80">This is my textarea to be replaced with CKEditor.</textarea>
-                </div>
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" id="invalidCheck" type="checkbox" value="" required="">
-                    <label class="form-check-label" for="invalidCheck">Agree to terms and conditions</label>
-                    <div class="invalid-feedback">You must agree before submitting.</div>
+                  <div class="col-md-auto">
+                    <div class="card">
+                      <div class="card-header">Logo设置</div>
+                      <div class="card-body"><img data-src="holder.js/300x200?text=300x100 
+ 缩略图"></div>
+                      <div class="card-footer text-center">
+                        <button class="btn btn-outline-primary btn-sm" type="button"><i class="iconfont icon-image"></i> 浏览</button>
+                        <button class="btn btn-outline-danger btn-sm" type="button"><i class="iconfont icon-delete"></i> 移除       </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
               <footer class="card-footer text-center">
-                <button class="btn btn-primary" type="submit"><i class="iconfont icon-save"></i>  提交</button>
-                <button class="btn btn-secondary" type="button"><i class="iconfont icon-left"></i>  返回</button>
+                <button class="btn btn-primary" type="submit"><i class="iconfont icon-save"> </i>提交</button>
+                <button class="btn btn-secondary" type="button"> <i class="iconfont icon-rollback"></i>返回               </button>
               </footer>
             </div>
           </form>
@@ -176,26 +193,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <script src="js/bootstrap/bootstrap.min.js"></script>
     <script src="js/app.js"></script>
-    <script>
-      CKEDITOR.replace( 'editor1' );
-      // Example starter JavaScript for disabling form submissions if there are invalid fields
-      (function() {
-      'use strict';
-      window.addEventListener('load', function() {
-      // Fetch all the forms we want to apply custom Bootstrap validation styles to
-      var forms = document.getElementsByClassName('needs-validation');
-      // Loop over them and prevent submission
-      var validation = Array.prototype.filter.call(forms, function(form) {
-      form.addEventListener('submit', function(event) {
-      if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-      }, false);
-      });
-      }, false);
-      })();
-    </script>
   </body>
 </html>

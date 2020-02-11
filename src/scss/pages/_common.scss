@@ -22,6 +22,7 @@ a {
     color: #666;
     &:hover {
         text-decoration: none;
+        color: $color-primary;
     }
 }
 
@@ -74,6 +75,12 @@ img {
 }
 
 .card { 
+    .expand{
+        display: block;
+    }
+    .compress{
+        display: none;
+    }
     &.card-fixed {
         position: fixed;
         left: 0;
@@ -81,6 +88,12 @@ img {
         z-index: 9000;
         width: 100%;
         height: 100%;
+        .expand{
+            display: none;
+        }
+        .compress{
+            display: block;
+        }
     }
  
     .card-title-v1{

@@ -11,29 +11,30 @@ html.no-js(lang='')
     meta(name='theme-color', content='#fafafa')
     link(href='fonts/iconfont.css', rel='stylesheet')
     link(href='css/styles.min.css', rel='stylesheet')
-  body.loginPage
-    header.site-header
-      .container
-        .logo
-          img(src='img/logo.svg', alt='')
-    .loginbox
-      header.loginbox-header 用户登录
-        
-      form.loginForm(method='post')
-        .mb-3
-          label(for='username') 帐号/用户名
-          input#username.form-control(type='text', name='username')
-        .mb-3
-          label(for='password') 密码
-          input#password.form-control(type='password', name='password')
+  body
+    .page-login
+      header.site-header
+        .container
+          .logo
+            img(src='img/logo.svg', alt='')
+      .loginbox
+        header.loginbox-header 用户登录
+          
+        form.loginForm(method='post')
+          .mb-3
+            label(for='username') 帐号/用户名
+            input#username.form-control(type='text', name='username')
+          .mb-3
+            label(for='password') 密码
+            input#password.form-control(type='password', name='password')
 
-        .custom-control.custom-checkbox.mb-3
-          input#rememberme.custom-control-input(type='checkbox')
-          label.custom-control-label(for='rememberme') 记住我
+          .custom-control.custom-checkbox.mb-3
+            input#rememberme.custom-control-input(type='checkbox')
+            label.custom-control-label(for='rememberme') 记住我
+              
             
-           
-        button.btn.btn-primary.btn-block(type='submit') 登录系统
-    include includes/footer.pug
+          button.btn.btn-primary.btn-block(type='submit') 登录系统
+      include includes/footer.pug
 
 
     script(src='js/libs/jquery-1.12.4.min.js')

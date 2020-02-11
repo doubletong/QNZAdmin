@@ -1,36 +1,42 @@
-var d = new Date();
-const st = document.getElementById("sitetime");
-if(st)
-    st.innerHTML = d;
-  
 
-// var app = function() {
-//     var body = void 0;
-//     var menu = void 0;
+
+
+var app = function() {
+       var st =  void 0;
+       var wrapper = void 0;
+       var menu = void 0;
 //     var menuItems = void 0;
 
-//     var init = function init() {
-//         body = document.querySelector('body');
-//         menu = document.querySelector('.menu-icon');
+       var init = function init() {
+         wrapper = document.getElementById('wrapper');
+         menu = document.getElementById('openav');
+         st = document.getElementById("sitetime");
 //         menuItems = document.querySelectorAll('.nav__list-item');
 
-//         applyListeners();
-//     };
+         applyListeners();
+      };
 
-//     var applyListeners = function applyListeners() {
-//         menu.addEventListener('click', function() { return toggleClass(body, 'nav-active'); });
-//     };
+       var applyListeners = function applyListeners() {
+           console.log(wrapper);
+           menu.addEventListener('click', function() { 
+               return toggleClass(wrapper, 'wrap-nonav'); 
+            });
 
-//     var toggleClass = function toggleClass(element, stringClass) {
-//         if (element.classList.contains(stringClass))
-//             element.classList.remove(stringClass);
-//         else
+           if(st){           
+            st.innerHTML = new Date();
+           }
+            
+       };
 
-//             element.classList.add(stringClass);
-//     };
+    var toggleClass = function toggleClass(element, stringClass) {
+        if (element.classList.contains(stringClass))
+            element.classList.remove(stringClass);
+        else
+            element.classList.add(stringClass);
+        };
 
-//     init();
-// }();
+     init();
+}();
 
 
 $(document).ready(function() {
@@ -44,22 +50,14 @@ $(document).ready(function() {
         });
     })
 
-    $('#openav').click(function(e){
-        e.preventDefault();
-        $("#wrapper").toggleClass('closenav');
-    })
 
 
     $('a.expand').click(function (e) {
-        $(this).closest('.card').addClass('card-fixed');
-        $(this).hide();
-        $(this).next('a').show()
+        $(this).closest('.card').addClass('card-fixed');     
         e.preventDefault();
     });
     $('a.compress').click(function (e) {
-        $(this).closest('.card').removeClass('card-fixed');
-        $(this).hide();
-        $(this).prev('a').show()
+        $(this).closest('.card').removeClass('card-fixed');    
         e.preventDefault();
     });
 
@@ -81,6 +79,8 @@ $(document).ready(function() {
             $(".mainmenu>li:nth-of-type(2) .submenu li:nth-of-type(2) a").addClass("active");
             break;
         case "/customers.html":   
+        case "/customer-detail.html":   
+        case "/customer-edit.html":   
             $(".mainmenu>li.customers a").addClass("active");
            // $(".mainmenu>li:customers .submenu li:nth-of-type(2) a").addClass("active");
             break;

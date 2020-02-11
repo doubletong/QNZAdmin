@@ -1,0 +1,63 @@
+extends includes/layout.pug
+
+block title
+    | 客户管理
+
+block content
+    .breadcrumb-container
+        .row
+            .col-md
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item                        
+                            a(href='/') 控制面板                    
+                        li.breadcrumb-item
+                            a(href='/customers.html') 客户管理     
+                        li.breadcrumb-item.active(aria-current='page') 香蕉设计
+            .col-md-auto
+                time#sitetime
+   
+
+
+    .card.page-customer
+        header.card-header
+            .row
+                .col 
+                    div.card-title-v1
+                        i.iconfont.icon-customer
+                        | 香蕉设计详情信息
+                .col-auto
+                    .control
+                        a.expand(href='#')
+                            i.iconfont.icon-fullscreen
+                        a.compress(href='#', style='display: none;')
+                            i.iconfont.icon-shrink
+        section.card-body
+            .jumbotron
+                .row
+                    .col-md
+                        h1 深圳香蕉设计有限公司
+                            small （公司）
+                        p.lead This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+                    .col-md-auto
+                        img(src='https://www.fillmurray.com/g/210/70', alt='深圳香蕉设计有限公司')
+
+            ul.list-group
+                li.list-group-item 电话：
+                    a(href='tel:15361828193')
+                        i.iconfont.icon-mobile                    
+                        | 15361828193
+                li.list-group-item 邮箱：
+                    a(href='mailto:twotong@gmail.com')
+                        i.iconfont.icon-mail
+                        | twotong@gmail.com
+                li.list-group-item 主页：
+                    a(href='http://heiniaozhi.cn')
+                        i.iconfont.icon-home
+                        | http://heiniaozhi.cn
+                li.list-group-item 创建时间：2012-10-21                   
+
+
+        
+block bkfooter
+    

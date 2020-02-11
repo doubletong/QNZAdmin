@@ -1,5 +1,5 @@
 .page-customer{
-    td{
+    
         ul{
             @include reset-list();
             li{
@@ -9,5 +9,5 @@
                 }
             }
         }
-    }
+   
 }

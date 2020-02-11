@@ -9667,6 +9667,7 @@ a {
 
 a:hover {
   text-decoration: none;
+  color: #1d829a;
 }
 
 .page {
@@ -9727,6 +9728,14 @@ img {
   margin: 0;
 }
 
+.card .expand {
+  display: block;
+}
+
+.card .compress {
+  display: none;
+}
+
 .card.card-fixed {
   position: fixed;
   left: 0;
@@ -9734,6 +9743,14 @@ img {
   z-index: 9000;
   width: 100%;
   height: 100%;
+}
+
+.card.card-fixed .expand {
+  display: none;
+}
+
+.card.card-fixed .compress {
+  display: block;
 }
 
 .card .card-title-v1 .iconfont {
@@ -9857,11 +9874,11 @@ img {
   transition: all .2s;
 }
 
-.wrapper.closenav .leftcol {
+.wrapper.wrap-nonav .leftcol {
   margin-left: -220px;
 }
 
-.wrapper.closenav .rightcol {
+.wrapper.wrap-nonav .rightcol {
   margin-left: -220px;
 }
 
@@ -11163,13 +11180,13 @@ body {
 }
 
 /*# sourceMappingURL=Main.css.map */
-body.loginPage {
+.page-login {
   background: #1d829a url(../img/bg.svg) no-repeat center center;
   background-size: cover;
   height: 100%;
 }
 
-body.loginPage .site-footer a {
+.page-login .site-footer a {
   color: #ccc;
 }
 
@@ -11207,15 +11224,19 @@ body.loginPage .site-footer a {
   padding: .6rem 1rem;
 }
 
-.page-customer td ul {
+.page-customer ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.page-customer td ul li .iconfont {
+.page-customer ul li .iconfont {
   color: #44c4d4;
   margin-right: .6rem;
+}
+
+.pagination {
+  margin-bottom: 0;
 }
 
 @media print {

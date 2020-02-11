@@ -21,8 +21,8 @@
     .rightcol{
         transition: all .2s;
     }
-    &.closenav{     
-   
+    &.wrap-nonav{     
+        
         .leftcol{
             margin-left: -220px;
         }
@@ -30,6 +30,7 @@
             margin-left: -220px;
         }
     }
+
 }
 
 .leftcol{
