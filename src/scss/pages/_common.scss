@@ -107,6 +107,11 @@ img {
 }
 
 .table {
+    th{
+        font-weight: normal;
+        color: #333;
+        background-color: #f7f7f7;
+    }
     td {
         vertical-align: middle;
         .btn {
