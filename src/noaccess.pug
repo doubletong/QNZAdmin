@@ -1,0 +1,33 @@
+extends includes/layout.pug
+
+block title
+    | 无权限查看
+
+block content
+    .breadcrumb-container
+        .row
+            .col-md
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') 控制面板
+                        li.breadcrumb-item
+                            a(href='#') Library
+                        li.breadcrumb-item.active(aria-current='page') 无权限
+            .col-md-auto
+                time#sitetime
+    .page.page-noaccess  
+        .alert.alert-danger(role='alert')
+            .row
+                .col-auto
+                    i.iconfont.icon-error-fill 
+                .col
+                    h4.alert-heading 很抱歉！
+                    p.mb-0
+                        |  没有权限查看此页，请重新
+                        a.alert-link(href='login.html') 登录
+                        | !
+
+            
+
+   

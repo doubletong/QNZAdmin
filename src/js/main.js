@@ -99,6 +99,10 @@ $(document).ready(function() {
         case "/pages.html":
             $(".mainmenu>li:nth-of-type(4) a").addClass("active");
             break;
+        case "/noaccess.html":
+            $(".mainmenu>li.ortherpage").addClass("nav-open");
+            $(".mainmenu>li.ortherpage .submenu li:nth-of-type(3) a").addClass("active");
+            break;
         case "/links.html":
             $(".mainmenu>li:nth-of-type(6)").addClass("nav-open");
             $(".mainmenu>li:nth-of-type(6) .submenu li:nth-of-type(1) a").addClass("active");

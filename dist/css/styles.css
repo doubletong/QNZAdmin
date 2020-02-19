@@ -11241,6 +11241,10 @@ body {
   margin-right: .6rem;
 }
 
+.page-noaccess .iconfont {
+  font-size: 2rem;
+}
+
 .pagination {
   margin-bottom: 0;
 }
