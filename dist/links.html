@@ -36,9 +36,10 @@
             </li>
             <li><a href="pages.html"><i class="iconfont icon-file-text"></i> 页面管理</a></li>
             <li class="customers"><a href="customers.html"><i class="iconfont icon-customer"></i> 客户管理</a></li>
-            <li class="down-nav"><a href="#"><i class="iconfont icon-link"></i> 链接管理 <i class="arrow iconfont icon-down"></i></a>
+            <li class="down-nav links"><a href="#"><i class="iconfont icon-link"></i> 链接<i class="arrow iconfont icon-down"></i></a>
               <ul class="submenu">
                 <li><a href="links.html">链接列表</a></li>
+                <li><a href="link_categories.html">链接分类</a></li>
               </ul>
             </li>
             <li class="down-nav ortherpage"><a href="#"><i class="iconfont icon-file-image"></i> 其它页面 <i class="arrow iconfont icon-down"></i></a>
@@ -96,13 +97,12 @@
               </div>
             </div>
           </div>
-          <div class="subheader">
-            <h1 class="subheader-title"><i class="iconfont icon-link"></i> 链接列表</h1><small>友情链接，客户列表展示</small>
-          </div>
           <div class="card">
             <header class="card-header">
               <div class="row">
-                <div class="col">链接列表</div>
+                <div class="col">
+                  <div class="card-title-v1"> <i class="iconfont icon-link"></i>链接列表</div>
+                </div>
                 <div class="col-auto">
                   <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#" style="display: none;"><i class="iconfont icon-shrink"></i></a></div>
                 </div>
@@ -122,6 +122,8 @@
                   <div class="col-md-auto">
                     <form class="form-inline" role="form">
                       <div class="form-group mr-2">
+                        <label class="sr-only" for="keyword">关键字</label>
+                        <input class="form-control mr-1" type="search" name="keyword" placeholder="关键字">
                         <label class="sr-only" for="inputCategory">分类</label>
                         <select class="form-control" id="inputCategory">
                           <option>--请选择分类--</option>
@@ -143,8 +145,9 @@
                       </th>
                       <th>ID</th>
                       <th>Logo</th>
-                      <th>主题/链接</th>
-                      <th>创建时间</th>
+                      <th>主题/描述</th>
+                      <th>链接</th>
+                      <th>排序</th>
                       <th>激活？</th>
                       <th style="width:260px;">操作</th>
                     </tr>
@@ -155,9 +158,10 @@
                         <input type="checkbox" value="">
                       </td>
                       <td>1</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
+                      <td><img src="https://www.fillmurray.com/70/70" alt=""></td>
                       <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
+                      <td>                              <a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
+                      <td>21</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
@@ -165,99 +169,12 @@
                       <td>
                         <input type="checkbox" value="">
                       </td>
-                      <td>2</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
+                      <td>1</td>
+                      <td><img src="https://www.fillmurray.com/70/70" alt=""></td>
                       <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
+                      <td>                              <a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
+                      <td>21</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-warning btn-sm" href="#" title="不推荐"><i class="iconfont icon-unlike"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="checkbox" value="">
-                      </td>
-                      <td>3</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
-                      <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
-                      <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-warning btn-sm" href="#" title="锁定"><i class="iconfont icon-eye-close"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="checkbox" value="">
-                      </td>
-                      <td>3</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
-                      <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
-                      <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="checkbox" value="">
-                      </td>
-                      <td>3</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
-                      <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
-                      <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="checkbox" value="">
-                      </td>
-                      <td>3</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
-                      <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
-                      <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="checkbox" value="">
-                      </td>
-                      <td>3</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
-                      <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
-                      <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="checkbox" value="">
-                      </td>
-                      <td>3</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
-                      <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
-                      <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="checkbox" value="">
-                      </td>
-                      <td>3</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
-                      <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
-                      <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-warning btn-sm" href="#" title="不推荐"><i class="iconfont icon-unlike"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <input type="checkbox" value="">
-                      </td>
-                      <td>3</td>
-                      <td><img src="https://www.fillmurray.com/210/70" alt=""></td>
-                      <td>科学世界<br><a href="http://www.bing.com"><small>[http://www.bing.com]</small></a></td>
-                      <td>2020-1-21</td>
-                      <td><i class="iconfont icon-close-circle-fill text-danger"></i></td>
                       <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                   </tbody>
