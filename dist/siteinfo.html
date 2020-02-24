@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title> -控制台
+    <title> 站点信息-控制台
     </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +12,7 @@
     <meta name="theme-color" content="#fafafa">
     <link href="fonts/iconfont.css" rel="stylesheet">
     <link href="css/styles.min.css" rel="stylesheet">
+    <script src="js/vendor/holderjs/holder.min.js"></script>
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -86,9 +87,9 @@
               <div class="col-md">
                 <nav aria-label="breadcrumb">
                   <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="#">控制面板</a></li>
-                    <li class="breadcrumb-item"><a href="#">Library</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Data</li>
+                    <li class="breadcrumb-item">                       <a href="/">控制面板                    </a></li>
+                    <li class="breadcrumb-item"><a href="/customers.html">客户管理     </a></li>
+                    <li class="breadcrumb-item active" aria-current="page">站点信息</li>
                   </ol>
                 </nav>
               </div>
@@ -97,64 +98,124 @@
               </div>
             </div>
           </div>
-          <div class="subheader">
-            <h1 class="subheader-title"><i class="iconfont icon-table"></i> 基本表格</h1><small>Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.</small>
-          </div>
           <form>
             <div class="card">
               <header class="card-header">
                 <div class="row">
-                  <div class="col">数据查询</div>
+                  <div class="col"> 
+                    <div class="card-title-v1"><i class="iconfont icon-setting"></i>站点信息</div>
+                  </div>
                   <div class="col-auto">
-                    <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#" style="display: none;"><i class="iconfont icon-shrink"></i></a></div>
+                    <div class="control"><a class="expand" href="javascript:void(0);"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="javascript:void(0);"><i class="iconfont icon-shrink"></i></a></div>
                   </div>
                 </div>
               </header>
               <section class="card-body">
-                <div class="form-group row">
-                  <label class="col-sm-2 col-form-label" for="inputEmail3">Email</label>
-                  <div class="col-sm-10">
-                    <input class="form-control" id="inputEmail3" type="email">
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <label class="col-sm-2 col-form-label" for="inputPassword3">Password</label>
-                  <div class="col-sm-10">
-                    <input class="form-control" id="inputPassword3" type="password">
-                  </div>
-                </div>
-                <fieldset class="form-group">
-                  <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
-                    <div class="col-sm-10">
-                      <div class="form-check">
-                        <input class="form-check-input" id="gridRadios1" type="radio" name="gridRadios" value="option1" checked="">
-                        <label class="form-check-label" for="gridRadios1">First radio</label>
+                <div class="row">
+                  <div class="col-md">               
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputName">网站名称</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputName" type="text">
                       </div>
-                      <div class="form-check">
-                        <input class="form-check-input" id="gridRadios2" type="radio" name="gridRadios" value="option2">
-                        <label class="form-check-label" for="gridRadios2">Second radio</label>
+                    </div>
+                    <div class="form-group">
+                      <div class="row">
+                        <legend class="col-form-label col-sm-2 pt-0">客户类型</legend>
+                        <div class="col-sm-10">
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" id="customRadioInline1" type="radio" name="gridRadios" value="option1">
+                            <label class="custom-control-label" for="customRadioInline1">公司</label>
+                          </div>
+                          <div class="custom-control custom-radio custom-control-inline">
+                            <input class="custom-control-input" id="customRadioInline2" type="radio" name="gridRadios" value="option2">
+                            <label class="custom-control-label" for="customRadioInline2">个人</label>
+                          </div>
+                        </div>
                       </div>
-                      <div class="form-check disabled">
-                        <input class="form-check-input" id="gridRadios3" type="radio" name="gridRadios" value="option3" disabled="">
-                        <label class="form-check-label" for="gridRadios3">Third disabled radio</label>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputPhone">联系电话</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputPhone" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputEmail">Email</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputEmail" type="email">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputHomepage">网址</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputHomepage" type="url">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputPhone">备案号</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputPhone" type="text">
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputPhone">公司名称</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputPhone" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputPhone">公司地址</label>
+                      <div class="col-sm-10">
+                        <input class="form-control" id="inputPhone" type="text">
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-sm-2 col-form-label" for="inputDescription">简介</label>
+                      <div class="col-sm-10">
+                        <textarea class="form-control" id="inputDescription" name="inputDescription" cols="30" rows="10"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <div class="col-sm-2">开启缓存</div>
+                      <div class="col-sm-10">
+                        <div class="custom-control custom-checkbox">
+                          <input class="custom-control-input" id="gridCheck1" type="checkbox">
+                          <label class="custom-control-label" for="gridCheck1"></label>开启
+                        </div>
                       </div>
                     </div>
                   </div>
-                </fieldset>
-                <div class="form-group row">
-                  <div class="col-sm-2">Checkbox</div>
-                  <div class="col-sm-10">
-                    <div class="form-check">
-                      <input class="form-check-input" id="gridCheck1" type="checkbox">
-                      <label class="form-check-label" for="gridCheck1">Example checkbox</label>
+                  <div class="col-md-auto">
+                    <div class="card mb-3">
+                      <div class="card-header">Logo设置</div>
+                      <div class="card-body"><img data-src="holder.js/300x100?text=300x100 
+ 缩略图"></div>
+                      <div class="card-footer text-center">
+                        <button class="btn btn-outline-primary btn-sm" type="button"><i class="iconfont icon-image"></i> 浏览</button>
+                        <button class="btn btn-outline-danger btn-sm" type="button"><i class="iconfont icon-delete"></i> 移除       </button>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header">SEO</div>
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label class="col-form-label" for="keywords">关键字                               </label>
+                          <input class="form-control" id="keywords" type="text">
+                        </div>
+                        <div class="form-group">
+                          <label class="col-form-label" for="inputDescription">描述                                  </label>
+                          <textarea class="form-control" id="inputDescription" name="inputDescription" rows="6">    </textarea>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </section>
               <footer class="card-footer text-center">
-                <button class="btn btn-primary" type="submit">提交</button>
-                <button class="btn btn-secondary" type="button">返回</button>
+                <button class="btn btn-primary" type="submit"><i class="iconfont icon-save"> </i>提交</button>
+                <button class="btn btn-secondary" type="button"> <i class="iconfont icon-rollback"></i>返回               </button>
               </footer>
             </div>
           </form>

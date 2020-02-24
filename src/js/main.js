@@ -115,6 +115,10 @@ $(document).ready(function() {
             $(".mainmenu>li.links").addClass("nav-open");
             $(".mainmenu>li.links .submenu li:nth-of-type(2) a").addClass("active");
             break;
+        case "/siteinfo.html":
+            $(".mainmenu>li.settings").addClass("nav-open");
+            $(".mainmenu>li.settings .submenu li:nth-of-type(1) a").addClass("active");
+            break;
     case "/culture.html":
     case "/footprints.html":
     case "/awards.html":            

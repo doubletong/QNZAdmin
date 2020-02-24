@@ -1,0 +1,132 @@
+extends includes/layout.pug
+
+block title
+    | 站点信息
+
+block bkheader
+    script(src='js/vendor/holderjs/holder.min.js')
+
+block content
+    .breadcrumb-container
+        .row
+            .col-md
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item                        
+                            a(href='/') 控制面板                    
+                        li.breadcrumb-item
+                            a(href='/customers.html') 客户管理     
+                        li.breadcrumb-item.active(aria-current='page') 站点信息
+            .col-md-auto
+                time#sitetime
+   
+    form
+        .card
+            header.card-header
+                .row
+                    .col 
+                        div.card-title-v1
+                            i.iconfont.icon-setting
+                            | 站点信息
+                    .col-auto
+                        .control
+                            a.expand(href='javascript:void(0);')
+                                i.iconfont.icon-fullscreen
+                            a.compress(href='javascript:void(0);')
+                                i.iconfont.icon-shrink
+            section.card-body
+                .row
+                    .col-md                
+
+                        .form-group.row
+                            label.col-sm-2.col-form-label(for='inputName') 网站名称
+                            .col-sm-10
+                                input#inputName.form-control(type='text')
+                        .form-group
+                            .row
+                                legend.col-form-label.col-sm-2.pt-0 客户类型
+                                .col-sm-10
+                                    .custom-control.custom-radio.custom-control-inline
+                                        input#customRadioInline1.custom-control-input(type='radio', name='gridRadios', value='option1')
+                                        label.custom-control-label(for='customRadioInline1')
+                                            | 公司
+                                    .custom-control.custom-radio.custom-control-inline
+                                        input#customRadioInline2.custom-control-input(type='radio', name='gridRadios', value='option2')
+                                        label.custom-control-label(for='customRadioInline2')
+                                            | 个人
+                        .form-group.row
+                            label.col-sm-2.col-form-label(for='inputPhone') 联系电话
+                            .col-sm-10
+                                input#inputPhone.form-control(type='text')
+                        .form-group.row
+                            label.col-sm-2.col-form-label(for='inputEmail') Email
+                            .col-sm-10
+                                input#inputEmail.form-control(type='email')
+                        .form-group.row
+                            label.col-sm-2.col-form-label(for='inputHomepage') 网址
+                            .col-sm-10
+                                input#inputHomepage.form-control(type='url')
+
+                        .form-group.row
+                            label.col-sm-2.col-form-label(for='inputPhone') 备案号
+                            .col-sm-10
+                                input#inputPhone.form-control(type='text')
+                        hr
+                        .form-group.row
+                            label.col-sm-2.col-form-label(for='inputPhone') 公司名称
+                            .col-sm-10
+                                input#inputPhone.form-control(type='text')
+                        .form-group.row
+                            label.col-sm-2.col-form-label(for='inputPhone') 公司地址
+                            .col-sm-10
+                                input#inputPhone.form-control(type='text')
+                        .form-group.row
+                            label.col-sm-2.col-form-label(for='inputDescription') 简介
+                            .col-sm-10
+                                textarea#inputDescription.form-control(name="inputDescription", cols="30", rows="10")
+                        
+                        .form-group.row
+                            .col-sm-2 开启缓存
+                            .col-sm-10
+                                .custom-control.custom-checkbox
+                                    input#gridCheck1.custom-control-input(type='checkbox')
+                                    label.custom-control-label(for='gridCheck1')
+                                    | 开启
+
+                    .col-md-auto
+                        .card.mb-3
+                            .card-header
+                                | Logo设置
+                            .card-body
+                                img(data-src='holder.js/300x100?text=300x100 \n 缩略图')
+                            .card-footer.text-center
+                                button.btn.btn-outline-primary.btn-sm(type='button')
+                                    i.iconfont.icon-image
+                                    |  浏览
+                                button.btn.btn-outline-danger.btn-sm(type='button')
+                                    i.iconfont.icon-delete
+                                    |  移除       
+                        .card
+                            .card-header
+                                | SEO
+                            .card-body
+                                .form-group
+                                    label.col-form-label(for='keywords') 关键字                               
+                                    input#keywords.form-control(type='text')
+
+                                .form-group
+                                    label.col-form-label(for='inputDescription') 描述                                  
+                                    textarea#inputDescription.form-control(name="inputDescription",  rows="6")     
+                                
+            footer.card-footer.text-center
+                button.btn.btn-primary(type='submit')
+                    i.iconfont.icon-save 
+                    | 提交
+                button.btn.btn-secondary(type='button') 
+                    i.iconfont.icon-rollback
+                    | 返回               
+
+
+        
+block bkfooter
+    
