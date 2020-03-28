@@ -9814,11 +9814,13 @@ img {
 
 .page-home .box {
   background-color: #1d829a;
+  display: block;
   color: #fff;
   padding: 1rem;
   border-radius: 6px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 
 .page-home .box .iconfont {

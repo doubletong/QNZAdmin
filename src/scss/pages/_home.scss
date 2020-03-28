@@ -1,11 +1,12 @@
 .page-home {
     .box {
-        background-color: $color-primary;
+        background-color: $color-primary; display: block;
         color: #fff;
         padding: 1rem;
         border-radius: 6px;
         position: relative;
         overflow: hidden;
+        margin-bottom: 1rem;
         .iconfont {
             position: absolute;
             right: -1rem;
