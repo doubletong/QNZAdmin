@@ -11,30 +11,52 @@
     <meta name="theme-color" content="#fafafa">
     <link href="fonts/iconfont.css" rel="stylesheet">
     <link href="css/styles.min.css" rel="stylesheet">
+    <style type="text/css">
+      .input-group-text {
+          padding:0;
+          overflow: hidden;
+          background-color:#fff;
+      }
+    </style>
   </head>
   <body>
     <div class="page-login">
       <header class="site-header">
         <div class="container">
-          <div class="logo"><img src="img/logo.svg" alt=""></div>
+          <div class="row align-items-center">
+            <div class="col-auto">
+              <div class="logo"><img src="img/logo.svg" alt=""></div>
+            </div>
+            <div class="col">
+              <h1 class="title">用户登录</h1>
+            </div>
+          </div>
         </div>
       </header>
       <div class="loginbox">
-        <header class="loginbox-header">用户登录</header>
         <form class="loginForm" method="post">
           <div class="mb-3">
             <label for="username">帐号/用户名</label>
-            <input class="form-control" id="username" type="text" name="username">
+            <input class="form-control" id="username" type="text" name="username" required>
           </div>
           <div class="mb-3">
             <label for="password">密码</label>
-            <input class="form-control" id="password" type="password" name="password">
+            <input class="form-control" id="password" type="password" name="password" required>
+          </div>
+          <div class="mb-3">
+            <label for="captcha">验证码</label>
+            <div class="input-group">
+              <input class="form-control" id="captcha" type="text" name="captcha" placeholder="验证码" required>
+              <div class="input-group-append"><span class="input-group-text"><img id="imgCaptcha" src="https://www.fillmurray.com/g/120/42" alt="CAPTCHA"></span></div>
+            </div>
           </div>
           <div class="custom-control custom-checkbox mb-3">
             <input class="custom-control-input" id="rememberme" type="checkbox">
             <label class="custom-control-label" for="rememberme">记住我</label>
           </div>
-          <button class="btn btn-primary btn-block" type="submit">登录系统</button>
+          <div class="text-center"> 
+            <button class="btn btn-primary" type="submit"><i class="iconfont icon-login"> </i>登录</button><a class="btn btn-outline-secondary" href="/"> <i class="iconfont icon-left"> </i>离开</a>
+          </div>
         </form>
       </div>
       <footer class="site-footer" id="pagefooter">Copyright © 2012-2020 <a href="http://heiniaozhi.cn">黑鸟志</a> All Rights Reserved</footer>

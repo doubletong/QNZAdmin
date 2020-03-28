@@ -11,29 +11,54 @@ html.no-js(lang='')
     meta(name='theme-color', content='#fafafa')
     link(href='fonts/iconfont.css', rel='stylesheet')
     link(href='css/styles.min.css', rel='stylesheet')
+    style(type='text/css').
+        .input-group-text {
+            padding:0;
+            overflow: hidden;
+            background-color:#fff;
+        }
   body
     .page-login
       header.site-header
         .container
-          .logo
-            img(src='img/logo.svg', alt='')
+          .row.align-items-center
+            .col-auto
+              .logo
+                img(src='img/logo.svg', alt='')
+            .col
+              h1.title 用户登录
+              
       .loginbox
-        header.loginbox-header 用户登录
+       
           
         form.loginForm(method='post')
           .mb-3
             label(for='username') 帐号/用户名
-            input#username.form-control(type='text', name='username')
+            input#username.form-control(type='text', name='username',required)
           .mb-3
             label(for='password') 密码
-            input#password.form-control(type='password', name='password')
+            input#password.form-control(type='password', name='password',required)
+          .mb-3
+            label(for="captcha") 验证码
+            .input-group
+              input#captcha.form-control(type="text", name="captcha", placeholder="验证码", required)
+              .input-group-append
+                span.input-group-text
+                  img#imgCaptcha(src="https://www.fillmurray.com/g/120/42", alt="CAPTCHA")
+     
+
 
           .custom-control.custom-checkbox.mb-3
             input#rememberme.custom-control-input(type='checkbox')
             label.custom-control-label(for='rememberme') 记住我
               
-            
-          button.btn.btn-primary.btn-block(type='submit') 登录系统
+          .text-center  
+            button.btn.btn-primary(type='submit')
+              i.iconfont.icon-login 
+              | 登录
+            a.btn.btn-outline-secondary(href="/") 
+              i.iconfont.icon-left 
+              | 离开
       include includes/footer.pug
 
 

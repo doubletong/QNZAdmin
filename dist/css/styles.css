@@ -11192,8 +11192,22 @@ body {
   height: 100%;
 }
 
+.page-login .container {
+  height: 100%;
+}
+
+.page-login .row {
+  height: 100%;
+}
+
 .page-login .site-footer a {
   color: #ccc;
+}
+
+.page-login h1.title {
+  color: #fff;
+  margin: 0;
+  font-size: 1.25rem;
 }
 
 .loginbox {
@@ -11208,13 +11222,7 @@ body {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-}
-
-.loginbox header.loginbox-header {
-  text-align: center;
-  border-radius: 6px 6px 0 0;
-  background: #f7f7f7;
-  padding: 1rem;
+  border-top: 5px #d04b44 solid;
 }
 
 .loginbox .loginForm {
@@ -11227,7 +11235,7 @@ body {
 }
 
 .loginbox .loginForm .btn {
-  padding: .6rem 1rem;
+  margin: .5rem .3rem;
 }
 
 .page-customer ul {

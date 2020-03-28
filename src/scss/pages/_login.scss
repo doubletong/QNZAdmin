@@ -3,10 +3,22 @@
     background: $color-primary url(../img/bg.svg) no-repeat center center;
     background-size: cover;
     height: 100%;
+    .container{
+      height: 100%;
+    }
+    .row{
+      height: 100%;
+    }
     .site-footer{
       a{
         color: #ccc;
       }
+    }
+    h1.title {
+      color: #fff;
+     margin: 0;
+     font-size: 1.25rem;
+   
     }
   }
   .loginbox {
@@ -17,13 +29,9 @@
     width: 100%;
     background-color: #fff;
     @include vertical-align(); 
-    header.loginbox-header {
-      text-align: center;
-      border-radius: 6px 6px 0 0;
-      background:#f7f7f7;
-     padding: 1rem;
+    border-top: 5px $color-secondary solid;
+    
    
-    }
   }
 
 
@@ -34,6 +42,7 @@
       height: auto;
     }
     .btn{
-      padding: .6rem 1rem;
+    
+      margin: .5rem .3rem;
     }
   }
