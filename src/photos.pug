@@ -1,0 +1,252 @@
+extends includes/layout.pug
+
+block title
+    | 客户管理
+
+block bkheader    
+    style(type='text/css').
+        .card.item{
+            margin-bottom:2rem;
+            border-radius: 0;
+            
+        }
+        @media only screen and (min-width: 1201px) {
+            .card.item{
+                width:220px;                
+            }            
+        }
+        .card.item .card-header {           
+            background-color:#fff;
+        }
+        .card.item .card-footer {
+            text-align:center;
+            background-color:#fff;
+        }
+        .card.item .card-body{
+            padding:5px; 
+        }
+        .card.item .card-body img{
+            display:block;
+            margin:0 auto;
+        }
+        .card.item .card-footer .btn{
+            margin:0 .1rem;
+        }
+
+block content
+    .breadcrumb-container
+        .row
+            .col-md
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') 控制面板                      
+                        li.breadcrumb-item.active(aria-current='page') 客户管理
+            .col-md-auto
+                time#sitetime
+   
+
+
+    .card.page-customer
+        header.card-header
+            .row
+                .col 
+                    div.card-title-v1
+                        i.iconfont.icon-customer
+                        | 客户列表
+                .col-auto
+                    .control
+                        a.expand(href='#')
+                            i.iconfont.icon-fullscreen
+                        a.compress(href='#', style='display: none;')
+                            i.iconfont.icon-shrink
+        section.card-body
+            .card-toolbar.mb-3
+                .row
+                    .col-md
+                        .btn-group(role='group', aria-label='Basic example')                       
+                            button.btn.btn-outline-info(type='button') 激活
+                            button.btn.btn-outline-info(type='button') 锁定
+                            button.btn.btn-outline-danger(type='button') 删除
+                    .col-md-auto
+                        form.form-inline(role='form')
+                            .form-group.mr-2
+                                label.sr-only(for='inputCategory') 相册
+                                select#inputCategory.form-control
+                                    option --请选择相册--
+                                    option 默认相册
+                                    option 个人                                 
+                            .form-group.mr-2
+                                label.sr-only(for='inputCategory') 状态
+                                select#inputCategory.form-control
+                                    option --请选择状态--
+                                    option 激活
+                                    option 锁定                   
+                            button.btn.btn-primary.btn-sm(type='submit')
+                                i.iconfont.icon-search
+                                |  查询
+            .list
+                .row
+                    .col-md-6.col-lg-4.col-xl-auto
+                        .card.item
+                            .card-header
+                                input(type='checkbox', value='') 
+                                |  图片名称
+                            .card-body
+                                img(src='https://www.fillmurray.com/g/240/240', alt='')
+                            .card-footer
+                          
+                                button.btn.btn-info.btn-sm(type="button" , data-toggle="tooltip", data-placement="top", title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-info.btn-sm(href='#', title='激活')
+                                    i.iconfont.icon-eye
+                                a.btn.btn-primary.btn-sm(href='customer-edit.html', title='编辑')
+                                    i.iconfont.icon-edit                            
+                                a.btn.btn-danger.btn-sm(href='#', title='删除')
+                                    i.iconfont.icon-delete
+                    
+                    .col-md-6.col-lg-4.col-xl-auto
+                        .card.item
+                            .card-header
+                                input(type='checkbox', value='') 
+                                |  图片名称
+                            .card-body
+                                img(src='https://www.fillmurray.com/g/240/240', alt='')
+                            .card-footer
+                                a.btn.btn-info.btn-sm(href='customer-detail.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-info.btn-sm(href='#', title='激活')
+                                    i.iconfont.icon-eye
+                                a.btn.btn-primary.btn-sm(href='customer-edit.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                                    i.iconfont.icon-file-copy
+                                a.btn.btn-danger.btn-sm(href='#', title='删除')
+                                    i.iconfont.icon-delete
+
+                    .col-md-6.col-lg-4.col-xl-auto
+                        .card.item
+                            .card-header
+                                input(type='checkbox', value='') 
+                                |  图片名称
+                            .card-body
+                                img(src='https://www.fillmurray.com/g/240/240', alt='')
+                            .card-footer
+                                a.btn.btn-info.btn-sm(href='customer-detail.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-info.btn-sm(href='#', title='激活')
+                                    i.iconfont.icon-eye
+                                a.btn.btn-primary.btn-sm(href='customer-edit.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                                    i.iconfont.icon-file-copy
+                                a.btn.btn-danger.btn-sm(href='#', title='删除')
+                                    i.iconfont.icon-delete
+
+                    .col-md-6.col-lg-4.col-xl-auto
+                        .card.item
+                            .card-header
+                                input(type='checkbox', value='') 
+                                |  图片名称
+                            .card-body
+                                img(src='https://www.fillmurray.com/g/240/240', alt='')
+                            .card-footer
+                                a.btn.btn-info.btn-sm(href='customer-detail.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-info.btn-sm(href='#', title='激活')
+                                    i.iconfont.icon-eye
+                                a.btn.btn-primary.btn-sm(href='customer-edit.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                                    i.iconfont.icon-file-copy
+                                a.btn.btn-danger.btn-sm(href='#', title='删除')
+                                    i.iconfont.icon-delete
+
+                    .col-md-6.col-lg-4.col-xl-auto
+                        .card.item
+                            .card-header
+                                input(type='checkbox', value='') 
+                                |  图片名称
+                            .card-body
+                                img(src='https://www.fillmurray.com/g/240/240', alt='')
+                            .card-footer
+                                a.btn.btn-info.btn-sm(href='customer-detail.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-info.btn-sm(href='#', title='激活')
+                                    i.iconfont.icon-eye
+                                a.btn.btn-primary.btn-sm(href='customer-edit.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                                    i.iconfont.icon-file-copy
+                                a.btn.btn-danger.btn-sm(href='#', title='删除')
+                                    i.iconfont.icon-delete
+
+                    .col-md-6.col-lg-4.col-xl-auto
+                        .card.item
+                            .card-header
+                                input(type='checkbox', value='') 
+                                |  图片名称
+                            .card-body
+                                img(src='https://www.fillmurray.com/g/240/240', alt='')
+                            .card-footer
+                                a.btn.btn-info.btn-sm(href='customer-detail.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-info.btn-sm(href='#', title='激活')
+                                    i.iconfont.icon-eye
+                                a.btn.btn-primary.btn-sm(href='customer-edit.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                                    i.iconfont.icon-file-copy
+                                a.btn.btn-danger.btn-sm(href='#', title='删除')
+                                    i.iconfont.icon-delete
+
+                    .col-md-6.col-lg-4.col-xl-auto
+                        .card.item
+                            .card-header
+                                input(type='checkbox', value='') 
+                                |  图片名称
+                            .card-body
+                                img(src='https://www.fillmurray.com/g/240/240', alt='')
+                            .card-footer
+                                a.btn.btn-info.btn-sm(href='customer-detail.html', title='查看明细')
+                                    i.iconfont.icon-ellipsis
+                                a.btn.btn-info.btn-sm(href='#', title='激活')
+                                    i.iconfont.icon-eye
+                                a.btn.btn-primary.btn-sm(href='customer-edit.html', title='编辑')
+                                    i.iconfont.icon-edit
+                                a.btn.btn-info.btn-sm(href='#', title='拷贝')
+                                    i.iconfont.icon-file-copy
+                                a.btn.btn-danger.btn-sm(href='#', title='删除')
+                                    i.iconfont.icon-delete
+
+            
+
+        footer.card-footer
+            .row.table-pager
+                .col-sm
+                    nav(aria-label='...')
+                        ul.pagination
+                            li.page-item.disabled
+                                a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-item.active(aria-current='page')
+                                a.page-link(href='#')
+                                    | 2 
+                                    span.sr-only (current)
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') Next
+                .col-sm-auto
+                    p.pagecount
+                        | 显示1-10条，总计10页，记录数100条
+block bkfooter
+    script.
+        $(function(){
+        $("#cbSelectAll").change(function(){
+        var isSelected = $(this).prop("checked");
+        $('td input[type="checkbox"]').prop("checked",isSelected)
+        });
+            $('[data-toggle="tooltip"]').tooltip();
+        })

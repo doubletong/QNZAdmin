@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8">
+    <title> 客户管理-控制台
+    </title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory-->
+    <meta name="theme-color" content="#fafafa">
+    <link href="fonts/iconfont.css" rel="stylesheet">
+    <link href="css/styles.min.css" rel="stylesheet">
+    <style type="text/css">
+      .card.item{
+          margin-bottom:2rem;
+          border-radius: 0;
+          
+      }
+      @media only screen and (min-width: 1201px) {
+          .card.item{
+              width:220px;                
+          }            
+      }
+      .card.item .card-header {           
+          background-color:#fff;
+      }
+      .card.item .card-footer {
+          text-align:center;
+          background-color:#fff;
+      }
+      .card.item .card-body{
+          padding:5px; 
+      }
+      .card.item .card-body img{
+          display:block;
+          margin:0 auto;
+      }
+      .card.item .card-footer .btn{
+          margin:0 .1rem;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="wrapper" id="wrapper">
+      <aside class="leftcol" id="leftcol">
+        <div class="logo"><a href="index.html"><img src="img/logo.svg" alt="logo"></a></div>
+        <nav id="menu">
+          <ul class="mainmenu" id="mainmenu">
+            <li><a href="index.html"><i class="iconfont icon-dashboard"></i> 控制面板
+                <div class="arrow-left"></div></a></li>
+            <li class="down-nav"><a href="#"><i class="iconfont icon-table"></i> 表格 <i class="arrow iconfont icon-down"></i></a>
+              <ul class="submenu">
+                <li><a href="table_basic.html">简单表格</a></li>
+                <li><a href="table_adv.html">复杂表格</a></li>
+              </ul>
+            </li>
+            <li class="down-nav"><a href="#"><i class="iconfont icon-edit"></i> 表单 <i class="arrow iconfont icon-down"></i></a>
+              <ul class="list-unstyled submenu">
+                <li><a href="form_basic.html">基本表单</a></li>
+                <li><a href="form_adv.html">带验证表单</a></li>
+                <li><a href="form_adv_pic.html">表单带文件上传</a></li>
+              </ul>
+            </li>
+            <li><a href="pages.html"><i class="iconfont icon-file-text"></i> 页面管理</a></li>
+            <li class="customers"><a href="customers.html"><i class="iconfont icon-customer"></i> 客户管理</a></li>
+            <li class="albums"><a href="photos.html"><i class="iconfont icon-image"></i> 相册</a></li>
+            <li class="down-nav links"><a href="#"><i class="iconfont icon-link"></i> 链接<i class="arrow iconfont icon-down"></i></a>
+              <ul class="submenu">
+                <li><a href="links.html">链接列表</a></li>
+                <li><a href="link_categories.html">链接分类</a></li>
+              </ul>
+            </li>
+            <li class="down-nav ortherpage"><a href="#"><i class="iconfont icon-file-image"></i> 其它页面 <i class="arrow iconfont icon-down"></i></a>
+              <ul class="submenu">
+                <li><a href="../Login.html"><i class="iconfont icon-angle-double-right"></i> 登录页</a></li>
+                <li><a href="../Register.html"><i class="iconfont icon-angle-double-right"></i> 注册页</a></li>
+                <li><a href="../noaccess.html"><i class="iconfont icon-angle-double-right"></i> 无权限页</a></li>
+                <li><a href="../404.html"><i class="iconfont icon-angle-double-right"></i> 404页面</a></li>
+              </ul>
+            </li>
+            <li class="down-nav settings"><a href="#"><i class="iconfont icon-setting"></i> 常规设置 <i class="arrow iconfont icon-down"></i></a>
+              <ul class="submenu">
+                <li><a href="siteinfo.html"><i class="iconfont icon-home"></i> 站点信息</a></li>
+                <li><a href="/bbi-admin/Common/CompanyInfo.aspx"><i class="iconfont icon-info-circle"></i> 企业信息</a></li>
+                <li><a href="/bbi-admin/Common/Social.aspx"><i class="iconfont icon-twitter"></i> 社交资料</a></li>
+                <li class="hide"><a href="/bbi-admin/Common/MailSettings.aspx"><i class="iconfont icon-envelope-o"></i> 邮箱服务设置</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <div class="closemenu"><a href="#"><i class="iconfont icon-chevron-circle-left"></i></a></div>
+      </aside>
+      <section class="rightcol" id="rightcol">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-primary"><a class="navbar-brand" id="openav" href="javascript:void(0);"><i class="iconfont icon-menu"></i></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active"><a class="nav-link" href="index.html">首页 <span class="sr-only">(current)</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="links.html">链接</a></li>
+              <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">待建</a></li>
+            </ul>
+            <ul class="navbar-nav navbar-right">
+              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">你好，Admin</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">修改密码</a><a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="/bbi-admin/loginOut.aspx"><i class="iconfont icon-logout"></i> 退出系统</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div class="main-content">         
+          <div class="breadcrumb-container">
+            <div class="row">
+              <div class="col-md">
+                <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">控制面板                      </a></li>
+                    <li class="breadcrumb-item active" aria-current="page">客户管理</li>
+                  </ol>
+                </nav>
+              </div>
+              <div class="col-md-auto">
+                <time id="sitetime"></time>
+              </div>
+            </div>
+          </div>
+          <div class="card page-customer">
+            <header class="card-header">
+              <div class="row">
+                <div class="col"> 
+                  <div class="card-title-v1"><i class="iconfont icon-customer"></i>客户列表</div>
+                </div>
+                <div class="col-auto">
+                  <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#" style="display: none;"><i class="iconfont icon-shrink"></i></a></div>
+                </div>
+              </div>
+            </header>
+            <section class="card-body">
+              <div class="card-toolbar mb-3">
+                <div class="row">
+                  <div class="col-md">
+                    <div class="btn-group" role="group" aria-label="Basic example">                      
+                      <button class="btn btn-outline-info" type="button">激活</button>
+                      <button class="btn btn-outline-info" type="button">锁定</button>
+                      <button class="btn btn-outline-danger" type="button">删除</button>
+                    </div>
+                  </div>
+                  <div class="col-md-auto">
+                    <form class="form-inline" role="form">
+                      <div class="form-group mr-2">
+                        <label class="sr-only" for="inputCategory">相册</label>
+                        <select class="form-control" id="inputCategory">
+                          <option>--请选择相册--</option>
+                          <option>默认相册</option>
+                          <option>个人                                 </option>
+                        </select>
+                      </div>
+                      <div class="form-group mr-2">
+                        <label class="sr-only" for="inputCategory">状态</label>
+                        <select class="form-control" id="inputCategory">
+                          <option>--请选择状态--</option>
+                          <option>激活</option>
+                          <option>锁定                   </option>
+                        </select>
+                      </div>
+                      <button class="btn btn-primary btn-sm" type="submit"><i class="iconfont icon-search"></i> 查询</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="row">
+                  <div class="col-md-6 col-lg-4 col-xl-auto">
+                    <div class="card item">
+                      <div class="card-header">
+                        <input type="checkbox" value=""> 图片名称
+                      </div>
+                      <div class="card-body"><img src="https://www.fillmurray.com/g/240/240" alt=""></div>
+                      <div class="card-footer">
+                        <button class="btn btn-info btn-sm" type="button" data-toggle="tooltip" data-placement="top" title="查看明细"><i class="iconfont icon-ellipsis"></i></button><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="customer-edit.html" title="编辑"><i class="iconfont icon-edit">                           </i></a><a class="btn btn-danger btn-sm" href="#" title="删除"><i class="iconfont icon-delete"></i></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-auto">
+                    <div class="card item">
+                      <div class="card-header">
+                        <input type="checkbox" value=""> 图片名称
+                      </div>
+                      <div class="card-body"><img src="https://www.fillmurray.com/g/240/240" alt=""></div>
+                      <div class="card-footer"><a class="btn btn-info btn-sm" href="customer-detail.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="customer-edit.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="#" title="删除"><i class="iconfont icon-delete"></i></a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-auto">
+                    <div class="card item">
+                      <div class="card-header">
+                        <input type="checkbox" value=""> 图片名称
+                      </div>
+                      <div class="card-body"><img src="https://www.fillmurray.com/g/240/240" alt=""></div>
+                      <div class="card-footer"><a class="btn btn-info btn-sm" href="customer-detail.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="customer-edit.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="#" title="删除"><i class="iconfont icon-delete"></i></a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-auto">
+                    <div class="card item">
+                      <div class="card-header">
+                        <input type="checkbox" value=""> 图片名称
+                      </div>
+                      <div class="card-body"><img src="https://www.fillmurray.com/g/240/240" alt=""></div>
+                      <div class="card-footer"><a class="btn btn-info btn-sm" href="customer-detail.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="customer-edit.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="#" title="删除"><i class="iconfont icon-delete"></i></a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-auto">
+                    <div class="card item">
+                      <div class="card-header">
+                        <input type="checkbox" value=""> 图片名称
+                      </div>
+                      <div class="card-body"><img src="https://www.fillmurray.com/g/240/240" alt=""></div>
+                      <div class="card-footer"><a class="btn btn-info btn-sm" href="customer-detail.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="customer-edit.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="#" title="删除"><i class="iconfont icon-delete"></i></a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-auto">
+                    <div class="card item">
+                      <div class="card-header">
+                        <input type="checkbox" value=""> 图片名称
+                      </div>
+                      <div class="card-body"><img src="https://www.fillmurray.com/g/240/240" alt=""></div>
+                      <div class="card-footer"><a class="btn btn-info btn-sm" href="customer-detail.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="customer-edit.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="#" title="删除"><i class="iconfont icon-delete"></i></a></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-lg-4 col-xl-auto">
+                    <div class="card item">
+                      <div class="card-header">
+                        <input type="checkbox" value=""> 图片名称
+                      </div>
+                      <div class="card-body"><img src="https://www.fillmurray.com/g/240/240" alt=""></div>
+                      <div class="card-footer"><a class="btn btn-info btn-sm" href="customer-detail.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="customer-edit.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="#" title="删除"><i class="iconfont icon-delete"></i></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <footer class="card-footer">
+              <div class="row table-pager">
+                <div class="col-sm">
+                  <nav aria-label="...">
+                    <ul class="pagination">
+                      <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="col-sm-auto">
+                  <p class="pagecount">显示1-10条，总计10页，记录数100条</p>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div>
+        <footer class="site-footer" id="pagefooter">Copyright © 2012-2020 <a href="http://heiniaozhi.cn">黑鸟志</a> All Rights Reserved</footer>
+      </section>
+    </div>
+    <script src="js/vendor/modernizr-3.8.0.min.js">    </script>
+    <script src="js/vendor/jquery-3.4.1.min.js">  </script>
+    <script src="js/vendor/jquery.easing.min.js"></script>
+    <script src="js/vendor/popper.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      $(function(){
+      $("#cbSelectAll").change(function(){
+      var isSelected = $(this).prop("checked");
+      $('td input[type="checkbox"]').prop("checked",isSelected)
+      });
+          $('[data-toggle="tooltip"]').tooltip();
+      })
+    </script>
+  </body>
+</html>
