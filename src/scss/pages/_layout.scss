@@ -45,7 +45,9 @@
             img{
                 display: block;
                 margin: 0 auto;
-                height: 60px;
+                @include mq(md){
+                    max-width: 80%;
+                }
             }
         }
     }
