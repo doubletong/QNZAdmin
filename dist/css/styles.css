@@ -9792,23 +9792,13 @@ img {
   }
 }
 
-.site-header .logo {
-  padding-top: .4rem;
-}
-
-@media (min-width: 768px) {
-  .site-header .logo {
-    padding-top: .6rem;
-  }
-}
-
 .site-header .logo img {
   height: 36px;
 }
 
 @media (min-width: 768px) {
   .site-header .logo img {
-    height: 46px;
+    height: 40px;
   }
 }
 

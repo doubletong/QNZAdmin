@@ -20,9 +20,9 @@ const size = require('gulp-size');
 const notify = require('gulp-notify');
 const colors = require('colors');
 const babel = require('gulp-babel');
-var gutil = require('gulp-util');
 var sourcemaps  = require('gulp-sourcemaps');
 var pug = require('gulp-pug');
+var log = require('fancy-log');
 
 var bases = {
     app: 'src/',
@@ -84,7 +84,7 @@ function scripts() {
             presets: ["@babel/preset-env"]
           }))
         .pipe(uglify())
-        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+        .on('error', function (err) { log.error(err.toString()); })
         .pipe(size({ gzip: false, showFiles: true }))
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write('./maps'))
@@ -171,14 +171,14 @@ function images() {
         .pipe(newer(bases.dist + "img"))
         .pipe(
             imagemin([
-                imagemin.gifsicle({ interlaced: true }),
-                imagemin.jpegtran({ progressive: true }),
+                imagemin.gifsicle({ interlaced: true }),             
+                imagemin.mozjpeg({quality: 80, progressive: true}),
                 imagemin.optipng({ optimizationLevel: 5 }),
                 imagemin.svgo({
-                    plugins: [{
-                        removeViewBox: false,
-                        collapseGroups: true
-                    }]
+                    plugins: [
+                        {removeViewBox: true},
+                        {cleanupIDs: false}
+                    ]
                 })
             ])
         )

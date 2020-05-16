@@ -14,18 +14,12 @@
     @include mq(md){
         height: 65px;
     }
-
-
-
     .logo{
-        padding-top: .4rem;
-        @include mq(md){
-            padding-top: .6rem;
-        }
+       
         img{
             height: 36px;
             @include mq(md){
-                height: 46px;
+                height: 40px;
             }
         }    
     }      
