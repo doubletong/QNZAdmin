@@ -11070,6 +11070,65 @@ img {
   }
 }
 
+.menuTree {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuTree li {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  padding-left: 1.7rem;
+  position: relative;
+}
+
+.menuTree li .expmenu {
+  position: absolute;
+  left: 0;
+  top: .5rem;
+  z-index: 1000;
+}
+
+.menuTree li span.title {
+  display: inline-block;
+  padding: 0 1rem 0 0;
+}
+
+.menuTree li a {
+  margin-right: .3rem;
+}
+
+.menuTree li .menuTree.hidden {
+  display: none;
+}
+
+.menuTree li .menuTree li {
+  border-bottom: 1px #eee dotted;
+}
+
+.menuTree li .menuTree li::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 1px;
+  background-color: #ccc;
+  left: -1rem;
+  top: 1.3rem;
+  z-index: 100;
+}
+
+.menuTree li .menuTree li::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #ccc;
+  left: -1rem;
+  top: 0;
+  z-index: 100;
+}
+
 @font-face {
   font-family: 'pt_sansregular';
   src: url("../fonts/PTS55F-webfont.eot");

@@ -1,0 +1,356 @@
+extends includes/layout.pug
+
+block content
+    .breadcrumb-container
+        .row
+            .col-md
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='#') 控制面板
+                        li.breadcrumb-item
+                            a(href='#') Library
+                        li.breadcrumb-item.active(aria-current='page') Data
+            .col-md-auto
+                time#sitetime
+    .subheader
+        h1.subheader-title
+            i.iconfont.icon-file-text
+            |  页面管理
+        small
+            | 全站所有零散的单页与内容片段集中管理
+    .card
+        header.card-header
+            .row
+                .col 树列表
+                .col-auto
+                    .control
+                        a.expand(href='#')
+                            i.iconfont.icon-fullscreen
+                        a.compress(href='#', style='display: none;')
+                            i.iconfont.icon-shrink
+        section.card-body
+            .card-toolbar.mb-3              
+                button.btn.btn-primary.btn-sm(type='button')
+                    i.iconfont.icon-plus
+                    |  添加
+
+                button.btn.btn-info.btn-sm(type='button')
+                    i.iconfont.icon-sort-descending
+                    |  排序
+        
+        
+            ul.menuTree
+                li.item-container.hasMenus
+                    div
+                        a.expmenu.expandmenu(href="#" data-url="/admin/menu/isexpand?id=3")
+                            span.iconfont.icon-minus-square-fill
+                        span.title &#x63A7;&#x5236;&#x9762;&#x7248;
+                        a(href="/admin/menu/updownmove?id=3&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                            i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                        a(href="/admin/menu/updownmove?id=3&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                            i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                        a(href="/admin/menu/movemenu?id=3" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                            i.iconfont.icon-right-circle
+                        a(href="/admin/menu/createmenu?parentId=3&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                            i.iconfont.icon-plus-circle
+                        a(href="/admin/menu/editmenu?id=3" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                            i.iconfont.icon-edit-square
+                        a.active-item(href="#" data-url="/admin/menu/isactive?id=3" title="锁定" data-action="激活")
+                            i.iconfont.icon-eye-fill
+                        a.delete-item(href="#" data-url="/admin/menu/delete?id=3" title="移除菜单" data-id="3" data-categoryid="1")
+                            i.iconfont.icon-delete
+                    ul.menuTree
+                        li.item-container.hasMenus
+                            div
+                                a.expmenu(href="#" data-url="/admin/menu/isexpand?id=12")
+                                    span.iconfont.icon-plus-square-fill
+                                | &#x9875;&#x9762;
+                                a(href="/admin/menu/updownmove?id=12&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                a(href="/admin/menu/updownmove?id=12&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                a(href="/admin/menu/movemenu?id=12" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                    i.iconfont.icon-right-circle
+                                a(href="/admin/menu/createmenu?parentId=12&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                    i.iconfont.icon-plus-circle
+                                a(href="/admin/menu/editmenu?id=12" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                    i.iconfont.icon-edit-square
+                                a.active-item(href="#" data-url="/admin/menu/isactive?id=12" title="锁定" data-action="激活")
+                                    i.iconfont.icon-eye-fill
+                                a.delete-item(href="#" data-url="/admin/menu/delete?id=12" title="移除菜单" data-id="12" data-categoryid="1")
+                                    i.iconfont.icon-delete
+                            ul.menuTree.hidden
+                                li.item-container
+                                    div
+                                        | &#x7F16;&#x8F91;
+                                        a(href="/admin/menu/updownmove?id=52&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                            i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                        a(href="/admin/menu/updownmove?id=52&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                            i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                        a(href="/admin/menu/movemenu?id=52" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-right-circle
+                                        a(href="/admin/menu/createmenu?parentId=52&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-plus-circle
+                                        a(href="/admin/menu/editmenu?id=52" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-edit-square
+                                        a.active-item(href="#" data-url="/admin/menu/isactive?id=52" title="激活" data-action="锁定")
+                                            i.iconfont.icon-eye
+                                        a.delete-item(href="#" data-url="/admin/menu/delete?id=52" title="移除菜单" data-id="52" data-categoryid="1")
+                                            i.iconfont.icon-delete
+                                li.item-container
+                                    div
+                                        | &#x5220;&#x9664;
+                                        a(href="/admin/menu/updownmove?id=53&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                            i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                        a(href="/admin/menu/updownmove?id=53&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                            i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                        a(href="/admin/menu/movemenu?id=53" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-right-circle
+                                        a(href="/admin/menu/createmenu?parentId=53&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-plus-circle
+                                        a(href="/admin/menu/editmenu?id=53" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-edit-square
+                                        a.active-item(href="#" data-url="/admin/menu/isactive?id=53" title="激活" data-action="锁定")
+                                            i.iconfont.icon-eye
+                                        a.delete-item(href="#" data-url="/admin/menu/delete?id=53" title="移除菜单" data-id="53" data-categoryid="1")
+                                            i.iconfont.icon-delete
+                                li.item-container
+                                    div
+                                        | &#x8BE6;&#x60C5;
+                                        a(href="/admin/menu/updownmove?id=54&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                            i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                        a(href="/admin/menu/updownmove?id=54&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                            i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                        a(href="/admin/menu/movemenu?id=54" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-right-circle
+                                        a(href="/admin/menu/createmenu?parentId=54&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-plus-circle
+                                        a(href="/admin/menu/editmenu?id=54" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-edit-square
+                                        a.active-item(href="#" data-url="/admin/menu/isactive?id=54" title="激活" data-action="锁定")
+                                            i.iconfont.icon-eye
+                                        a.delete-item(href="#" data-url="/admin/menu/delete?id=54" title="移除菜单" data-id="54" data-categoryid="1")
+                                            i.iconfont.icon-delete
+                        li.item-container.hasMenus
+                            div
+                                a.expmenu(href="#" data-url="/admin/menu/isexpand?id=39")
+                                    span.iconfont.icon-plus-square-fill
+                                | &#x4EA7;&#x54C1;
+                                a(href="/admin/menu/updownmove?id=39&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                a(href="/admin/menu/updownmove?id=39&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                a(href="/admin/menu/movemenu?id=39" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                    i.iconfont.icon-right-circle
+                                a(href="/admin/menu/createmenu?parentId=39&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                    i.iconfont.icon-plus-circle
+                                a(href="/admin/menu/editmenu?id=39" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                    i.iconfont.icon-edit-square
+                                a.active-item(href="#" data-url="/admin/menu/isactive?id=39" title="锁定" data-action="激活")
+                                    i.iconfont.icon-eye-fill
+                                a.delete-item(href="#" data-url="/admin/menu/delete?id=39" title="移除菜单" data-id="39" data-categoryid="1")
+                                    i.iconfont.icon-delete
+                            ul.menuTree.hidden
+                                li.item-container.hasMenus
+                                    div
+                                        a.expmenu(href="#" data-url="/admin/menu/isexpand?id=11")
+                                            span.iconfont.icon-plus-square-fill
+                                        | &#x4EA7;&#x54C1;&#x5217;&#x8868;
+                                        a(href="/admin/menu/updownmove?id=11&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                            i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                        a(href="/admin/menu/updownmove?id=11&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                            i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                        a(href="/admin/menu/movemenu?id=11" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-right-circle
+                                        a(href="/admin/menu/createmenu?parentId=11&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-plus-circle
+                                        a(href="/admin/menu/editmenu?id=11" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                            i.iconfont.icon-edit-square
+                                        a.active-item(href="#" data-url="/admin/menu/isactive?id=11" title="锁定" data-action="激活")
+                                            i.iconfont.icon-eye-fill
+                                        a.delete-item(href="#" data-url="/admin/menu/delete?id=11" title="移除菜单" data-id="11" data-categoryid="1")
+                                            i.iconfont.icon-delete
+                                    ul.menuTree.hidden
+                                        li.item-container
+                                            div
+                                                | &#x4E0A;&#x4F20;&#x7F29;&#x7565;&#x56FE;
+                                                a(href="/admin/menu/updownmove?id=67&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                                a(href="/admin/menu/updownmove?id=67&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                                a(href="/admin/menu/movemenu?id=67" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-right-circle
+                                                a(href="/admin/menu/createmenu?parentId=67&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-plus-circle
+                                                a(href="/admin/menu/editmenu?id=67" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-edit-square
+                                                a.active-item(href="#" data-url="/admin/menu/isactive?id=67" title="激活" data-action="锁定")
+                                                    i.iconfont.icon-eye
+                                                a.delete-item(href="#" data-url="/admin/menu/delete?id=67" title="移除菜单" data-id="67" data-categoryid="1")
+                                                    i.iconfont.icon-delete
+                                        li.item-container
+                                            div
+                                                | &#x4E0A;&#x4F20;&#x7EC4;&#x56FE;
+                                                a(href="/admin/menu/updownmove?id=68&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                                a(href="/admin/menu/updownmove?id=68&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                                a(href="/admin/menu/movemenu?id=68" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-right-circle
+                                                a(href="/admin/menu/createmenu?parentId=68&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-plus-circle
+                                                a(href="/admin/menu/editmenu?id=68" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-edit-square
+                                                a.active-item(href="#" data-url="/admin/menu/isactive?id=68" title="激活" data-action="锁定")
+                                                    i.iconfont.icon-eye
+                                                a.delete-item(href="#" data-url="/admin/menu/delete?id=68" title="移除菜单" data-id="68" data-categoryid="1")
+                                                    i.iconfont.icon-delete
+                                        li.item-container
+                                            div
+                                                | &#x5220;&#x9664;&#x56FE;&#x7247;
+                                                a(href="/admin/menu/updownmove?id=69&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                                a(href="/admin/menu/updownmove?id=69&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                                a(href="/admin/menu/movemenu?id=69" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-right-circle
+                                                a(href="/admin/menu/createmenu?parentId=69&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-plus-circle
+                                                a(href="/admin/menu/editmenu?id=69" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-edit-square
+                                                a.active-item(href="#" data-url="/admin/menu/isactive?id=69" title="激活" data-action="锁定")
+                                                    i.iconfont.icon-eye
+                                                a.delete-item(href="#" data-url="/admin/menu/delete?id=69" title="移除菜单" data-id="69" data-categoryid="1")
+                                                    i.iconfont.icon-delete
+                                        li.item-container
+                                            div
+                                                | &#x7F16;&#x8F91;
+                                                a(href="/admin/menu/updownmove?id=47&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                                a(href="/admin/menu/updownmove?id=47&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                                a(href="/admin/menu/movemenu?id=47" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-right-circle
+                                                a(href="/admin/menu/createmenu?parentId=47&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-plus-circle
+                                                a(href="/admin/menu/editmenu?id=47" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-edit-square
+                                                a.active-item(href="#" data-url="/admin/menu/isactive?id=47" title="激活" data-action="锁定")
+                                                    i.iconfont.icon-eye
+                                                a.delete-item(href="#" data-url="/admin/menu/delete?id=47" title="移除菜单" data-id="47" data-categoryid="1")
+                                                    i.iconfont.icon-delete
+                                        li.item-container
+                                            div
+                                                | &#x5BFC;&#x5165;&#x5546;&#x54C1;
+                                                a(href="/admin/menu/updownmove?id=48&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                                a(href="/admin/menu/updownmove?id=48&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                                a(href="/admin/menu/movemenu?id=48" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-right-circle
+                                                a(href="/admin/menu/createmenu?parentId=48&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-plus-circle
+                                                a(href="/admin/menu/editmenu?id=48" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-edit-square
+                                                a.active-item(href="#" data-url="/admin/menu/isactive?id=48" title="激活" data-action="锁定")
+                                                    i.iconfont.icon-eye
+                                                a.delete-item(href="#" data-url="/admin/menu/delete?id=48" title="移除菜单" data-id="48" data-categoryid="1")
+                                                    i.iconfont.icon-delete
+                                        li.item-container
+                                            div
+                                                | &#x5220;&#x9664;
+                                                a(href="/admin/menu/updownmove?id=49&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                                a(href="/admin/menu/updownmove?id=49&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                                a(href="/admin/menu/movemenu?id=49" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-right-circle
+                                                a(href="/admin/menu/createmenu?parentId=49&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-plus-circle
+                                                a(href="/admin/menu/editmenu?id=49" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-edit-square
+                                                a.active-item(href="#" data-url="/admin/menu/isactive?id=49" title="激活" data-action="锁定")
+                                                    i.iconfont.icon-eye
+                                                a.delete-item(href="#" data-url="/admin/menu/delete?id=49" title="移除菜单" data-id="49" data-categoryid="1")
+                                                    i.iconfont.icon-delete
+                                        li.item-container
+                                            div
+                                                | &#x8BE6;&#x60C5;
+                                                a(href="/admin/menu/updownmove?id=50&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                                a(href="/admin/menu/updownmove?id=50&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                                a(href="/admin/menu/movemenu?id=50" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-right-circle
+                                                a(href="/admin/menu/createmenu?parentId=50&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-plus-circle
+                                                a(href="/admin/menu/editmenu?id=50" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-edit-square
+                                                a.active-item(href="#" data-url="/admin/menu/isactive?id=50" title="激活" data-action="锁定")
+                                                    i.iconfont.icon-eye
+                                                a.delete-item(href="#" data-url="/admin/menu/delete?id=50" title="移除菜单" data-id="50" data-categoryid="1")
+                                                    i.iconfont.icon-delete
+                                        li.item-container
+                                            div
+                                                | &#x6DFB;&#x52A0;
+                                                a(href="/admin/menu/updownmove?id=6&isUp=True&categoryId=1" title="向上" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-up-circle(data-icon="icon-up-circle")
+                                                a(href="/admin/menu/updownmove?id=6&isUp=False&categoryId=1" title="向下" data-ajax="true" data-ajax-method="POST" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccessSave")
+                                                    i.iconfont.icon-down-circle(data-icon="icon-down-circle")
+                                                a(href="/admin/menu/movemenu?id=6" data-ajax="true" title="移动菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-right-circle
+                                                a(href="/admin/menu/createmenu?parentId=6&categoryId=1" data-ajax="true" title="新增子菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-plus-circle
+                                                a(href="/admin/menu/editmenu?id=6" data-ajax="true" title="编辑菜单" data-ajax-method="GET" data-ajax-mode="replace" data-ajax-update="#edit-container" data-ajax-begin="onBegin" data-ajax-complete="onComplete" data-ajax-failure="onFailed" data-ajax-success="onSuccess")
+                                                    i.iconfont.icon-edit-square
+                                                a.active-item(href="#" data-url="/admin/menu/isactive?id=6" title="激活" data-action="锁定")
+                                                    i.iconfont.icon-eye
+                                                a.delete-item(href="#" data-url="/admin/menu/delete?id=6" title="移除菜单" data-id="6" data-categoryid="1")
+                                                    i.iconfont.icon-delete
+                                    
+
+
+        footer.card-footer
+            .row.table-pager
+                .col-sm
+                    nav(aria-label='...')
+                        ul.pagination
+                            li.page-item.disabled
+                                a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
+                            li.page-item
+                                a.page-link(href='#') 1
+                            li.page-item.active(aria-current='page')
+                                a.page-link(href='#')
+                                    | 2 
+                                    span.sr-only (current)
+                            li.page-item
+                                a.page-link(href='#') 3
+                            li.page-item
+                                a.page-link(href='#') Next
+                .col-sm-auto
+                    p.pagecount
+                        | 显示1-10条，总计10页，记录数100条
+
+
+
+block bkfooter
+    script.
+                        
+        $(document).on("click", '.expmenu', function (e) {
+        //  $(".expmenu").on("click", function (e) {
+            e.preventDefault();
+
+            if ($(this).hasClass("expandmenu")) {
+                $(this).children("span").removeClass("icon-minus-square-fill").addClass("icon-plus-square-fill");
+            } else {
+                $(this).children("span").removeClass("icon-plus-square-fill").addClass("icon-minus-square-fill");
+            }
+
+            $(this).toggleClass("expandmenu");
+            $(this).closest("li").children("ul.menuTree").toggleClass("hidden");
+
+            //var url = $(this).attr("data-url");
+            //Common.SingleAction(url, "", false);
+
+        });

@@ -1,0 +1,53 @@
+.menuTree{
+    @include reset-list();
+    li{
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-left: 1.7rem;
+        position: relative;
+        .expmenu{
+            position: absolute;
+            left: 0;
+            top: .5rem;
+            z-index: 1000;
+        }
+        span.title{
+            display: inline-block;
+            padding: 0 1rem 0 0;
+        }
+
+        a{
+            margin-right: .3rem;    
+        }
+       
+        .menuTree{
+           
+            &.hidden{
+                display: none;
+            }
+            li{                     
+                border-bottom: 1px #eee dotted;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 25px;
+                    height: 1px;
+                    background-color: #ccc;
+                    left: -1rem;
+                    top: 1.3rem;
+                    z-index: 100;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height:100%;
+                    background-color: #ccc;
+                    left: -1rem;
+                    top: 0;
+                    z-index: 100;
+                }
+            }
+        }
+    }
+}
