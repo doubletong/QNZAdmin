@@ -100,11 +100,17 @@
                  
                 }
                
-                &.open{
-                    color: #fff;
+            
+            }
+            &.open{
+                color: #fff;
+                &>a{
                     .arrow{
                         transform: rotate(180deg);
+                        }
                     }
+                .submenu{
+                    display: block !important;
                 }
             }
           

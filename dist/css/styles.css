@@ -9970,12 +9970,16 @@ img {
   transition: all .25s;
 }
 
-.leftcol .mainmenu > li > a.open {
+.leftcol .mainmenu > li.open {
   color: #fff;
 }
 
-.leftcol .mainmenu > li > a.open .arrow {
+.leftcol .mainmenu > li.open > a .arrow {
   transform: rotate(180deg);
+}
+
+.leftcol .mainmenu > li.open .submenu {
+  display: block !important;
 }
 
 .leftcol .mainmenu > li .submenu {
