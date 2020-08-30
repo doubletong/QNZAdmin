@@ -1,7 +1,7 @@
 
-  .page-login {
-    background: $color-primary ;
-
+  .page-register {
+    background: $color-primary url(../img/bg.svg) no-repeat center center;
+    background-size: cover;
     height: 100%;
     .container{
       height: 100%;
@@ -10,14 +10,8 @@
       height: 100%;
     }
     .site-footer{
-      color:#fff;
-      font-weight: lighter;
-      z-index: 200;
       a{
-        color: #fff;
-        &:hover{
-          text-decoration: underline;
-        }
+        color: #ccc;
       }
     }
     h1.title {
@@ -36,16 +30,8 @@
     background-color: #fff;
     @include vertical-align(); 
     border-top: 5px $color-secondary solid;
-    z-index: 100;
     
-    .logo{
-      border-radius: 50%;
-      height: 100px;
-      width: 100px;
-      background-color: $color-primary;
-      margin: 2rem auto 0;
-     padding: 1rem;
-    }
+   
   }
 
 
