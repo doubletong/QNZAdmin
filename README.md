@@ -3,7 +3,7 @@
 使用：Pug, bootstrap, scss, jquery
 
 ### 更新日志
-
+- 2020.8.30  更新bootstrap 4.5.2 框架/更新了login页面
 - 2020.1.28  用PUG重构页面
 - 2020.1.25  更新bootstrap 4.4.1 框架
 - 2014.08.07  更新了登录页

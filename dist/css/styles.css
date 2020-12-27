@@ -1627,8 +1627,7 @@ body {
 
 /*# sourceMappingURL=Main.css.map */
 .page-login {
-  background: #1d829a url(../img/bg.svg) no-repeat center center;
-  background-size: cover;
+  background: #1d829a;
   height: 100%;
 }
 
@@ -1640,11 +1639,83 @@ body {
   height: 100%;
 }
 
+.page-login .site-footer {
+  color: #fff;
+  font-weight: lighter;
+  z-index: 200;
+}
+
 .page-login .site-footer a {
-  color: #ccc;
+  color: #fff;
+}
+
+.page-login .site-footer a:hover {
+  text-decoration: underline;
 }
 
 .page-login h1.title {
+  color: #fff;
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.loginbox {
+  max-width: 360px;
+  margin: 0 auto;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 12px;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-top: 5px #d04b44 solid;
+  z-index: 100;
+}
+
+.loginbox .logo {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  background-color: #1d829a;
+  margin: 2rem auto 0;
+  padding: 1rem;
+}
+
+.loginbox .loginForm {
+  padding: 30px;
+}
+
+.loginbox .loginForm .form-control {
+  padding: .6rem .8rem;
+  height: auto;
+}
+
+.loginbox .loginForm .btn {
+  margin: .5rem .3rem;
+}
+
+.page-register {
+  background: #1d829a url(../img/bg.svg) no-repeat center center;
+  background-size: cover;
+  height: 100%;
+}
+
+.page-register .container {
+  height: 100%;
+}
+
+.page-register .row {
+  height: 100%;
+}
+
+.page-register .site-footer a {
+  color: #ccc;
+}
+
+.page-register h1.title {
   color: #fff;
   margin: 0;
   font-size: 1.25rem;
