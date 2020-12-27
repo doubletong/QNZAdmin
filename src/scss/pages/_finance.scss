@@ -1,0 +1,289 @@
+.page-finance{
+    background-color: #fff;
+    .ser-header{
+        
+        .item{
+            background-size: cover;
+            display: block;
+            height: 100px;
+            color: #fff;
+            font-size: rem(12);
+            padding-top: .6rem;
+            background-color: #333;
+            background-position: center center;
+            background-repeat: no-repeat;
+            text-align: center;
+            @include mq(md) {
+                height: 160px;    padding-top: 1.8rem;
+                font-size: rem(18);
+            }
+            @include mq(lg) {
+                height: 210px;    padding-top: 2.5rem;  font-size: rem(22);
+            }
+            .icon{
+                height: 3.5rem;
+                    @include mq(md) {
+                        height: 4.5rem;
+                    }
+                    @include mq(lg) {
+                        height: 5.5rem;
+                    }
+                .iconfont{
+                    font-size: rem(36);
+                        @include mq(md) {
+                            font-size: rem(46);
+                        }
+                        @include mq(lg) {
+                            font-size: rem(56);
+                        }
+                }
+            }
+            &:hover{
+                background: $color-primary;
+            }
+            &.active{
+                background: $color-primary;
+                &::after{
+                    content: " ";
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    border:7px $color-primary solid;
+                    border-bottom-color: transparent;
+                    border-left-color: transparent;
+                    border-right-color: transparent;
+                    position: absolute;
+                    bottom: -14px;
+                    left: 50%;
+                    margin-left: -7px;
+                    z-index: 100;
+                }
+            }
+        }
+        .make{
+            background-image: url('../img/f01.jpg');              
+            
+        }
+        .life{
+            background-image: url('../img/f02.jpg');
+            
+        }
+        .city{
+            background-image: url('../img/f03.jpg');
+            
+        }
+        .orther{
+            background-image: url('../img/f04.jpg');
+            
+        }
+    }
+
+    .tabcontent{
+     
+        display: none;
+        .title{
+            font-size: rem(20);
+            font-weight: normal;
+            color: #333;
+            margin-bottom: 2rem;
+            margin-top: 2rem;
+
+            @include mq(lg){
+              
+                margin-top: 3rem;
+                margin-bottom: 2rem;
+            }
+        }
+        .title-v1{
+            margin-bottom: 2rem;
+            margin-top: -1rem;
+        }
+        .progress{
+            padding-top: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
+            @include mq(lg){
+                margin-bottom: 4rem;
+            }
+        }
+
+        .b {
+            background-color: rgb(246, 67, 71);
+           border-radius: 36px;          
+            height: 45px;
+            text-align: center;
+            line-height:45px;
+            color: #fff;
+            font-size:rem(18) ;
+            @include mq(md){
+                line-height: 55px;
+                height: 55px;  
+                 font-size:rem(22) ;
+            }
+            @include mq(lg){
+                line-height: 71px;
+                height: 71px;  
+                 font-size:rem(26) ;
+            }
+          }
+          .icon-plus{
+            font-size: rem(22);line-height: 45px;
+            color: $color-primary;
+            @include mq(md){
+                font-size: rem(28);line-height: 55px;
+            }
+            @include mq(lg){
+                font-size: rem(36);line-height: 71px;
+            }
+          }
+
+          &.active{
+              display: block;
+          }
+
+          .form-group{
+              margin-bottom: rem(20);border:1px #eee solid;
+              padding: .3rem .3rem .3rem 1rem;
+              border-radius: 6px;
+              background-color: #fff;
+              position: relative;
+          
+              label{
+                  position: absolute;
+                  left: .8rem;
+                  top: 1rem;
+                  z-index: 100;
+                  color: $color-primary;
+              }
+              .form-control{
+                  border: none;
+                  width: 100%;
+                  padding: .6rem;
+                  outline: none;
+                
+              }
+          }
+
+          .phone{
+              color: $color-primary;
+              font-size: rem(20);
+              .iconfont{
+                  font-size: rem(20);
+              }
+             
+          }
+          .note{
+            color: #999;
+        }
+        .form-action{
+            padding-top: 3rem;
+        }
+        .tx{
+            .item{
+                margin-bottom: 2rem;
+            }
+            .icon{
+            
+                    border-width: 1px;
+                    border-color:$color-primary;
+                    border-style: solid;
+                    border-radius: 50%;
+                
+                    width: 90px;
+                    height: 90px;
+                    text-align: center;
+                    line-height: 88px;
+                .iconfont{
+                    color:$color-primary;
+                    font-size: rem(36);
+                }
+                 
+            }
+            h3{
+                font-size: rem(18);
+                color: #333;
+                font-weight: normal;
+            }
+            p{
+                margin-bottom: 0;
+                font-size: rem(13);
+                color: #999;
+                @include mq(lg){
+                    font-size: rem(14);
+                }
+            }
+        }
+
+    
+    }
+
+    .s1{
+        padding-top: 2rem;
+        .box{
+            margin-bottom: 2rem;
+            .title{
+                color: $color-primary;
+            font-weight: normal;
+                font-size: rem(20);
+                position: relative;
+                padding-left: 1.5rem;
+                margin-bottom: 1rem;
+                &::before{
+                 
+                    border-radius: 50%;
+                    background-color: rgb(102, 102, 102);
+                    position: absolute;                    
+                    width: 8px;
+                    height: 8px;
+                    content: "";
+                    display: block;
+                    z-index: 100;
+                    left: 0;
+                    top: .9rem;                  
+                      
+                      
+                }
+            }
+            .pic{
+                text-align: center;
+                margin-bottom: 1rem;
+                @include mq(md){
+                    margin-bottom:0;
+                }
+                img{
+                   width: 100%;
+                    @include mq(md){
+                        height: 140px;
+                        object-fit: cover;
+                        width: 220px;
+                    }
+                    @include mq(lg){
+                        
+                        width: 250px;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+    }
+    .s2{
+        padding-top: 2rem;
+        ul{
+            @include reset-list;
+            padding-top: .5rem;
+            li{
+                display: inline-block;
+              margin-right: 2rem;
+              margin-bottom: 1.5rem;
+                    background-color: $color-primary;
+                    box-shadow: 0px 2px 2px 0px rgba(246, 67, 71, 0.2);                
+               color: #fff;
+                    height: 38px;                   
+                    padding: 0 2rem;
+             border-radius: 19px;
+             line-height:38px ;
+                  
+            }
+        }
+    }
+}

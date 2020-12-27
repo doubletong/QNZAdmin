@@ -12,6 +12,7 @@ html.no-js(lang='')
     // Place favicon.ico in the root directory
     meta(name='theme-color', content='#fafafa')
     link(href='fonts/iconfont.css', rel='stylesheet')
+    link(href='bootstrap/css/bootstrap.min.css', rel='stylesheet')
     link(href='css/styles.min.css', rel='stylesheet')
 
     block bkheader
@@ -27,12 +28,9 @@ html.no-js(lang='')
           block content
         
         include footer.pug
-    
-    script(src='js/vendor/modernizr-3.8.0.min.js')     
+     
     script(src='js/vendor/jquery-3.4.1.min.js')   
-    script(src='js/vendor/jquery.easing.min.js')
-    script(src='js/vendor/popper.min.js')
-    script(src='js/bootstrap/bootstrap.min.js')
+    script(src='bootstrap/js/bootstrap.bundle.min.js')
     script(src='js/app.js')
 
     block bkfooter
