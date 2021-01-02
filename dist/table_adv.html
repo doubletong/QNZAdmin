@@ -2,7 +2,7 @@
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title> -控制台
+    <title> 数据查询-控制台
     </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,7 +80,7 @@
                   <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Something else here</a>
                 </div>
               </li>
-              <li class="nav-item"><a class="nav-link" href="/bbi-admin/loginOut.aspx"><i class="iconfont icon-logout"></i> 退出系统</a></li>
+              <li class="nav-item"><a class="nav-link" href="login.html"><i class="iconfont icon-logout"></i> 退出系统</a></li>
             </ul>
           </div>
         </nav>
@@ -107,7 +107,9 @@
           <div class="card">
             <header class="card-header">
               <div class="row">
-                <div class="col">数据查询</div>
+                <div class="col"> 
+                  <div class="card-title-v1"><i class="iconfont icon-table"></i>数据查询</div>
+                </div>
                 <div class="col-auto">
                   <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#" style="display: none;"><i class="iconfont icon-shrink"></i></a></div>
                 </div>
@@ -117,7 +119,7 @@
               <div class="card-toolbar mb-3">
                 <div class="row">
                   <div class="col-md">
-                    <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                       <button class="btn btn-outline-info" type="button">移动</button>
                       <button class="btn btn-outline-info" type="button">推荐</button>
                       <button class="btn btn-outline-info" type="button">激活</button>
@@ -126,15 +128,15 @@
                   </div>
                   <div class="col-md-auto">
                     <form class="form-inline" role="form">
-                      <div class="input-group mr-2">
+                      <div class="input-group input-group-sm mr-2">
                         <div class="input-group-prepend"><span class="input-group-text">从</span></div>
                         <input class="form-control" id="fromDate" type="date" placeholder="请输入日期" aria-label="Dollar amount (with dot and two decimal places)">
                       </div>
-                      <div class="input-group mr-2">
+                      <div class="input-group input-group-sm mr-2">
                         <div class="input-group-prepend"><span class="input-group-text">到</span></div>
                         <input class="form-control" id="toDate" type="date" placeholder="请输入日期" aria-label="Dollar amount (with dot and two decimal places)">
                       </div>
-                      <div class="form-group mr-2">
+                      <div class="form-group input-group-sm mr-2">
                         <label class="sr-only" for="inputCategory">业务类型</label>
                         <select class="form-control" id="inputCategory">
                           <option>--请选择业务类型--</option>
@@ -144,7 +146,7 @@
                           <option>5</option>
                         </select>
                       </div>
-                      <button class="btn btn-primary btn-sm" type="submit"><i class="iconfont icon-search"></i> 查询</button>
+                      <button class="btn btn-primary btn-sm" type="submit">    <i class="iconfont icon-search">                          </i> 查询</button>
                     </form>
                   </div>
                 </div>
@@ -291,10 +293,10 @@
               </div>
             </section>
             <footer class="card-footer">
-              <div class="row table-pager">
+              <div class="row table-pager align-items-center">
                 <div class="col-sm">
                   <nav aria-label="...">
-                    <ul class="pagination">
+                    <ul class="pagination pagination-sm">
                       <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
                       <li class="page-item"><a class="page-link" href="#">1</a></li>
                       <li class="page-item active" aria-current="page"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
@@ -304,7 +306,7 @@
                   </nav>
                 </div>
                 <div class="col-sm-auto">
-                  <p class="pagecount">显示1-10条，总计10页，记录数100条</p>
+                  <div class="pagecount">显示1-10条，总计10页，记录数100条</div>
                 </div>
               </div>
             </footer>

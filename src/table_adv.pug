@@ -1,5 +1,7 @@
 extends includes/layout.pug
 
+block title
+    | 数据查询
 
 block content
     .breadcrumb-container
@@ -25,7 +27,11 @@ block content
     .card
         header.card-header
             .row
-                .col 数据查询
+                .col 
+                    div.card-title-v1
+                        i.iconfont.icon-table
+                        | 数据查询
+                
                 .col-auto
                     .control
                         a.expand(href='#')
@@ -36,22 +42,22 @@ block content
             .card-toolbar.mb-3
                 .row
                     .col-md
-                        .btn-group(role='group', aria-label='Basic example')
+                        .btn-group.btn-group-sm(role='group', aria-label='Basic example')
                             button.btn.btn-outline-info(type='button') 移动
                             button.btn.btn-outline-info(type='button') 推荐
                             button.btn.btn-outline-info(type='button') 激活
                             button.btn.btn-outline-danger(type='button') 删除
                     .col-md-auto
                         form.form-inline(role='form')
-                            .input-group.mr-2
+                            .input-group.input-group-sm.mr-2
                                 .input-group-prepend
                                     span.input-group-text 从
                                 input#fromDate.form-control(type='date', placeholder='请输入日期', aria-label='Dollar amount (with dot and two decimal places)')
-                            .input-group.mr-2
+                            .input-group.input-group-sm.mr-2
                                 .input-group-prepend
                                     span.input-group-text 到
                                 input#toDate.form-control(type='date', placeholder='请输入日期', aria-label='Dollar amount (with dot and two decimal places)')
-                            .form-group.mr-2
+                            .form-group.input-group-sm.mr-2
                                 label.sr-only(for='inputCategory') 业务类型
                                 select#inputCategory.form-control
                                     option --请选择业务类型--
@@ -59,8 +65,8 @@ block content
                                     option 3
                                     option 4
                                     option 5
-                            button.btn.btn-primary.btn-sm(type='submit')
-                                i.iconfont.icon-search
+                            button.btn.btn-primary.btn-sm(type='submit')     
+                                i.iconfont.icon-search                           
                                 |  查询
             .table-responsive
                 table.table.table-hover.box-table
@@ -307,10 +313,10 @@ block content
                                 a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
                                     i.iconfont.icon-delete
         footer.card-footer
-            .row.table-pager
+            .row.table-pager.align-items-center
                 .col-sm
                     nav(aria-label='...')
-                        ul.pagination
+                        ul.pagination.pagination-sm
                             li.page-item.disabled
                                 a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
                             li.page-item
@@ -324,7 +330,7 @@ block content
                             li.page-item
                                 a.page-link(href='#') Next
                 .col-sm-auto
-                    p.pagecount
+                    .pagecount
                         | 显示1-10条，总计10页，记录数100条
 block bkfooter
     script.

@@ -46,7 +46,7 @@
                 display: block;
                 margin: 0 auto;
                 @include mq(md){
-                    max-width: 80%;
+                    max-width: 50%;
                 }
             }
         }

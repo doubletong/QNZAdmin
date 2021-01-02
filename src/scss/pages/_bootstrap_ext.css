@@ -1,0 +1,18 @@
+.card-header {
+  padding: .4rem 1.25rem;
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #00536B;
+  border-color: #00536B;
+}
+
+.btn-sm i.iconfont {
+  font-size: rem(12);
+}
+
+.table td, .table th {
+  padding: .4rem .75rem;
+}
