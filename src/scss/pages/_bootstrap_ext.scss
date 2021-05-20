@@ -1,6 +1,10 @@
 .card-header {
     padding: .4rem 1.25rem;
     background-color: rgba(0,0,0,.02);
+    .card-title{
+        color:$color-primary;
+   
+    }
 }
 
 // buttons

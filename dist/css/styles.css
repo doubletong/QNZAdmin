@@ -129,20 +129,6 @@ img {
   color: #d04b44;
 }
 
-.table th {
-  font-weight: normal;
-  color: #333;
-  background-color: #f7f7f7;
-}
-
-.table td {
-  vertical-align: middle;
-}
-
-.table td .btn {
-  margin-left: .3rem;
-}
-
 .site-header {
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(51, 148, 225, 0.18)), to(transparent));
   background-image: linear-gradient(270deg, rgba(51, 148, 225, 0.18), transparent);
@@ -441,6 +427,10 @@ img {
 .card-header {
   padding: .4rem 1.25rem;
   background-color: rgba(0, 0, 0, 0.02);
+}
+
+.card-header .card-title {
+  color: #1d829a;
 }
 
 .btn-primary {

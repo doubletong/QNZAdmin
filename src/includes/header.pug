@@ -1,28 +1,34 @@
 nav.navbar.navbar-expand-lg.navbar-light.bg-light.navbar-primary
-    a#openav.navbar-brand(href='javascript:void(0);')
-        i.iconfont.icon-menu
-    #navbarSupportedContent.collapse.navbar-collapse
-        ul.navbar-nav.mr-auto
-            li.nav-item.active
-                a.nav-link(href='index.html')
-                    | 首页 
-                    span.sr-only (current)
-            li.nav-item
-                a.nav-link(href='#') 内容
-            li.nav-item
-                a.nav-link(href='#') 模板
-            li.nav-item
-                a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') 待建
-        ul.navbar-nav.navbar-right
-            li.nav-item.dropdown
-                a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                    | 你好，Admin
-                .dropdown-menu(aria-labelledby='navbarDropdown')
-                    a.dropdown-item(href='#') 修改密码
-                    a.dropdown-item(href='#') Another action
-                    .dropdown-divider
-                    a.dropdown-item(href='#') Something else here
-            li.nav-item
-                a.nav-link(href='login.html')
-                    i.iconfont.icon-logout
-                    |  退出系统
+    .container-fluid
+        a#openav.navbar-brand(href='javascript:void(0);')
+            i.iconfont.icon-menu
+        #navbarSupportedContent.collapse.navbar-collapse
+
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.nav-item
+                    a.nav-link.active(href='index.html', aria-current="page")
+                        | 首页                 
+                li.nav-item
+                    a.nav-link(href='#') 内容
+                li.nav-item
+                    a.nav-link(href='#') 模板
+                li.nav-item
+                    a.nav-link.disabled(href='#', tabindex='-1', aria-disabled='true') 待建
+            ul.navbar-nav.d-flex
+                li.nav-item.dropdown                   
+                    a#navbarDropdown.nav-link.dropdown-toggle(href='#', role='button', data-bs-toggle='dropdown', aria-expanded='false')
+                        | 你好，Admin
+                    ul.dropdown-menu(aria-labelledby="navbarDropdown")
+                        li
+                            a.dropdown-item(href='#') 修改密码
+                        li
+                            a.dropdown-item(href='#') Another action
+                        li
+                            hr.dropdown-divider
+                        li
+                            a.dropdown-item(href='#') Something else here
+                li.nav-item
+                    a.nav-link(href='login.html')
+                        i.iconfont.icon-logout
+                        |  退出系统
+

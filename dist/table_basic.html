@@ -66,22 +66,29 @@
         <div class="closemenu"><a href="#"><i class="iconfont icon-chevron-circle-left"></i></a></div>
       </aside>
       <section class="rightcol" id="rightcol">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-primary"><a class="navbar-brand" id="openav" href="javascript:void(0);"><i class="iconfont icon-menu"></i></a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active"><a class="nav-link" href="index.html">首页 <span class="sr-only">(current)</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#">内容</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">模板</a></li>
-              <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">待建</a></li>
-            </ul>
-            <ul class="navbar-nav navbar-right">
-              <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">你好，Admin</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="#">修改密码</a><a class="dropdown-item" href="#">Another action</a>
-                  <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Something else here</a>
-                </div>
-              </li>
-              <li class="nav-item"><a class="nav-link" href="login.html"><i class="iconfont icon-logout"></i> 退出系统</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-primary">
+          <div class="container-fluid"><a class="navbar-brand" id="openav" href="javascript:void(0);"><i class="iconfont icon-menu"></i></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">首页                 </a></li>
+                <li class="nav-item"><a class="nav-link" href="#">内容</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">模板</a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">待建</a></li>
+              </ul>
+              <ul class="navbar-nav d-flex">
+                <li class="nav-item dropdown">                  <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">你好，Admin</a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">修改密码</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="login.html"><i class="iconfont icon-logout"></i> 退出系统</a></li>
+              </ul>
+            </div>
           </div>
         </nav>
         <div class="main-content">         
@@ -101,44 +108,46 @@
               </div>
             </div>
           </div>
-          <div class="subheader">
-            <h1 class="subheader-title"><i class="iconfont icon-table"></i> 基本表格</h1><small>Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.</small>
-          </div>
           <div class="card">
             <header class="card-header">
               <div class="row">
-                <div class="col">数据查询</div>
+                <div class="col"> 
+                  <div class="card-title mb-0"><i class="iconfont icon-table"> </i>数据查询</div>
+                </div>
                 <div class="col-auto">
-                  <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#" style="display: none;"><i class="iconfont icon-shrink"></i></a></div>
+                  <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#"><i class="iconfont icon-shrink"></i></a></div>
                 </div>
               </div>
             </header>
             <section class="card-body">
               <div class="card-toolbar mb-3">
-                <form class="form-inline" role="form">
-                  <div class="input-group mr-2">
-                    <div class="input-group-prepend"><span class="input-group-text">从</span></div>
-                    <input class="form-control" id="fromDate" type="date" placeholder="请输入日期" aria-label="Dollar amount (with dot and two decimal places)">
+                <form class="row g-2" role="form">
+                  <div class="col-md">
+                    <div class="input-group"><span class="input-group-text" id="basic-addon1">从</span>
+                      <input class="form-control" id="fromDate" type="date" placeholder="请输入日期" aria-label="开始日期" aria-describedby="basic-addon1">
+                    </div>
                   </div>
-                  <div class="input-group mr-2">
-                    <div class="input-group-prepend"><span class="input-group-text">到</span></div>
-                    <input class="form-control" id="toDate" type="date" placeholder="请输入日期" aria-label="Dollar amount (with dot and two decimal places)">
+                  <div class="col-md">                  
+                    <div class="input-group"><span class="input-group-text" id="basic-addon2">到                       </span>
+                      <input class="form-control" id="toDate" type="date" placeholder="请输入日期" aria-label="结束日期" aria-describedby="basic-addon2">
+                    </div>
                   </div>
-                  <div class="form-group mr-2">
-                    <label class="sr-only" for="inputCategory">业务类型</label>
-                    <select class="form-control" id="inputCategory">
-                      <option>--请选择业务类型--</option>
+                  <div class="col-md"> 
+                    <select class="form-select" id="validationDefault04">
+                      <option selected disabled>--请选择业务类型--</option>
                       <option>2</option>
                       <option>3</option>
                       <option>4</option>
                       <option>5</option>
                     </select>
                   </div>
-                  <button class="btn btn-primary btn-sm" type="submit"><i class="iconfont icon-search"></i> 查询</button>
+                  <div class="col-md"> 
+                    <button class="btn btn-primary" type="submit"><i class="iconfont icon-search"></i> 查询</button>
+                  </div>
                 </form>
               </div>
               <div class="table-responsive">
-                <table class="table table-hover box-table">
+                <table class="table table-striped table-hover">
                   <thead>
                     <tr>
                       <th>ID</th>
@@ -257,20 +266,20 @@
               </div>
             </section>
             <footer class="card-footer">
-              <div class="row table-pager">
+              <div class="row table-pager align-items-center">
                 <div class="col-sm">
                   <nav aria-label="...">
                     <ul class="pagination">
                       <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
                       <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2                                    </a></li>
                       <li class="page-item"><a class="page-link" href="#">3</a></li>
                       <li class="page-item"><a class="page-link" href="#">Next</a></li>
                     </ul>
                   </nav>
                 </div>
                 <div class="col-sm-auto">
-                  <p class="pagecount">显示1-10条，总计10页，记录数100条</p>
+                  <p class="pagecount mb-0">显示1-10条，总计10页，记录数100条</p>
                 </div>
               </div>
             </footer>
