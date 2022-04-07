@@ -1,5 +1,5 @@
 body {
-    color: #666;
+    color: $color-text;
     background-color: #f1f1f1;
     font-family: "Microsoft YaHei", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
     padding-top: 50px;
@@ -95,14 +95,7 @@ img {
             display: block;
         }
     }
- 
-    .card-title-v1{
-        .iconfont{
-            margin-right: .6rem;
-            font-size: rem(18);
-            color: $color-secondary;
-        }
-    }
+
     
 }
 

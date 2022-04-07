@@ -9,10 +9,10 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory-->
-    <meta name="theme-color" content="#fafafa">
-    <link href="fonts/iconfont.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.min.css" rel="stylesheet">
+    <meta name="theme-color" content="#fafafa"><!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css?v=4e7fcdbad4a0b3abc8a94c9926f1816e" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="fonts/iconfont.css?v=4e7fcdbad4a0b3abc8a94c9926f1816e" rel="stylesheet">
+    <link href="css/styles.min.css?v=4e7fcdbad4a0b3abc8a94c9926f1816e" rel="stylesheet">
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -75,7 +75,7 @@
                 <li class="nav-item"><a class="nav-link" href="#">模板</a></li>
                 <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">待建</a></li>
               </ul>
-              <ul class="navbar-nav d-flex">
+              <ul class="navbar-nav">
                 <li class="nav-item dropdown">                  <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">你好，Admin</a>
                   <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <li><a class="dropdown-item" href="#">修改密码</a></li>
@@ -108,14 +108,11 @@
               </div>
             </div>
           </div>
-          <div class="subheader">
-            <h1 class="subheader-title"><i class="iconfont icon-table"></i> 基本表格</h1><small>Documentation and examples for opt-in styling of tables (given their prevelant use in JavaScript plugins) with Bootstrap.</small>
-          </div>
           <div class="card">
             <header class="card-header">
               <div class="row">
                 <div class="col"> 
-                  <div class="card-title-v1"><i class="iconfont icon-table"></i>数据查询</div>
+                  <div class="card-title mb-0"><i class="iconfont icon-table"> </i>数据查询</div>
                 </div>
                 <div class="col-auto">
                   <div class="control"><a class="expand" href="#"><i class="iconfont icon-fullscreen"></i></a><a class="compress" href="#" style="display: none;"><i class="iconfont icon-shrink"></i></a></div>
@@ -125,7 +122,7 @@
             <section class="card-body">
               <div class="card-toolbar mb-3">
                 <div class="row">
-                  <div class="col-md">
+                  <div class="col-lg">
                     <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
                       <button class="btn btn-outline-info" type="button">移动</button>
                       <button class="btn btn-outline-info" type="button">推荐</button>
@@ -133,34 +130,37 @@
                       <button class="btn btn-outline-danger" type="button">删除</button>
                     </div>
                   </div>
-                  <div class="col-md-auto">
-                    <form class="form-inline" role="form">
-                      <div class="input-group input-group-sm mr-2">
-                        <div class="input-group-prepend"><span class="input-group-text">从</span></div>
-                        <input class="form-control" id="fromDate" type="date" placeholder="请输入日期" aria-label="Dollar amount (with dot and two decimal places)">
+                  <div class="col-lg-auto">
+                    <form class="row g-2" role="form">
+                      <div class="col-md-auto">
+                        <div class="input-group input-group-sm"><span class="input-group-text" id="basic-addon1">从</span>
+                          <input class="form-control" id="fromDate" type="date" placeholder="请输入日期" aria-label="开始日期" aria-describedby="basic-addon1">
+                        </div>
                       </div>
-                      <div class="input-group input-group-sm mr-2">
-                        <div class="input-group-prepend"><span class="input-group-text">到</span></div>
-                        <input class="form-control" id="toDate" type="date" placeholder="请输入日期" aria-label="Dollar amount (with dot and two decimal places)">
+                      <div class="col-md-auto">        
+                        <div class="input-group input-group-sm"><span class="input-group-text" id="basic-addon2">到                       </span>
+                          <input class="form-control" id="toDate" type="date" placeholder="请输入日期" aria-label="结束日期" aria-describedby="basic-addon2">
+                        </div>
                       </div>
-                      <div class="form-group input-group-sm mr-2">
-                        <label class="sr-only" for="inputCategory">业务类型</label>
-                        <select class="form-control" id="inputCategory">
-                          <option>--请选择业务类型--</option>
+                      <div class="col-md-auto">
+                        <select class="form-select form-select-sm" id="validationDefault04">
+                          <option selected disabled>--请选择业务类型--</option>
                           <option>2</option>
                           <option>3</option>
                           <option>4</option>
                           <option>5</option>
                         </select>
                       </div>
-                      <button class="btn btn-primary btn-sm" type="submit">    <i class="iconfont icon-search">                          </i> 查询</button>
+                      <div class="col-md-auto">
+                        <button class="btn btn-primary btn-sm" type="submit"><i class="iconfont icon-search"></i> 查询</button>
+                      </div>
                     </form>
                   </div>
                 </div>
               </div>
               <div class="table-responsive">
-                <table class="table table-hover box-table">
-                  <thead>
+                <table class="table table-hover table-sm">
+                  <thead class="table-light">
                     <tr>
                       <th>
                         <input id="cbSelectAll" type="checkbox">
@@ -185,7 +185,7 @@
                       <td>Mark</td>
                       <td>Otto</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                     <tr>
                       <td>
@@ -197,7 +197,7 @@
                       <td>Mark</td>
                       <td>Otto</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-warning btn-sm" href="#" title="不推荐"><i class="iconfont icon-unlike"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-warning btn-sm" href="#" title="不推荐"><i class="iconfont icon-unlike"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                     <tr>
                       <td>
@@ -209,7 +209,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-warning btn-sm" href="#" title="锁定"><i class="iconfont icon-eye-close"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-warning btn-sm" href="#" title="锁定"><i class="iconfont icon-eye-close"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                     <tr>
                       <td>
@@ -221,7 +221,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                     <tr>
                       <td>
@@ -233,7 +233,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                     <tr>
                       <td>
@@ -245,7 +245,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                     <tr>
                       <td>
@@ -257,7 +257,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                     <tr>
                       <td>
@@ -269,7 +269,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                     <tr>
                       <td>
@@ -281,7 +281,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td><i class="iconfont icon-check-circle-fill text-success"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-warning btn-sm" href="#" title="不推荐"><i class="iconfont icon-unlike"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-warning btn-sm" href="#" title="不推荐"><i class="iconfont icon-unlike"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                     <tr>
                       <td>
@@ -293,7 +293,7 @@
                       <td>Otto</td>
                       <td>@mdo</td>
                       <td><i class="iconfont icon-close-circle-fill text-danger"></i></td>
-                      <td><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
+                      <td class="actions"><a class="btn btn-info btn-sm" href="NetDetailList.html" title="查看明细"><i class="iconfont icon-ellipsis"></i></a><a class="btn btn-info btn-sm" href="#" title="推荐"><i class="iconfont icon-like"></i></a><a class="btn btn-info btn-sm" href="#" title="激活"><i class="iconfont icon-eye"></i></a><a class="btn btn-primary btn-sm" href="NetDetailList.html" title="编辑"><i class="iconfont icon-edit"></i></a><a class="btn btn-info btn-sm" href="#" title="拷贝"><i class="iconfont icon-file-copy"></i></a><a class="btn btn-danger btn-sm" href="NetDetailList.html" title="删除"><i class="iconfont icon-delete"></i></a></td>
                     </tr>
                   </tbody>
                 </table>
@@ -306,14 +306,14 @@
                     <ul class="pagination pagination-sm">
                       <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a></li>
                       <li class="page-item"><a class="page-link" href="#">1</a></li>
-                      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2 <span class="sr-only">(current)</span></a></li>
+                      <li class="page-item active" aria-current="page"><a class="page-link" href="#">2                                     </a></li>
                       <li class="page-item"><a class="page-link" href="#">3</a></li>
                       <li class="page-item"><a class="page-link" href="#">Next</a></li>
                     </ul>
                   </nav>
                 </div>
                 <div class="col-sm-auto">
-                  <div class="pagecount">显示1-10条，总计10页，记录数100条</div>
+                  <div class="pagecount mb-0">显示1-10条，总计10页，记录数100条</div>
                 </div>
               </div>
             </footer>
@@ -321,10 +321,9 @@
         </div>
         <footer class="site-footer" id="pagefooter">Copyright © 2012-2020 <a href="http://heiniaozhi.cn">黑鸟志</a> All Rights Reserved</footer>
       </section>
-    </div>
-    <script src="js/vendor/jquery-3.4.1.min.js">  </script>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/app.js"></script>
+    </div><!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js?v=4e7fcdbad4a0b3abc8a94c9926f1816e" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/app.js?v=4e7fcdbad4a0b3abc8a94c9926f1816e"></script>
     <script>
       $(function(){
       $("#cbSelectAll").change(function(){

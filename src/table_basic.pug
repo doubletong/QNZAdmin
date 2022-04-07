@@ -30,30 +30,30 @@ block content
         section.card-body
             .card-toolbar.mb-3
                 form.row.g-2(role='form')
-                    .col-md
-                        .input-group
+                    .col-md-auto
+                        .input-group.input-group-sm
                             span#basic-addon1.input-group-text 从
                             input#fromDate.form-control(type='date', placeholder='请输入日期', aria-label='开始日期', aria-describedby="basic-addon1")
-                    .col-md                   
-                        .input-group
+                    .col-md-auto         
+                        .input-group.input-group-sm
                             span#basic-addon2.input-group-text 到                       
                             input#toDate.form-control(type='date', placeholder='请输入日期', aria-label='结束日期', aria-describedby="basic-addon2")
-                    .col-md  
+                    .col-md-auto
                        
-                        select#validationDefault04.form-select
+                        select#validationDefault04.form-select.form-select-sm
                             option(selected, disabled) --请选择业务类型--
                             option 2
                             option 3
                             option 4
                             option 5
 
-                    .col-md  
-                        button.btn.btn-primary(type='submit')
+                    .col-md-auto
+                        button.btn.btn-primary.btn-sm(type='submit')
                             i.iconfont.icon-search
                             |  查询
 
             .table-responsive
-                table.table.table-striped.table-hover
+                table.table.table-striped.align-middle
                     thead
                         tr
                             th ID
@@ -73,7 +73,7 @@ block content
                             td Mark
                             td Otto
                             td @mdo
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -88,7 +88,7 @@ block content
                             td Mark
                             td Otto
                             td @mdo
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -103,7 +103,7 @@ block content
                             td Otto
                             td @mdo
                             td Larry the Bird
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -118,7 +118,7 @@ block content
                             td Otto
                             td @mdo
                             td Larry the Bird
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -133,7 +133,7 @@ block content
                             td Otto
                             td @mdo
                             td Larry the Bird
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -148,7 +148,7 @@ block content
                             td Otto
                             td @mdo
                             td Larry the Bird
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -163,7 +163,7 @@ block content
                             td Otto
                             td @mdo
                             td Larry the Bird
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -178,7 +178,7 @@ block content
                             td Otto
                             td @mdo
                             td Larry the Bird
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -193,7 +193,7 @@ block content
                             td Otto
                             td @mdo
                             td Larry the Bird
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -208,7 +208,7 @@ block content
                             td Otto
                             td @mdo
                             td Larry the Bird
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-primary.btn-sm(href='NetDetailList.html', title='编辑')
@@ -219,7 +219,7 @@ block content
             .row.table-pager.align-items-center
                 .col-sm
                     nav(aria-label='...')
-                        ul.pagination
+                        ul.pagination.pagination-sm
                             li.page-item.disabled
                                 a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
                             li.page-item

@@ -1,10 +1,22 @@
-.container {
-    max-width: 1180px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    padding: 0 1rem;
+.card{
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0,0,0,.10);
 }
-
-.flex {
-    display: flex;
+.card-header{
+    background-color: #fff;
+    border-bottom: none;
+   
+    .card-title{
+        color:$color-text-heading;   
+    }
+}
+.card-body{  
+    .card-toolbar{
+       
+    }
+}
+.card-footer{
+    background-color: #fff; 
+    border-top: none;
+    padding-bottom: 1rem;
 }

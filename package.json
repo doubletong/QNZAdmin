@@ -1,58 +1,60 @@
 {
-    "name": "sassy-starter",
-    "title": "Sassy Starter",
-    "description": "A starter toolkit based on Scalable and Modular Architecture for CSS (SMACSS) for Sass (SCSS) projects",
-    "author": {
-        "name": "Mina Markham",
-        "url": "https://github.com/minamarkham"
-    },
-    "version": "2.1.0",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/minamarkham/sassy-starter.git"
-    },
-    "homepage": "https://minamarkham.github.io/sassy-starter/",
-    "keywords": [
-        "sass",
-        "scss",
-        "doc",
-        "boilerplate",
-        "starter",
-        "gulp",
-        "smacss"
-    ],
-    "bugs": {
-        "url": "https://github.com/minamarkham/sassy-starter/issues"
-    },
-    "dependencies": {
-        "autoprefixer": "^9.4.6",
-        "cssnano": "^4.1.8",
-        "gulp-imagemin": "^7.1.0",
-        "gulp-newer": "^1.4.0",
-        "gulp-postcss": "^8.0.0",
-        "gulp-pug": "^4.0.1",
-        "gulp-sass-lint": "^1.4.0"
-    },
-    "devDependencies": {
-        "@babel/core": "^7.8.3",
-        "@babel/preset-env": "^7.8.3",
-        "babel-preset-env": "^1.7.0",
-        "browser-sync": "^2.26.3",
-        "colors": "^1.3.2",
-        "del": "^5.1.0",
-        "fancy-log": "^1.3.3",
-        "gulp": "^4.0.2",
-        "gulp-babel": "^8.0.0",
-        "gulp-clean-css": "^3.10.0",
-        "gulp-concat": "^2.6.1",
-        "gulp-notify": "^3.2.0",
-        "gulp-plumber": "^1.2.0",
-        "gulp-rename": "^2.0.0",
-        "gulp-sass": "^4.0.2",
-        "gulp-size": "^3.0.0",
-        "gulp-sourcemaps": "^2.6.5",
-        "gulp-uglify": "^3.0.2",
-        "jshint": "^2.11.1"
-    }
+  "name": "sassy-starter",
+  "title": "Sassy Starter",
+  "description": "A starter toolkit based on Scalable and Modular Architecture for CSS (SMACSS) for Sass (SCSS) projects",
+  "author": {
+    "name": "Mina Markham",
+    "url": "https://github.com/minamarkham"
+  },
+  "version": "2.1.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/minamarkham/sassy-starter.git"
+  },
+  "homepage": "https://minamarkham.github.io/sassy-starter/",
+  "keywords": [
+    "sass",
+    "scss",
+    "doc",
+    "boilerplate",
+    "starter",
+    "gulp",
+    "smacss"
+  ],
+  "bugs": {
+    "url": "https://github.com/minamarkham/sassy-starter/issues"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.4",
+    "browserslist": "^4.20.2",
+    "cssnano": "^5.1.7",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
+    "gulp-sass-lint": "^1.4.0",
+    "sass": "^1.50.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/preset-env": "^7.16.11",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.27.9",
+    "del": "^6.0.0",
+    "fancy-log": "^2.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-size": "^4.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "gulp-version-number": "^0.2.4",
+    "jshint": "^2.13.4"
+  }
 }

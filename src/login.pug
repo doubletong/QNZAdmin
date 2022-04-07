@@ -33,10 +33,9 @@ html.no-js(lang='')
             input#password.form-control(type='password', name='password',placeholder="密码",required)
           .mb-4      
             .input-group
-              input#captcha.form-control(type="text", name="captcha", placeholder="验证码", required)
-              .input-group-append
-                span.input-group-text
-                  img#imgCaptcha(src="https://www.fillmurray.com/g/120/42", alt="CAPTCHA")
+              input#captcha.form-control(type="text", name="captcha", placeholder="验证码", aria-label="Captcha", aria-describedby="basic-addon2", required)
+              span#basic-addon2.input-group-text
+                img#imgCaptcha(src="https://www.fillmurray.com/g/120/42", alt="CAPTCHA")
      
 
 

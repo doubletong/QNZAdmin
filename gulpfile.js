@@ -6,21 +6,23 @@ const browserSync = require("browser-sync").create();
 const cssnano = require("cssnano");
 const del = require("del");
 const gulp = require("gulp");
-const imagemin = require("gulp-imagemin");
+const imagemin = import('gulp-imagemin');
 const newer = require("gulp-newer");
 const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const rename = require("gulp-rename");
-const sass = require("gulp-sass");
+const sass = require('gulp-sass')(require('sass'));
 
 const cleanCSS = require('gulp-clean-css');
 const concat = require('gulp-concat');
 const uglify = require('gulp-uglify');
 const size = require('gulp-size');
 const notify = require('gulp-notify');
-const colors = require('colors');
 const babel = require('gulp-babel');
+
+const version = require('gulp-version-number');
 var sourcemaps  = require('gulp-sourcemaps');
+
 var pug = require('gulp-pug');
 var log = require('fancy-log');
 
@@ -28,19 +30,6 @@ var bases = {
     app: 'src/',
     dist: 'dist/',
 };
-
-colors.setTheme({
-    silly: 'rainbow',
-    input: 'grey',
-    verbose: 'cyan',
-    prompt: 'grey',
-    info: 'green',
-    data: 'grey',
-    help: 'cyan',
-    warn: 'yellow',
-    debug: 'blue',
-    error: 'red'
-});
 
 
 
@@ -84,7 +73,7 @@ function scripts() {
             presets: ["@babel/preset-env"]
           }))
         .pipe(uglify())
-        .on('error', function (err) { log.error(err.toString()); })
+        .on('error', function (err) {  log.error(err.toString()); })
         .pipe(size({ gzip: false, showFiles: true }))
         .pipe(concat('app.js'))
         .pipe(sourcemaps.write('./maps'))
@@ -128,6 +117,13 @@ function copyFiles(done) {
 function htmls(done) {
     gulp.src([bases.app + '*.html', bases.app + '**/*.html', bases.app + '*.txt',bases.app + '*.xml',bases.app + '*.webmanifest', bases.app + '*.json'])
         .pipe(size({ gzip: true, showFiles: true }))
+        .pipe(version({
+            'value': '%MDS%',
+            'append': {
+                'key': 'v',
+                'to': ['css', 'js'],
+            }
+        }))
         .pipe(gulp.dest(bases.dist))
         .pipe(browserSync.stream());
 
@@ -139,6 +135,13 @@ function pugtohtml(done){
     gulp.src([bases.app + '*.pug'])
         .pipe(pug({
             pretty:true
+        }))
+        .pipe(version({
+            'value': '%MDS%',
+            'append': {
+                'key': 'v',
+                'to': ['css', 'js'],
+            }
         }))
         .pipe(gulp.dest(bases.dist))
         .pipe(browserSync.stream());
@@ -165,25 +168,25 @@ function browserSyncReload(done) {
 }
 
 // Optimize Images
-function images() {
-    return gulp
-        .src([bases.app + "img/**/*"])
-        .pipe(newer(bases.dist + "img"))
-        .pipe(
-            imagemin([
-                imagemin.gifsicle({ interlaced: true }),             
-                imagemin.mozjpeg({quality: 80, progressive: true}),
-                imagemin.optipng({ optimizationLevel: 5 }),
-                imagemin.svgo({
-                    plugins: [
-                        {removeViewBox: true},
-                        {cleanupIDs: false}
-                    ]
-                })
-            ])
-        )
-        .pipe(gulp.dest(bases.dist + "img"));
-}
+// function images() {
+//     return gulp
+//         .src([bases.app + "img/**/*"])
+//         .pipe(newer(bases.dist + "img"))
+//         .pipe(
+//             imagemin([
+//                 imagemin.gifsicle({ interlaced: true }),             
+//                 imagemin.mozjpeg({quality: 80, progressive: true}),
+//                 imagemin.optipng({ optimizationLevel: 5 }),
+//                 imagemin.svgo({
+//                     plugins: [
+//                         {removeViewBox: true},
+//                         {cleanupIDs: false}
+//                     ]
+//                 })
+//             ])
+//         )
+//         .pipe(gulp.dest(bases.dist + "img"));
+// }
 
 
 // Watch files
@@ -197,7 +200,7 @@ function watchFiles() {
         gulp.series(htmls, browserSyncReload)
     );
     gulp.watch(bases.app + "**.pug", gulp.series(pugtohtml));
-    gulp.watch(bases.app + "img/**/*", images);
+    // gulp.watch(bases.app + "img/**/*", images);
 }
 
 
@@ -205,13 +208,13 @@ function watchFiles() {
 const js = gulp.series(scripts);
 //const build = gulp.series(clean, gulp.parallel(css, images, js, htmls, copyFiles));
 const build = (done) => {
-    gulp.series( clean, gulp.parallel(css, images, js, htmls, copyFiles))(done);
+    gulp.series( clean, gulp.parallel(css, js, htmls, copyFiles))(done);
 };
 const watch = gulp.parallel(watchFiles, browserSyncOpen);
 
 // export tasks
 exports.htmls = htmls;
-exports.images = images;
+// exports.images = images;
 exports.css = css;
 exports.js = js;
 exports.pug = pugtohtml;

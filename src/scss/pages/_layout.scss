@@ -34,7 +34,7 @@
 }
 
 .leftcol{
-    background-color:$color-primary;
+    background-color: darken($color-primary,20%)  ;
     color: lighten($color: $color-primary, $amount: 30%);
     width: 220px;
     .logo{
@@ -98,8 +98,7 @@
                     display: block;
                     transition:all .25s;
                  
-                }
-               
+                }               
             
             }
             &.open{
@@ -109,24 +108,25 @@
                         transform: rotate(180deg);
                         }
                     }
-                .submenu{
-                    display: block !important;
-                }
+            
             }
           
-            .submenu{
-                background-color: darken($color-primary,8%);
+            .submenu{               
                 @include reset-list();
-                display: none;
-                padding-top: .5rem;
-                padding-bottom: .5rem;
+                overflow: hidden;
+                height: 0;
+                border-left: 1px rgba(255,255,255,.3) solid;
+                transition: height .3s;
+                margin-left: 1.6rem;
+                
                 li{
                     a{
                         color:lighten($color: $color-primary, $amount: 30%);
                         display: block;
-                        padding: .5rem 1rem .5rem 2.6rem;
+                        padding: .3rem 1rem .3rem 1rem;
                         font-size: rem(14);
                         position: relative;
+
                         &:hover{
                             color: #fff;
                         }
@@ -146,6 +146,9 @@
                             }
                         }
                     }
+                }
+                &.active{
+                    height: auto;
                 }
                 
             }

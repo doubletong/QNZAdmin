@@ -1,0 +1,41 @@
+
+.table{
+    --bs-table-hover-bg: #f1f6ff;
+    --bs-table-striped-bg: #f7f7f7;
+    --bs-table-striped-color:#666;
+    border-top: 3px $color-primary solid;
+    
+    tr{
+        th{
+            background-color: lighten($color: $color-primary, $amount: 45%);           
+            padding: .4rem .75rem;
+            font-weight: normal;     
+         
+            border-bottom: 2px transparent solid;
+            &:first-child{
+                padding-left: 1rem;
+            }
+            &:last-child{
+                padding-right: 1rem;
+            }
+        }
+        td{
+            padding: .7rem .75rem;
+            color: $color-text;
+            border-bottom: 1px lighten($color: $color-primary, $amount: 45%) solid;
+           
+            &.actions{
+                .btn{
+                    margin-right: .3rem;
+                }
+            }
+            &:first-child{
+                padding-left: 1rem;
+            }
+            &:last-child{
+                padding-right: 1rem;
+            }
+        }
+    }
+
+}

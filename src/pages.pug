@@ -13,22 +13,21 @@ block content
                         li.breadcrumb-item.active(aria-current='page') Data
             .col-md-auto
                 time#sitetime
-    .subheader
-        h1.subheader-title
-            i.iconfont.icon-file-text
-            |  页面管理
-        small
-            | 全站所有零散的单页与内容片段集中管理
+ 
     .card
         header.card-header
             .row
-                .col 单页列表
+                .col 
+                    .card-title.mb-0
+                        i.iconfont.icon-table 
+                        | 页面管理
                 .col-auto
                     .control
                         a.expand(href='#')
                             i.iconfont.icon-fullscreen
-                        a.compress(href='#', style='display: none;')
+                        a.compress(href='#')
                             i.iconfont.icon-shrink
+
         section.card-body
             .card-toolbar.mb-3
                 .row
@@ -39,29 +38,32 @@ block content
                             button.btn.btn-outline-info(type='button') 激活
                             button.btn.btn-outline-danger(type='button') 删除
                     .col-md-auto
-                        form.form-inline(role='form')
-                            .input-group.mr-2
-                                .input-group-prepend
-                                    span.input-group-text 从
-                                input#fromDate.form-control(type='date', placeholder='请输入日期', aria-label='Dollar amount (with dot and two decimal places)')
-                            .input-group.mr-2
-                                .input-group-prepend
-                                    span.input-group-text 到
-                                input#toDate.form-control(type='date', placeholder='请输入日期', aria-label='Dollar amount (with dot and two decimal places)')
-                            .form-group.mr-2
-                                label.sr-only(for='inputCategory') 业务类型
-                                select#inputCategory.form-control
-                                    option --请选择业务类型--
+                        form.row.g-2(role='form')
+                            .col-md-auto
+                                .input-group
+                                    span#basic-addon1.input-group-text 从
+                                    input#fromDate.form-control(type='date', placeholder='请输入日期', aria-label='开始日期', aria-describedby="basic-addon1")
+                            .col-md-auto         
+                                .input-group
+                                    span#basic-addon2.input-group-text 到                       
+                                    input#toDate.form-control(type='date', placeholder='请输入日期', aria-label='结束日期', aria-describedby="basic-addon2")
+                            .col-md-auto
+                            
+                                select#validationDefault04.form-select
+                                    option(selected, disabled) --请选择业务类型--
                                     option 2
                                     option 3
                                     option 4
                                     option 5
-                            button.btn.btn-primary.btn-sm(type='submit')
-                                i.iconfont.icon-search
-                                |  查询
+
+                            .col-md-auto
+                                button.btn.btn-primary(type='submit')
+                                    i.iconfont.icon-search
+                                    |  查询
+
             .table-responsive
                 table.table.table-hover.box-table
-                    thead
+                    thead.table-light
                         tr
                             th
                                 input#cbSelectAll(type='checkbox')
@@ -79,7 +81,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-check-circle-fill.text-success
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-info.btn-sm(href='#', title='推荐')
@@ -100,7 +102,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-check-circle-fill.text-success
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-warning.btn-sm(href='#', title='不推荐')
@@ -121,7 +123,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-check-circle-fill.text-success
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-info.btn-sm(href='#', title='推荐')
@@ -142,7 +144,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-check-circle-fill.text-success
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-info.btn-sm(href='#', title='推荐')
@@ -163,7 +165,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-check-circle-fill.text-success
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-info.btn-sm(href='#', title='推荐')
@@ -184,7 +186,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-check-circle-fill.text-success
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-info.btn-sm(href='#', title='推荐')
@@ -205,7 +207,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-check-circle-fill.text-success
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-info.btn-sm(href='#', title='推荐')
@@ -226,7 +228,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-check-circle-fill.text-success
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-info.btn-sm(href='#', title='推荐')
@@ -247,7 +249,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-check-circle-fill.text-success
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-warning.btn-sm(href='#', title='不推荐')
@@ -268,7 +270,7 @@ block content
                             td 2020-1-21
                             td
                                 i.iconfont.icon-close-circle-fill.text-danger
-                            td
+                            td.actions
                                 a.btn.btn-info.btn-sm(href='NetDetailList.html', title='查看明细')
                                     i.iconfont.icon-ellipsis
                                 a.btn.btn-info.btn-sm(href='#', title='推荐')
@@ -282,22 +284,20 @@ block content
                                 a.btn.btn-danger.btn-sm(href='NetDetailList.html', title='删除')
                                     i.iconfont.icon-delete
         footer.card-footer
-            .row.table-pager
+            .row.table-pager.align-items-center
                 .col-sm
                     nav(aria-label='...')
-                        ul.pagination
+                        ul.pagination.pagination-sm
                             li.page-item.disabled
                                 a.page-link(href='#', tabindex='-1', aria-disabled='true') Previous
                             li.page-item
                                 a.page-link(href='#') 1
                             li.page-item.active(aria-current='page')
-                                a.page-link(href='#')
-                                    | 2 
-                                    span.sr-only (current)
+                                a.page-link(href='#') 2                                  
                             li.page-item
                                 a.page-link(href='#') 3
                             li.page-item
                                 a.page-link(href='#') Next
                 .col-sm-auto
-                    p.pagecount
+                    p.pagecount.mb-0
                         | 显示1-10条，总计10页，记录数100条
